@@ -1,4 +1,6 @@
 # **Rumble of the Forest**
+![Getting Started](./Imagenes/Rumble_of_The_Forrest_Cover.png)
+
 ## **Chronicle Games**
 
 ---
