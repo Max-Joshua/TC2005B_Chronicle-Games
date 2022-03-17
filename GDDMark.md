@@ -1,5 +1,5 @@
 # **Rumble of the Forest**
-![Getting Started](./Imagenes/Rumble_of_The_Forrest_Cover.png)
+![Getting Started](./Imagenes/Rumble_of_The_Forest_Cover.png)
 
 ## **Chronicle Games**
 
@@ -14,6 +14,7 @@
 
 ## _Game Design Document_
 
+![Getting Started](./Imagenes/itesm.png)
 ---
 
 ##### **Copyright notice / author information / boring legal stuff nobody likes**
