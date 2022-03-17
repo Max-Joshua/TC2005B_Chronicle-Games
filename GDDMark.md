@@ -1,4 +1,14 @@
 # **Rumble of the Forest**
+## **Chronicle Games**
+
+---
+
+####   Ivan Diaz - A01365801
+####   Joshua Amaya - A01025258
+####   Octavio Fenollosa - A01781042
+####   Emilio Sibaja - A01025139
+
+---
 
 ## _Game Design Document_
 
@@ -46,7 +56,7 @@
 
 ### **Summary**
 
-Our game is about how the main character (Chubby the squirrel) overcome adversity through music and rhythm. 
+Our game is about how the main character (Chubby the squirrel) overcome adversity through music and rhythm. It is a 2D, pixel art, platform and rhythm game.
 
 ### **Gameplay**
 
@@ -72,25 +82,18 @@ We want the player to go through various feelings through out the game. At the s
     2. Assessment / Next Level
 4. End Credits
 
-<!-- _(example)_ -->
-
 ### **Controls**
 
-
-The player will move with the arrow keys to go left, right and jump. For the player to attack, the keys A, S, D will be used to do normal and special attacks. And to keep our charater and the forest alive, the player must press the space bar following the rhythm of the músic that is playing, this also heals the character if done correctly. Otherwise, the player will start to lose health until the character dies along with the forest.
-
+The player will move with the arrow keys to go left, right and jump. For the player to attack, the keys A, S, D will be used to do normal and special attacks. And to keep our charater and the forest alive, the player must press the space bar following the rhythm of the music that is playing, this also heals the character if done correctly. Otherwise, the player will start to lose health until the character dies along with the forest.
 
 ### **Mechanics**
 
-Are there any interesting mechanics? If so, how are you going to accomplish them? Physics, algorithms, etc.
-
-Al final de cada nivel, se presentará 
+The player must go to the right, fighting moving enemies with the character's musical instrument (if the character touches an enemy it loses certain amount of health) and jumping platforms and static obstacles to finish the current level. At the end of each level, there will be a boss. In order to defeat it, the player must press a sequence of keys (Guitar Hero Style) as it will be indicated on the screen. For that we will make the key that has to be pressed fall in the screen and we'll use a line to guide the player when to press the key, and if most of the keys were pressed on the right moment, the player moves on to the next level (on the final level, a final scene and the credits will be shown instead).
+If the player dies the current level will be restarted even if they get to the boss.
 
 ## _Level Design_
 
 ---
-
-_(Note : These sections can safely be skipped if they&#39;re not relevant, or you&#39;d rather go about it another way. For most games, at least one of them should be useful. But I&#39;ll understand if you don&#39;t want to use them. It&#39;ll only hurt my feelings a little bit.)_
 
 ### **Themes**
 
@@ -146,8 +149,26 @@ _(Note : These sections can safely be skipped if they&#39;re not relevant, or yo
 
 ### **Game Flow**
 
-1. Start on grass
-2.  
+1. Start on grass.
+2. Left wall, must move right.
+3. Rhythm bar is shown.
+4. Introduction of health mechanics.
+5. After advancing, introduction to first NPC.
+6. The NPC hands over the first instrument.
+7. Tutorial on perfect note mechanics.
+8. Instrument power tutorial.
+9. Keep moving right, level theme song is introduced.
+10. First enemy spawn.
+11. Press the power key to hit the enemy.
+12. Platforms and enemies appear.
+13. Traverse through the level defeating enemies and avoiding obstacles.
+14. Level boss room entrance.
+15. Level boss appears on the right side of the screen.
+16. Room is closed, change of boss interactions and movement.
+17. Switch to perfect note mechanic.
+18. Each successful note increases the basic power of the instrument; the boss can be attacked after mechanic
+19. Level boss defeat.
+20. Overall scene change.
 
 ## _Development_
 
@@ -161,8 +182,6 @@ _(Note : These sections can safely be skipped if they&#39;re not relevant, or yo
     3. BaseObject
 2. BaseObstacle
 3. BaseInteractable
-
-_(example)_
 
 ### **Derived Classes / Component Compositions**
 
@@ -200,25 +219,28 @@ _(example)_
     1. PerfectNotes
     2. GoodNote
 
-_(example)_
-
 ## _Graphics_
+![Getting Started](./Imagenes/Gordilla_Standard_Small-Sheet.png)
 
+-Main Character (Chubby The Squirrel)
+![Getting Started](./Imagenes/Gordilla_Ambiente.png)
+-Main character and a concept background
 
+![Getting Started](./Imagenes/Gordilla_Jumping-Sheet.png)
+-Sprite sheet of the main character while jumping
+
+![Getting Started](./Imagenes/sample.png)
+-One of our dark backgrounds
 
 ### **Style Attributes**
 
-What kinds of colors will you be using? Do you have a limited palette to work with? A post-processed HSV map/image? Consistency is key for immersion.
-
-What kind of graphic style are you going for? Cartoony? Pixel-y? Cute? How, specifically? Solid, thick outlines with flat hues? Non-black outlines with limited tints/shades? Emphasize smooth curvatures over sharp angles? Describe a set of general rules depicting your style here.
-
-Well-designed feedback, both good (e.g. leveling up) and bad (e.g. being hit), are great for teaching the player how to play through trial and error, instead of scripting a lengthy tutorial. What kind of visual feedback are you going to use to let the player know they&#39;re interacting with something? That they \*can\* interact with something?
+At the start we'll be using dark colors and at the end light colors to represent the characters journey. All the graphic style is going to be pixel art with no black outlines. Animations will be played with the character movement, attack and when it takes damage
 
 ### **Graphics Needed**
 
 1. Characters
     1. Main Characters
-        1. Gordilla (idle, walking, jumping, receiving damaged, dying)
+        1. Gordilla aka. Chubby (idle, walking, jumping, receiving damaged, dying)
         2. Miztli (idle, walking, attacking, receiving damaged, dying)
         3. Tlacuatzin (idle, walking, attacking, receiving damaged, dying)
         4. Tenoch (idle, walking, attacking,receiving damaged, dying)
@@ -260,7 +282,6 @@ Well-designed feedback, both good (e.g. leveling up) and bad (e.g. being hit), a
     4. Hand Pan
     5. Marimba
 
-_(example)_
 
 
 ## _Sounds/Music_
@@ -282,16 +303,12 @@ Stylistically, what kind of sound effects are you looking for? Do you want to ex
     2. Sharper Footsteps (stone floor)
     3. Soft Landing (low vertical velocity)
     4. Hard Landing (high vertical velocity)
-    5. Glass Breaking
-    6. Chest Opening
-    7. Door Opening
+
 2. Feedback
     1. Relieved &quot;Ahhhh!&quot; (health)
     2. Shocked &quot;Ooomph!&quot; (attacked)
     3. Happy chime (extra life)
     4. Sad chime (died)
-
-_(example)_
 
 ### **Music Needed**
 
@@ -299,43 +316,3 @@ _(example)_
 2. Exciting &quot;castle&quot; track
 3. Creepy, slow &quot;dungeon&quot; track
 4. Happy ending credits track
-5. Rick Astley&#39;s hit #1 single &quot;Never Gonna Give You Up&quot;
-
-_(example)_
-
-
-## _Schedule_
-
----
-
-_(define the main activities and the expected dates when they should be finished. This is only a reference, and can change as the project is developed)_
-
-1. develop base classes
-    1. base entity
-        1. base player
-        2. base enemy
-        3. base block
-  2. base app state
-        1. game world
-        2. menu world
-2. develop player and basic block classes
-    1. physics / collisions
-3. find some smooth controls/physics
-4. develop other derived classes
-    1. blocks
-        1. moving
-        2. falling
-        3. breaking
-        4. cloud
-    2. enemies
-        1. soldier
-        2. rat
-        3. etc.
-5. design levels
-    1. introduce motion/jumping
-    2. introduce throwing
-    3. mind the pacing, let the player play between lessons
-6. design sounds
-7. design music
-
-_(example)_
