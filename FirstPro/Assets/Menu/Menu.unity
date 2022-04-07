@@ -212,7 +212,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2020540176}
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_MethodName: SetVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &46339002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,7 +1031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e7232871d0a314ba0b80154b450732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.05
+  scrollSpeed: 0.02
 --- !u!64 &658715791
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2252,6 +2264,7 @@ GameObject:
   - component: {fileID: 2020540174}
   - component: {fileID: 2020540173}
   - component: {fileID: 2020540172}
+  - component: {fileID: 2020540176}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2341,6 +2354,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2020540176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020540171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa5dcd615b9f6a847b133e3644501b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: f4f4cbb257ac2ee458223fe828c03566, type: 2}
 --- !u!1 &2098338556
 GameObject:
   m_ObjectHideFlags: 0
