@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     public float jump;
     float moveVelocity;
     private Animator animator;
+    public bool Grounded;
     
 
     //Grounded Vars
@@ -20,10 +21,14 @@ public class Movement : MonoBehaviour
     }
     void Update () 
     {
+
+
+
+
         //Jumping
         if (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.Z) || Input.GetKeyDown (KeyCode.W)) 
         {
-            if(grounded)
+            if(Grounded)
             {
                 GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, jump);
                 animator.SetBool("isJumping", true);
@@ -60,15 +65,13 @@ public class Movement : MonoBehaviour
 
     }
     //Check if Grounded
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        grounded = true;
-        animator.SetBool("isJumping", false);
-    }
-    
-    void OnTriggerExit2D(Collider2D other) 
-    {
-        grounded = false;
-        animator.SetBool("isJumping", true);
-    }
+        private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.tag == "ground")
+            Grounded = true;
+        }
+
+        private void OnCollisionExit2D(Collision2D other) {
+        if (other.gameObject.tag == "ground")
+            Grounded = false;
+        }
 }
