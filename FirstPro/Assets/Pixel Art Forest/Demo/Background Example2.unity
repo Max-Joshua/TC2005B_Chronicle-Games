@@ -2144,6 +2144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 203742633}
+  RainSound: {fileID: 1026169534}
 --- !u!1 &519556531
 GameObject:
   m_ObjectHideFlags: 0
