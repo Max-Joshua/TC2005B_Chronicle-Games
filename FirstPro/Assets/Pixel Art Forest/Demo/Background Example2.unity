@@ -4121,7 +4121,6 @@ GameObject:
   - component: {fileID: 1006492543}
   - component: {fileID: 1006492542}
   - component: {fileID: 1006492545}
-  - component: {fileID: 1006492544}
   - component: {fileID: 1006492546}
   - component: {fileID: 1006492540}
   m_Layer: 0
@@ -4209,7 +4208,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4f434da6e612c6479bbf76375739bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  delay: 0.45
+  walkingSounds:
+  - {fileID: 8300000, guid: 00f32dc73279ac141b73b7d9ee8f5e94, type: 3}
+  - {fileID: 8300000, guid: 9e5c80478a452294e8f578c5f4c33a00, type: 3}
+  - {fileID: 8300000, guid: 7f5de9ba8f9c21e4cbca923f13f14c1b, type: 3}
+  jumping: {fileID: 8300000, guid: 3b5f55f2e5777734a8a34e27ec7ff149, type: 3}
+  walking: {fileID: 1006492545}
+  speed: 3
   jump: 5
   Grounded: 0
 --- !u!50 &1006492539
@@ -4314,25 +4320,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1006492544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006492535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40e76dd4e3be7b74cb5c003bfbd45ed5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 0.45
-  walkingSounds:
-  - {fileID: 8300000, guid: 00f32dc73279ac141b73b7d9ee8f5e94, type: 3}
-  - {fileID: 8300000, guid: 9e5c80478a452294e8f578c5f4c33a00, type: 3}
-  - {fileID: 8300000, guid: 7f5de9ba8f9c21e4cbca923f13f14c1b, type: 3}
-  jumping: {fileID: 8300000, guid: 3b5f55f2e5777734a8a34e27ec7ff149, type: 3}
-  walking: {fileID: 1006492546}
 --- !u!82 &1006492545
 AudioSource:
   m_ObjectHideFlags: 0
