@@ -39,7 +39,7 @@ public class Movement : MonoBehaviour
         {
 
             //Jumping
-            if (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.Z) || Input.GetKeyDown (KeyCode.W)) 
+            if (Input.GetKeyDown (KeyCode.UpArrow)) 
             {
                 if(Grounded)
                 {
@@ -66,7 +66,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("isWalking", false);
 
             //Left Right Movement
-            if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.A)) 
+            if (Input.GetKey (KeyCode.LeftArrow)) 
             {
                 moveVelocity = -speed;
 
@@ -74,7 +74,7 @@ public class Movement : MonoBehaviour
                 
                 animator.SetBool("isWalking", true);
             }
-            if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.D)) 
+            if (Input.GetKey (KeyCode.RightArrow)) 
             {
                 moveVelocity = speed;
                 gameObject.transform.localScale = new Vector3(1, 1, 1);
@@ -84,14 +84,14 @@ public class Movement : MonoBehaviour
 
             GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveVelocity, GetComponent<Rigidbody2D> ().velocity.y);
 
-            if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A)){
+            if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)){
                 isWalking = true;
             }
 
-            if(Input.GetKeyUp(KeyCode.D)){
+            if(Input.GetKeyUp(KeyCode.RightArrow)){
                 isWalking = false;
             }
-            if(Input.GetKeyUp(KeyCode.A)){
+            if(Input.GetKeyUp(KeyCode.LeftArrow)){
                 isWalking = false;
             }
 
