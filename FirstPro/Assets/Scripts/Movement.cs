@@ -26,6 +26,8 @@ public class Movement : MonoBehaviour
     private Animator animator;
     public bool Grounded;
 
+    public bool doubleJump;
+
     
     void Start(){
         animator = GetComponent<Animator>();
@@ -41,9 +43,11 @@ public class Movement : MonoBehaviour
             //Jumping
             if (Input.GetKeyDown (KeyCode.UpArrow)) 
             {
-                if(Grounded)
+                if(Grounded || doubleJump)
                 {
+                        
                     GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, jump);
+                    SuperJump();
                     animator.SetBool("isJumping", true);
 
                 audioSource.clip = jumping;
@@ -119,11 +123,22 @@ public class Movement : MonoBehaviour
                 private void OnCollisionEnter2D(Collision2D other) {
                 if (other.gameObject.tag == "ground")
                     Grounded = true;
+                    doubleJump = true;
                 }
 
                 private void OnCollisionExit2D(Collision2D other) {
                 if (other.gameObject.tag == "ground")
                     Grounded = false;
+                }
+
+
+                private void SuperJump()
+                {
+                    if (!Grounded && doubleJump)
+                    {
+                    GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, jump);
+                    doubleJump = false;
+                    }
                 }
                 
 }

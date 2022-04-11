@@ -21,10 +21,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A) && currentHealth != minHealth)
-        {
-            TakeDamage(2);
-        }
 
         if (Input.GetKeyDown(KeyCode.Space) && currentHealth != maxHealth)
         {
@@ -39,7 +35,7 @@ public class Player : MonoBehaviour
     }
 
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 
