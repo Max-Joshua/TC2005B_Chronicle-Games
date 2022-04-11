@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1499422095926654529}
   - component: {fileID: -8737872756506610828}
   - component: {fileID: 5574879558560582674}
-  - component: {fileID: -8374872413633371548}
   m_Layer: 5
   m_Name: LeftBar
   m_TagString: Untagged
@@ -120,16 +119,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8, y: 71}
   m_EdgeRadius: 0
---- !u!114 &-8374872413633371548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499422095926654535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04724e71b2ecf3e42addd80074126fa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pla: {fileID: 0}

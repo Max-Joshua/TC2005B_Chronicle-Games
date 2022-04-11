@@ -5,7 +5,9 @@ using UnityEngine;
 public class Instantiator : MonoBehaviour
 {
 public GameObject prefab;
-public float time;
+public float time_del;
+
+public float Timer;
 
 
 
@@ -20,10 +22,15 @@ public float time;
    // Update is called once per frame
    void Update () 
    {
-       if (Input.GetKeyDown(KeyCode.Space))
+
+       Timer -= Time.deltaTime;
+
+       if (Timer <= 0f)
         {
 
-            Destroy(Instantiate(prefab, transform), time);
+            Destroy(Instantiate(prefab, transform), time_del);
+
+            Timer = .5f;
             
         }
 
