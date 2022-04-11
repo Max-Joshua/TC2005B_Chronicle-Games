@@ -7,18 +7,17 @@ public class Trigger : MonoBehaviour
 {
 
      Player player;
-    GameObject pla;
-     void Awake()
+     public GameObject player_;
+     void Start()
      {
-         player = pla.GetComponent<Player>();
+         player = player_.GetComponent<Player>();
      }
 
 
     //Each time the bars hit the heart in the center, the player takes 2 damage 
-    //  void OnTriggerStay2D(Collider2D other)
-    //  {
-
-    //     player.TakeDamage(0);
-    //  }
+      void OnTriggerEnter2D(Collider2D other)
+      {
+        player.TakeDamage(0);
+      }
 
 }

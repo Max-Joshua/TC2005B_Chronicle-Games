@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/VideoGame/Menu/Menu.unity
     guid: dd32682dfb92e40489ba40a825871eca
   - enabled: 1
-    path: Assets/VideoGame/FirstLevel.unity
+    path: Assets/Scenes/FirstLevel.unity
     guid: 3be04a7eb566c7b43b4898a7d3743ef7
   m_configObjects: {}
