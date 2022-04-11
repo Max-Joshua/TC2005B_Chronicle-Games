@@ -6,10 +6,10 @@ public class Lines : MonoBehaviour
 {
 
    
-
-    public float HorizontalSpeed = 250 ;
-     public float MaxHorizontalPosition = 200 ;
-     public float MinHorizontalPosition = -200 ;
+    Player player;
+    public float HorizontalSpeed = 100 ;
+     public float MaxHorizontalPosition = 525 ;
+     public float MinHorizontalPosition = 50 ;
      
      // Please, name correctly your variables.
      // Yourself, in 3 months will be grateful    
@@ -33,6 +33,28 @@ public class Lines : MonoBehaviour
      
          rectTransform.anchoredPosition = position;
      }
+
+    //  public void OnTriggerEnter(Collider other)
+    //   {
+
+    //       Debug.Log("Lines");
+
+    //       Vector2 position = rectTransform.anchoredPosition;
+          
+    //       if (Input.GetKeyDown(KeyCode.Space) && player.currentHealth != player.maxHealth)
+    //         {
+    //             position.x = MinHorizontalPosition;
+    //             rectTransform.anchoredPosition = position;
+
+    //             if (player.currentHealth != player.maxHealth)
+    //             {
+    //                 player.Heal(10);
+    //             }
+    //         }
+          
+    //   }
+
+
 
 
 

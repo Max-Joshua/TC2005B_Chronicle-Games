@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: 8, y: 77.13}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &1499422095926654528
@@ -90,9 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3975d61efe633e43bacf7819c96517d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalSpeed: 100
-  MaxHorizontalPosition: 525
-  MinHorizontalPosition: 50
+  HorizontalSpeed: 400
+  MaxHorizontalPosition: 475
+  MinHorizontalPosition: 0
+  rectTransform: {fileID: 0}
 --- !u!61 &5574879558560582674
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -131,3 +132,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04724e71b2ecf3e42addd80074126fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pla: {fileID: 0}

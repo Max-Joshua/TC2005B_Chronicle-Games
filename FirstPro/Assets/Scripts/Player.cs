@@ -22,10 +22,10 @@ public class Player : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space) && currentHealth != maxHealth)
-        {
-            Heal(1);
-        }
+        // if (Input.GetKeyDown(KeyCode.Space) && currentHealth != maxHealth)
+        // {
+        //     Heal(1);
+        // }
 
         if (currentHealth <= minHealth)
         {
@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
 
     }
 
-    void Heal(int heal)
+    public void Heal(int heal)
     {
         currentHealth += heal;
 
