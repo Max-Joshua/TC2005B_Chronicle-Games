@@ -140,5 +140,9 @@ public class Movement : MonoBehaviour
                     doubleJump = false;
                     }
                 }
+
+
+
+                
                 
 }

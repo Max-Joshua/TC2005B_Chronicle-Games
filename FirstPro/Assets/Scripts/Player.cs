@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
 
     public HealthBar healthBar;
 
+    private Rigidbody2D rb2d;
+
+
 
     void Start()
     {
@@ -56,4 +59,19 @@ public class Player : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+
+
+
+        if (other.gameObject.tag == "Enemy")
+        {
+            TakeDamage(1);
+        }
+    }
+
+
 }
