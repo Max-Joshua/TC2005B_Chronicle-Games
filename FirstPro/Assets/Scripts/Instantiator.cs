@@ -11,10 +11,15 @@ public float Timer;
 
 
 
-    void Awake()
+    void Start()
     {
+
+
         Transform Rhythm = GameObject.FindWithTag("Rhythm").transform; 
+        
         transform.SetParent(Rhythm, false);
+        
+    
 
         
     }
@@ -23,17 +28,33 @@ public float Timer;
    void Update () 
    {
 
-       Timer -= Time.deltaTime;
+       
+       CreateBar();
+    
+   }
+
+
+    public void CreateBar ()
+    {
+
+
+        Timer -= Time.deltaTime;
+
+       
 
        if (Timer <= 0f)
         {
+            
+            GameObject Bar = Instantiate(prefab, transform);
 
-            Destroy(Instantiate(prefab, transform), time_del);
+            Destroy(Bar, time_del);
 
-            Timer = .5f;
+            Timer = 1f;
             
         }
 
-    
-   }
+
+    }
+
+
 }
