@@ -632,6 +632,7 @@ Transform:
   m_Children:
   - {fileID: 248075652}
   - {fileID: 190540065}
+  - {fileID: 1783028960}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -694,15 +695,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 810b40e582af19d4882ec73a650aa67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 35
+  walkSpeed: -35
+  range: 1.75
+  timeBTWShots: 2
+  shootSpeed: 5
   mustPatrol: 0
   mustTurn: 0
+  canShoot: 0
   rb: {fileID: 57310054}
   groundCheckPosition: {fileID: 190540065}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   bodyCollider: {fileID: 57310056}
+  player: {fileID: 1006492536}
+  shootPos: {fileID: 1783028960}
+  bullet: {fileID: 1277532067253020870, guid: 0763828fd1c586e46814fb75716e1522, type: 3}
 --- !u!61 &57310056
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -914,7 +922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190540064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.46, y: -0.27, z: 0}
+  m_LocalPosition: {x: 0.46, y: -0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 57310052}
@@ -1094,14 +1102,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 25
+  range: 4
+  timeBTWShots: 0
+  shootSpeed: 0
   mustPatrol: 0
   mustTurn: 0
+  canShoot: 0
   rb: {fileID: 203938231}
   groundCheckPosition: {fileID: 1178788194}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   bodyCollider: {fileID: 203938234}
+  player: {fileID: 1006492536}
+  shootPos: {fileID: 0}
+  bullet: {fileID: 0}
 --- !u!61 &203938234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1452,7 +1467,7 @@ Transform:
   m_GameObject: {fileID: 248075650}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 57310052}
   m_RootOrder: 0
@@ -12609,14 +12624,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 65
+  range: 4
+  timeBTWShots: 0
+  shootSpeed: 0
   mustPatrol: 0
   mustTurn: 0
+  canShoot: 0
   rb: {fileID: 1669127443}
   groundCheckPosition: {fileID: 986862941}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   bodyCollider: {fileID: 1669127445}
+  player: {fileID: 1006492536}
+  shootPos: {fileID: 0}
+  bullet: {fileID: 0}
 --- !u!1 &1729108222
 GameObject:
   m_ObjectHideFlags: 0
@@ -12781,6 +12803,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1783028959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1783028960}
+  m_Layer: 0
+  m_Name: shootPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1783028960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783028959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.488, y: 0.062, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 57310052}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1791023059
 GameObject:
   m_ObjectHideFlags: 0
