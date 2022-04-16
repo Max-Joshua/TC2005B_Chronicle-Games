@@ -711,6 +711,8 @@ MonoBehaviour:
   player: {fileID: 1006492536}
   shootPos: {fileID: 1783028960}
   bullet: {fileID: 1277532067253020870, guid: 0763828fd1c586e46814fb75716e1522, type: 3}
+  shootingSound: {fileID: 8300000, guid: dc4125e881858be459fb8acb11d441b3, type: 3}
+  hittingSound: {fileID: 0}
 --- !u!61 &57310056
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1117,6 +1119,8 @@ MonoBehaviour:
   player: {fileID: 1006492536}
   shootPos: {fileID: 0}
   bullet: {fileID: 0}
+  shootingSound: {fileID: 0}
+  hittingSound: {fileID: 0}
 --- !u!61 &203938234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12639,6 +12643,8 @@ MonoBehaviour:
   player: {fileID: 1006492536}
   shootPos: {fileID: 0}
   bullet: {fileID: 0}
+  shootingSound: {fileID: 0}
+  hittingSound: {fileID: 0}
 --- !u!1 &1729108222
 GameObject:
   m_ObjectHideFlags: 0
