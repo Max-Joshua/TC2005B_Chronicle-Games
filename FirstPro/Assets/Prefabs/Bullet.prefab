@@ -175,6 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 382838480a9e6294f8156b50763eb2ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dieTime: 10
-  damage: 3
+  dieTime: 4
+  damage: 5
   die: {fileID: 1277532067253020870}

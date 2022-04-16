@@ -5,23 +5,33 @@ using UnityEngine;
 public class enemyBullet : MonoBehaviour
 {
 
-    public float dieTime, damage;
+    Player player;
+    public float dieTime;
+    public int damage;
     public GameObject die;
+    
+    //Audio
 
     // Start is called before the first frame update
     void Start(){
         StartCoroutine(CountDownTimer());
     }
 
-    void OnCollisionEnter2D(Collision2D col) {
+    private void OnCollisionEnter2D(Collision2D collision) {
+        GameObject collisionGameObject = collision.gameObject;
+    
 
-    Die();
+        if(collisionGameObject.tag == "Player"){
 
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
+            if(collisionGameObject.GetComponent<Player>() != null){
+                
+                collisionGameObject.GetComponent<Player>().TakeDamage(damage);
+
+            }
+            Die();
+        }else{
+            Die();
+        }
     }
 
     IEnumerator CountDownTimer(){
