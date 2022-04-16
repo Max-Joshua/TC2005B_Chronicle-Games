@@ -89,10 +89,9 @@ public class AiPatrol : MonoBehaviour
         yield return new WaitForSeconds(timeBTWShots);
         GameObject newBullet = Instantiate(bullet, shootPos.position, Quaternion.identity);
 
-
         newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * walkSpeed * Time.fixedDeltaTime, 0f);    
 
-        audioSource.PlayOneShot(shootingSound);
+    
         
             
         canShoot = true;
