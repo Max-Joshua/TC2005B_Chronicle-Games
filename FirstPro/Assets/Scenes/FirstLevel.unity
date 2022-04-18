@@ -710,9 +710,7 @@ MonoBehaviour:
   bodyCollider: {fileID: 57310056}
   player: {fileID: 1006492536}
   shootPos: {fileID: 1783028960}
-  bullet: {fileID: 1277532067253020870, guid: 0763828fd1c586e46814fb75716e1522, type: 3}
-  shootingSound: {fileID: 8300000, guid: dc4125e881858be459fb8acb11d441b3, type: 3}
-  hittingSound: {fileID: 0}
+  Bullet: {fileID: 1277532067253020870, guid: 0763828fd1c586e46814fb75716e1522, type: 3}
 --- !u!61 &57310056
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1118,9 +1116,7 @@ MonoBehaviour:
   bodyCollider: {fileID: 203938234}
   player: {fileID: 1006492536}
   shootPos: {fileID: 0}
-  bullet: {fileID: 0}
-  shootingSound: {fileID: 0}
-  hittingSound: {fileID: 0}
+  Bullet: {fileID: 0}
 --- !u!61 &203938234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5548,7 +5544,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3b5f55f2e5777734a8a34e27ec7ff149, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b262a42526fad1b438770ef2c122bae2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -12642,9 +12638,7 @@ MonoBehaviour:
   bodyCollider: {fileID: 1669127445}
   player: {fileID: 1006492536}
   shootPos: {fileID: 0}
-  bullet: {fileID: 0}
-  shootingSound: {fileID: 0}
-  hittingSound: {fileID: 0}
+  Bullet: {fileID: 0}
 --- !u!1 &1729108222
 GameObject:
   m_ObjectHideFlags: 0

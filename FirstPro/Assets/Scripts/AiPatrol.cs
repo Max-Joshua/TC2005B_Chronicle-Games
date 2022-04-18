@@ -16,18 +16,16 @@ public class AiPatrol : MonoBehaviour
     public LayerMask groundLayer;
     public Collider2D bodyCollider;
     public Transform player, shootPos;
-    public GameObject bullet;
+    public GameObject Bullet;
 
     //Audio
-    private AudioSource audioSource;
-    [SerializeField] AudioClip shootingSound;
-    [SerializeField] AudioSource hittingSound;
+
     bool isPlaying = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = gameObject.GetComponent<AudioSource>();
+
         mustPatrol = true;
         canShoot = true;
     }
@@ -87,12 +85,9 @@ public class AiPatrol : MonoBehaviour
         canShoot = false;
         //Shoot
         yield return new WaitForSeconds(timeBTWShots);
-        GameObject newBullet = Instantiate(bullet, shootPos.position, Quaternion.identity);
+        GameObject newBullet = Instantiate(Bullet, shootPos.position, Quaternion.identity);
 
         newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * walkSpeed * Time.fixedDeltaTime, 0f);    
-
-    
-        
             
         canShoot = true;
         

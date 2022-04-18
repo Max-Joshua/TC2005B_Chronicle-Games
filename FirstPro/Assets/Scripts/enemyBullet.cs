@@ -9,12 +9,16 @@ public class enemyBullet : MonoBehaviour
     public float dieTime;
     public int damage;
     public GameObject die;
+    public AudioClip hitSource;
     
     //Audio
 
     // Start is called before the first frame update
     void Start(){
+
+        
         StartCoroutine(CountDownTimer());
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
@@ -23,12 +27,19 @@ public class enemyBullet : MonoBehaviour
 
         if(collisionGameObject.tag == "Player"){
 
+            
+            Debug.Log("NRUDFJFFFFFFF");
+
             if(collisionGameObject.GetComponent<Player>() != null){
                 
                 collisionGameObject.GetComponent<Player>().TakeDamage(damage);
-
+                AudioSource.PlayClipAtPoint(hitSource, transform.position);
             }
-            Die();
+            
+            
+            StartCoroutine(quickDead());
+        
+            quickDead();
         }else{
             Die();
         }
@@ -37,6 +48,12 @@ public class enemyBullet : MonoBehaviour
     IEnumerator CountDownTimer(){
 
         yield return new WaitForSeconds(dieTime);
+
+        Die();
+    }
+
+    IEnumerator quickDead(){
+        yield return new WaitForSeconds(0.1f);
 
         Die();
     }
