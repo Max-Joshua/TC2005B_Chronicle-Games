@@ -9,6 +9,8 @@ public class TriggerSpace : MonoBehaviour
     Lines line;
 
     public bool Damage;
+
+    public bool canHeal = true;
     
     bool canPress = false;
     
@@ -30,12 +32,13 @@ public class TriggerSpace : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && canPress)
         {
             Debug.Log("Pressed");
-            if ( player.currentHealth != player.maxHealth)
+            if ((player.currentHealth != player.maxHealth) && canHeal )
             {
 
 
                 player.Heal(1);
                 Debug.Log("Healed!");
+                canHeal = false;
 
                 
                     
@@ -50,7 +53,7 @@ public class TriggerSpace : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && !canPress)
         {
-            player.TakeDamage(1);
+            player.TakeDamage(0);
 
             Debug.Log("Missed!");
         }
@@ -79,6 +82,7 @@ public class TriggerSpace : MonoBehaviour
         }
 
         Damage = true;
+        canHeal = true;
     }
 
 }

@@ -4694,6 +4694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
+  canHeal: 1
   pla: {fileID: 1006492535}
 --- !u!50 &896294402
 Rigidbody2D:
@@ -4729,7 +4730,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 25.832687, y: -2.6735535}
+  m_Offset: {x: 45.077316, y: -2.6735535}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4740,7 +4741,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.518097, y: 61.68213}
+  m_Size: {x: 27.054413, y: 61.68213}
   m_EdgeRadius: 0
 --- !u!114 &896294404
 MonoBehaviour:
@@ -11519,7 +11520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -2.1, y: 5}
   m_SizeDelta: {x: 950, y: 77.1301}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1334608144
@@ -11535,7 +11536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1499422095926654535, guid: 1b6ee684e179a2e4aa86607658510016, type: 3}
-  time_del: 1.2
+  time_del: 1.21
   Timer: 0
 --- !u!114 &1334608145
 MonoBehaviour:
@@ -11550,7 +11551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4850157455224065049, guid: 148e1321d456f604999fdeb7788b8af1, type: 3}
-  time_del: 1.2
+  time_del: 1.21
   Timer: 0
 --- !u!1 &1370004261
 GameObject:
