@@ -28,6 +28,7 @@ public class AiPatrol : MonoBehaviour
 
         mustPatrol = true;
         canShoot = true;
+        
     }
 
     // Update is called once per frame
@@ -91,5 +92,5 @@ public class AiPatrol : MonoBehaviour
             
         canShoot = true;
         
-    }
-}       
+    }    
+}

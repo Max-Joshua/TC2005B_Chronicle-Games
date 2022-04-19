@@ -10,14 +10,15 @@ public class enemyBullet : MonoBehaviour
     public int damage;
     public GameObject die;
     public AudioClip hitSource;
-    
-    //Audio
 
     // Start is called before the first frame update
     void Start(){
 
         
         StartCoroutine(CountDownTimer());
+        Transform Bullet = GameObject.FindWithTag("crowBullet").transform; 
+        
+        transform.SetParent(Bullet, false);
         
     }
 
@@ -42,6 +43,7 @@ public class enemyBullet : MonoBehaviour
             quickDead();
         }else{
             Die();
+
         }
     }
 
