@@ -10,6 +10,7 @@ public class enemyBullet : MonoBehaviour
     public int damage;
     public GameObject die;
     public AudioClip hitSource;
+    public Camera mainCamera;
 
     // Start is called before the first frame update
     void Start(){
@@ -33,6 +34,8 @@ public class enemyBullet : MonoBehaviour
             if(collisionGameObject.GetComponent<Player>() != null){
                 
                 collisionGameObject.GetComponent<Player>().TakeDamage(damage);
+                mainCamera.GetComponent<CameraShake>().TriggerShake();
+
                 AudioSource.PlayClipAtPoint(hitSource, transform.position);
             }
             

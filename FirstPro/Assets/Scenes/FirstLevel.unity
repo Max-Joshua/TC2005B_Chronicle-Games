@@ -740,7 +740,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 57310056}
   player: {fileID: 1006492536}
   shootPos: {fileID: 1783028960}
@@ -1057,7 +1057,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 139789190}
   player: {fileID: 1006492536}
   shootPos: {fileID: 1163242746}
@@ -1423,7 +1423,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 203938234}
   player: {fileID: 1006492536}
   shootPos: {fileID: 817165327}
@@ -2178,7 +2178,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 326891030}
   player: {fileID: 1006492536}
   shootPos: {fileID: 1547694856}
@@ -3627,7 +3627,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 563874877}
   player: {fileID: 1006492536}
   shootPos: {fileID: 23604021}
@@ -4246,7 +4246,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 639065207}
   player: {fileID: 1006492536}
   shootPos: {fileID: 1242522120}
@@ -5102,7 +5102,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 704200459}
   player: {fileID: 1006492536}
   shootPos: {fileID: 319267705}
@@ -7031,7 +7031,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 842156511}
   player: {fileID: 1006492536}
   shootPos: {fileID: 884697735}
@@ -14389,7 +14389,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 1299328852}
   player: {fileID: 1006492536}
   shootPos: {fileID: 1879960163}
@@ -15346,7 +15346,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 1502749778}
   player: {fileID: 1006492536}
   shootPos: {fileID: 442579455}
@@ -15780,7 +15780,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 1534737229}
   player: {fileID: 1006492536}
   shootPos: {fileID: 886188398}
@@ -16846,7 +16846,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 1741995335}
   player: {fileID: 1006492536}
   shootPos: {fileID: 108826969}
@@ -17077,7 +17077,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 1785172620}
   player: {fileID: 1006492536}
   shootPos: {fileID: 317349579}
@@ -17254,7 +17254,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 1807773252}
   player: {fileID: 1006492536}
   shootPos: {fileID: 562991709}
@@ -30601,7 +30601,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 1955310703}
   player: {fileID: 1006492536}
   shootPos: {fileID: 301702148}
@@ -30742,7 +30742,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 1958482806}
   player: {fileID: 1006492536}
   shootPos: {fileID: 1717151455}
@@ -30965,7 +30965,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 1993974148}
   player: {fileID: 1006492536}
   shootPos: {fileID: 1036705823}
@@ -31106,7 +31106,7 @@ MonoBehaviour:
     m_Bits: 64
   Enemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bodyCollider: {fileID: 1995867498}
   player: {fileID: 1006492536}
   shootPos: {fileID: 1256001629}
@@ -31821,8 +31821,9 @@ GameObject:
   - component: {fileID: 2136161190}
   - component: {fileID: 2136161189}
   - component: {fileID: 2136161194}
+  - component: {fileID: 2136161191}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31870,6 +31871,22 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136161188}
   m_Enabled: 1
+--- !u!114 &2136161191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136161188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a702e6c44769b408ee9ae80ab428d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transform: {fileID: 2136161193}
+  shakeDuration: 4
+  shakeMagnitude: 10000
+  dampingSpeed: 4
 --- !u!20 &2136161192
 Camera:
   m_ObjectHideFlags: 0

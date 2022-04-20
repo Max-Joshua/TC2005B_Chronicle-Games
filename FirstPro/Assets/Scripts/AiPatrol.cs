@@ -71,7 +71,6 @@ public class AiPatrol : MonoBehaviour
 
     void Patrol(){
         if(mustTurn || bodyCollider.IsTouchingLayers(groundLayer) || bodyCollider.IsTouchingLayers(Enemies)){
-            Debug.Log("IM TOUCHING AN ENEMY OR A WALL!!!!!");
             Flip();
         }
         rb.velocity = new Vector2(walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
