@@ -14,6 +14,7 @@ public class AiPatrol : MonoBehaviour
     public Rigidbody2D rb;
     public Transform groundCheckPosition;
     public LayerMask groundLayer;
+    public LayerMask Enemies;
     public Collider2D bodyCollider;
     public Transform player, shootPos;
     public GameObject Bullet;
@@ -69,7 +70,8 @@ public class AiPatrol : MonoBehaviour
     }
 
     void Patrol(){
-        if(mustTurn || bodyCollider.IsTouchingLayers(groundLayer)){
+        if(mustTurn || bodyCollider.IsTouchingLayers(groundLayer) || bodyCollider.IsTouchingLayers(Enemies)){
+            Debug.Log("IM TOUCHING AN ENEMY OR A WALL!!!!!");
             Flip();
         }
         rb.velocity = new Vector2(walkSpeed * Time.fixedDeltaTime, rb.velocity.y);

@@ -17,8 +17,7 @@ public class enemyBullet : MonoBehaviour
         
         StartCoroutine(CountDownTimer());
         Transform Bullet = GameObject.FindWithTag("crowBullet").transform; 
-        
-        transform.SetParent(Bullet, false);
+    
         
     }
 
