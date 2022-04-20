@@ -195,7 +195,8 @@ MonoBehaviour:
   damage: 2
   die: {fileID: 1277532067253020870}
   hitSource: {fileID: 8300000, guid: b262a42526fad1b438770ef2c122bae2, type: 3}
-  shaker: {fileID: 0}
+  playerTransform: {fileID: 0}
+  HitScreen: {fileID: 1168220755072945272, guid: a43db67539f38f444be705010ff198ed, type: 3}
 --- !u!82 &861150767512268110
 AudioSource:
   m_ObjectHideFlags: 0
