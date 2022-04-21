@@ -40,13 +40,8 @@ public class TriggerSpace : MonoBehaviour
                 Debug.Log("Healed!");
                 canHeal = false;
 
-                
                     
             }
-
-
-           
-
             Damage = false;
 
         }

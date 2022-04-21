@@ -49,7 +49,7 @@ public float Timer;
 
             Destroy(Bar, time_del);
 
-            Timer = 0.7f;
+            Timer = 60f/70f;
             
         }
 

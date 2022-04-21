@@ -35,7 +35,7 @@ public class enemyBullet : MonoBehaviour
             if(collisionGameObject.GetComponent<Player>() != null){
                 
                 collisionGameObject.GetComponent<Player>().TakeDamage(damage);
-                CinemachineShake.Instance.ShakeCamera(5F, .2F);
+                CinemachineShake.Instance.ShakeCamera(2F, .2F);
 
                 GameObject newHitScreen = Instantiate(HitScreen, collisionGameObject.transform.position, Quaternion.identity);
                 newHitScreen.transform.parent = gameObject.transform;
