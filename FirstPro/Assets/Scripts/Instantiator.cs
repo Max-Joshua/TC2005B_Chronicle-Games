@@ -19,7 +19,7 @@ public float Timer;
         
         transform.SetParent(Rhythm, false);
         
-    
+        Timer =  (60f/70f)/2;
 
         
     }
