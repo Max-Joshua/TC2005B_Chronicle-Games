@@ -9,12 +9,21 @@ public class TriggerSpace : MonoBehaviour
     public bool Damage;
     public bool canHeal = true;
     bool canPress = false;
+
+    //Particles and animations
     public ParticleSystem Explosion;
+    private Animator animator;
     
      [SerializeField] GameObject pla;
+
+    void Start(){
+        animator = GetComponent<Animator>();
+    }
+    
      void Awake()
      {
          player = pla.GetComponent<Player>();
+         
      }
 
 
@@ -26,6 +35,7 @@ public class TriggerSpace : MonoBehaviour
         {
             Explosion.Play();
             CinemachineShake.Instance.ShakeCamera(0.05F, .1F);
+            animator.SetBool("isHealing", true);
 
             Debug.Log("Pressed");
             if ((player.currentHealth != player.maxHealth) && canHeal )
@@ -36,14 +46,18 @@ public class TriggerSpace : MonoBehaviour
                 canHeal = false;
             }
             Damage = false;
-
+            
+        }else{
+            animator.SetBool("isHealing", false);
         }
+        
 
         if (Input.GetKeyDown(KeyCode.Space) && !canPress)
         {
             player.TakeDamage(0);
 
             Debug.Log("Missed!");
+            animator.SetBool("isHealing", false);
         }
 
      }
