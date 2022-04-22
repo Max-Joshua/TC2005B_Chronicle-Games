@@ -47,11 +47,11 @@ public class TriggerSpace : MonoBehaviour
                 
                     GameObject newBullet = Instantiate(Bullet, shootPos.position, Quaternion.identity);
                     
-                    if(player.transform.localScale.x < -1){
+                    if(player.transform.localScale.x <= -1){
                         newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(movementScript.shootSpeed * -movementScript.speed * Time.fixedDeltaTime, 0f);    
                         player.UsePower();
                     }else{
-                        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(movementScript.shootSpeed * -movementScript.speed * Time.fixedDeltaTime, 0f);    
+                        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(movementScript.shootSpeed * movementScript.speed * Time.fixedDeltaTime, 0f);    
                         player.UsePower();
                     }
                 
