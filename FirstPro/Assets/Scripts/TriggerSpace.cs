@@ -43,12 +43,13 @@ public class TriggerSpace : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && canPress && canShoot)
         {
-            if(Input.GetKeyDown(KeyCode.E) && (player.currentPower >= 0 && player.currentPower <= 3)){
+            if(Input.GetKeyDown(KeyCode.E) && (player.currentPower >= 0 && player.currentPower == 3)){
                 
                     GameObject newBullet = Instantiate(Bullet, shootPos.position, Quaternion.identity);
                     
                     if(player.transform.localScale.x <= -1){
-                        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(movementScript.shootSpeed * -movementScript.speed * Time.fixedDeltaTime, 0f);    
+                        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(movementScript.shootSpeed * -movementScript.speed * Time.fixedDeltaTime, 0f);
+                        newBullet.transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);    
                         player.UsePower();
                     }else{
                         newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(movementScript.shootSpeed * movementScript.speed * Time.fixedDeltaTime, 0f);    

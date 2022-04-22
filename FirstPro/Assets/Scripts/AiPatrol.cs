@@ -21,6 +21,7 @@ public class AiPatrol : MonoBehaviour
 
     //Audio
     bool isPlaying = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -44,8 +45,9 @@ public class AiPatrol : MonoBehaviour
 
             if(player.position.x > transform.position.x && transform.localScale.x < 0
                 || player.position.x < transform.position.x && transform.localScale.x > 0){
-                
+
                 Flip();
+
                 
             }
 
@@ -70,12 +72,14 @@ public class AiPatrol : MonoBehaviour
 
     void Patrol(){
         if(mustTurn || bodyCollider.IsTouchingLayers(groundLayer) || bodyCollider.IsTouchingLayers(Enemies)){
+
             Flip();
         }
         rb.velocity = new Vector2(walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
     }
 
     void Flip(){
+
         mustPatrol = false;
         gameObject.transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         walkSpeed *= -1;
@@ -88,8 +92,15 @@ public class AiPatrol : MonoBehaviour
         yield return new WaitForSeconds(timeBTWShots);
         GameObject newBullet = Instantiate(Bullet, shootPos.position, Quaternion.identity);
 
-        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * walkSpeed * Time.fixedDeltaTime, 0f);    
-            
+        if(gameObject.transform.localScale.x <= -1){
+            Debug.Log("Shoot Left");
+            newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * walkSpeed * Time.fixedDeltaTime, 0f);
+            newBullet.transform.localScale = new Vector2(transform.localScale.x + .3f, transform.localScale.y - .3f);      
+        }else{
+            Debug.Log("Shoot Right");
+            newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * walkSpeed * Time.fixedDeltaTime, 0f);
+        
+        }
         canShoot = true;
         
     }
