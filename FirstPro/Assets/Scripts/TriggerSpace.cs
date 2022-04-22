@@ -5,28 +5,21 @@ using UnityEngine;
 public class TriggerSpace : MonoBehaviour
 {
     Player player;
-
     Lines line;
-
     public bool Damage;
-
     public bool canHeal = true;
-    
     bool canPress = false;
+    public ParticleSystem Explosion;
     
      [SerializeField] GameObject pla;
      void Awake()
      {
          player = pla.GetComponent<Player>();
-         
-        
-
      }
 
 
      void Update()
      {
-
          transform.SetAsLastSibling();
 
         if (Input.GetKeyDown(KeyCode.Space) && canPress)
@@ -34,13 +27,10 @@ public class TriggerSpace : MonoBehaviour
             Debug.Log("Pressed");
             if ((player.currentHealth != player.maxHealth) && canHeal )
             {
-
-
+                Explosion.Play();
                 player.Heal(1);
                 Debug.Log("Healed!");
                 canHeal = false;
-
-                    
             }
             Damage = false;
 
