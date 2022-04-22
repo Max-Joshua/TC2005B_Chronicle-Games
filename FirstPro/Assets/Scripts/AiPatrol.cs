@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AiPatrol : MonoBehaviour
 {
-    public float walkSpeed, range, timeBTWShots, shootSpeed;
+    public float walkSpeed, range, timeBTWShots, shootSpeed, health;
     private float distToPlayer;
 
     [HideInInspector]
@@ -93,5 +93,19 @@ public class AiPatrol : MonoBehaviour
             
         canShoot = true;
         
-    }    
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if(health <= 0){
+            Die();
+        }
+    }
+
+    public void Die(){
+        Destroy(gameObject);
+    }
+
 }

@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: febbed7e419941d48a0eea7086fe7ef3
+guid: 6ef3226fa7d75d54cb4d0549663354fd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3499586986166329302
-    second: bullet-Sheet_0
+      213: -2300350016739478509
+    second: bullet-gordilla-Sheet_0
   - first:
-      213: -9136901373799878502
-    second: bullet-Sheet_1
+      213: -7419528066482131165
+    second: bullet-gordilla-Sheet_1
   - first:
-      213: -3101984766516748559
-    second: bullet-Sheet_2
+      213: -2931041704366665817
+    second: bullet-gordilla-Sheet_2
   - first:
-      213: 6382557618825938842
-    second: bullet-Sheet_3
+      213: 7198704405594906243
+    second: bullet-gordilla-Sheet_3
   - first:
-      213: 785445828736974634
-    second: bullet-Sheet_4
+      213: -1300080589641810611
+    second: bullet-gordilla-Sheet_4
   - first:
-      213: 704530802297223075
-    second: bullet-Sheet_5
+      213: 2174113473525030372
+    second: bullet-gordilla-Sheet_5
   - first:
-      213: 821548642288118086
-    second: bullet-Sheet_6
+      213: -192789769839345510
+    second: bullet-gordilla-Sheet_6
   - first:
-      213: -7657511384987098333
-    second: bullet-Sheet_7
+      213: -6116485802432100252
+    second: bullet-gordilla-Sheet_7
   - first:
-      213: -7183848749854419385
-    second: bullet-Sheet_8
+      213: -839183772640990549
+    second: bullet-gordilla-Sheet_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -95,7 +95,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -107,7 +107,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,7 +119,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -130,7 +130,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bullet-Sheet_0
+      name: bullet-gordilla-Sheet_0
       rect:
         serializedVersion: 2
         x: 22
@@ -144,14 +144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a20e9fc7d28fe6fc0800000000000000
-      internalID: -3499586986166329302
+      spriteID: 314fd29f8d38310e0800000000000000
+      internalID: -2300350016739478509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet-Sheet_1
+      name: bullet-gordilla-Sheet_1
       rect:
         serializedVersion: 2
         x: 118
@@ -165,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9031e22c94333180800000000000000
-      internalID: -9136901373799878502
+      spriteID: 32faa4ca88a880990800000000000000
+      internalID: -7419528066482131165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet-Sheet_2
+      name: bullet-gordilla-Sheet_2
       rect:
         serializedVersion: 2
         x: 218
@@ -186,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fe98153a4983f4d0800000000000000
-      internalID: -3101984766516748559
+      spriteID: 7af8e556919d257d0800000000000000
+      internalID: -2931041704366665817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet-Sheet_3
+      name: bullet-gordilla-Sheet_3
       rect:
         serializedVersion: 2
         x: 250
@@ -207,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a97459c8656639850800000000000000
-      internalID: 6382557618825938842
+      spriteID: 38e168a348fe6e360800000000000000
+      internalID: 7198704405594906243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet-Sheet_4
+      name: bullet-gordilla-Sheet_4
       rect:
         serializedVersion: 2
         x: 314
@@ -228,14 +228,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2ffd2cd1d676ea00800000000000000
-      internalID: 785445828736974634
+      spriteID: d4df403879f25fde0800000000000000
+      internalID: -1300080589641810611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet-Sheet_5
+      name: bullet-gordilla-Sheet_5
       rect:
         serializedVersion: 2
         x: 346
@@ -249,14 +249,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a73f3c280ff6c900800000000000000
-      internalID: 704530802297223075
+      spriteID: 4ed99da6fa00c2e10800000000000000
+      internalID: 2174113473525030372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet-Sheet_6
+      name: bullet-gordilla-Sheet_6
       rect:
         serializedVersion: 2
         x: 408
@@ -270,14 +270,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 649a94d232ab66b00800000000000000
-      internalID: 821548642288118086
+      spriteID: a90856cc9b2135df0800000000000000
+      internalID: -192789769839345510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet-Sheet_7
+      name: bullet-gordilla-Sheet_7
       rect:
         serializedVersion: 2
         x: 504
@@ -291,14 +291,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 323a55277fd0bb590800000000000000
-      internalID: -7657511384987098333
+      spriteID: 4688058b190ed1ba0800000000000000
+      internalID: -6116485802432100252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet-Sheet_8
+      name: bullet-gordilla-Sheet_8
       rect:
         serializedVersion: 2
         x: 594
@@ -312,8 +312,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7461bc8af97dd4c90800000000000000
-      internalID: -7183848749854419385
+      spriteID: baa26721ece9a54f0800000000000000
+      internalID: -839183772640990549
       vertices: []
       indices: 
       edges: []

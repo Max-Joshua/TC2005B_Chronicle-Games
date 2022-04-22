@@ -318,6 +318,36 @@ Transform:
   m_Father: {fileID: 563874881}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &37511498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37511499}
+  m_Layer: 0
+  m_Name: shootPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &37511499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37511498}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.43, y: -0.02, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1006492536}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &38620512
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,8 +694,8 @@ Transform:
   - {fileID: 248075652}
   - {fileID: 190540065}
   - {fileID: 1783028960}
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 2026622240}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &57310053
 BoxCollider2D:
@@ -730,6 +760,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
+  health: 55
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -1047,6 +1078,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
+  health: 55
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -1123,8 +1155,8 @@ Transform:
   - {fileID: 1110209544}
   - {fileID: 1654041759}
   - {fileID: 1163242746}
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 2026622240}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &142107251
 GameObject:
@@ -6285,6 +6317,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
+  health: 80
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -7122,6 +7155,7 @@ MonoBehaviour:
   range: 2
   timeBTWShots: 1
   shootSpeed: 5
+  health: 30
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -7198,8 +7232,8 @@ Transform:
   - {fileID: 1046408640}
   - {fileID: 1547694856}
   - {fileID: 2012076015}
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 1258956282}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &334449491
 GameObject:
@@ -8687,6 +8721,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
+  health: 55
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -8763,8 +8798,8 @@ Transform:
   - {fileID: 693179931}
   - {fileID: 1453161577}
   - {fileID: 23604021}
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 2026622240}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &565799460
 GameObject:
@@ -9306,6 +9341,7 @@ MonoBehaviour:
   range: 2
   timeBTWShots: 1
   shootSpeed: 5
+  health: 30
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -9382,8 +9418,8 @@ Transform:
   - {fileID: 1349532307}
   - {fileID: 1242522120}
   - {fileID: 86936633}
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_Father: {fileID: 1258956282}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &642767358
 GameObject:
@@ -10152,6 +10188,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
+  health: 80
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -12081,6 +12118,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
+  health: 80
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -12523,8 +12561,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 1
   canHeal: 1
+  Bullet: {fileID: 1277532067253020870, guid: 182d5763bbd00fd4db981adeb717fcf1, type: 3}
+  shootPos: {fileID: 37511499}
+  movementScript: {fileID: 1006492538}
   Explosion: {fileID: 2065179422}
   pla: {fileID: 1006492535}
+  canShoot: 0
 --- !u!50 &896294402
 Rigidbody2D:
   serializedVersion: 4
@@ -13345,6 +13387,7 @@ Transform:
   m_Children:
   - {fileID: 1277202875}
   - {fileID: 2065179420}
+  - {fileID: 37511499}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13419,7 +13462,9 @@ MonoBehaviour:
   jumping: {fileID: 8300000, guid: 3b5f55f2e5777734a8a34e27ec7ff149, type: 3}
   walking: {fileID: 1006492545}
   speed: 3
+  shootSpeed: 5
   jump: 4.8
+  moveVelocity: 0
   Grounded: 0
   doubleJump: 0
 --- !u!50 &1006492539
@@ -14574,6 +14619,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1995867502}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1258956281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1258956282}
+  m_Layer: 0
+  m_Name: FOXES
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1258956282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258956281}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1807773256}
+  - {fileID: 326891034}
+  - {fileID: 1995867502}
+  - {fileID: 639065211}
+  - {fileID: 1993974152}
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1274515728
 GameObject:
@@ -19558,6 +19638,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
+  health: 80
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -20519,6 +20600,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
+  health: 55
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -20595,8 +20677,8 @@ Transform:
   - {fileID: 1658566244}
   - {fileID: 1662262469}
   - {fileID: 442579455}
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 2026622240}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1514606717
 GameObject:
@@ -20953,6 +21035,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
+  health: 80
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -22055,6 +22138,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
+  health: 55
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -22131,8 +22215,8 @@ Transform:
   - {fileID: 1847228649}
   - {fileID: 1827749865}
   - {fileID: 108826969}
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 2026622240}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1766880334
 GameObject:
@@ -22286,6 +22370,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
+  health: 55
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -22362,8 +22447,8 @@ Transform:
   - {fileID: 1577401977}
   - {fileID: 1598617908}
   - {fileID: 317349579}
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 2026622240}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1791023059
 GameObject:
@@ -22463,6 +22548,7 @@ MonoBehaviour:
   range: 2
   timeBTWShots: 1
   shootSpeed: 5
+  health: 30
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -22539,8 +22625,8 @@ Transform:
   - {fileID: 914629666}
   - {fileID: 562991709}
   - {fileID: 334449492}
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 1258956282}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1827749864
 GameObject:
@@ -35810,6 +35896,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
+  health: 55
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -35886,8 +35973,8 @@ Transform:
   - {fileID: 1554706373}
   - {fileID: 1783867631}
   - {fileID: 301702148}
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 2026622240}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1958482805
 GameObject:
@@ -35951,6 +36038,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
+  health: 80
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -36174,6 +36262,7 @@ MonoBehaviour:
   range: 2
   timeBTWShots: 1
   shootSpeed: 5
+  health: 30
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -36250,8 +36339,8 @@ Transform:
   - {fileID: 998164271}
   - {fileID: 1036705823}
   - {fileID: 1850765132}
-  m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_Father: {fileID: 1258956282}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1995867497
 GameObject:
@@ -36315,6 +36404,7 @@ MonoBehaviour:
   range: 2
   timeBTWShots: 1
   shootSpeed: 5
+  health: 30
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -36391,8 +36481,8 @@ Transform:
   - {fileID: 901383145}
   - {fileID: 1256001629}
   - {fileID: 690753194}
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 1258956282}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2012076014
 GameObject:
@@ -36496,6 +36586,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2026622239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2026622240}
+  m_Layer: 7
+  m_Name: CROWS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2026622240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026622239}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 57310052}
+  - {fileID: 1741995339}
+  - {fileID: 1955310707}
+  - {fileID: 139789194}
+  - {fileID: 563874881}
+  - {fileID: 1785172624}
+  - {fileID: 1502749782}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2048133824
 GameObject:
   m_ObjectHideFlags: 0

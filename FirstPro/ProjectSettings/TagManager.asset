@@ -8,6 +8,7 @@ TagManager:
   - Rhythm
   - Enemy
   - crowBullet
+  - playerBullet
   layers:
   - Default
   - TransparentFX

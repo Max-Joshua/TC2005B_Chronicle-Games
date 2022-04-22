@@ -20,9 +20,9 @@ public class Movement : MonoBehaviour
     bool isWalking;
 
     //Movement
-    public float speed;
+    public float speed, shootSpeed;
     public float jump;
-    float moveVelocity;
+    public float moveVelocity;
     private Animator animator;
     public bool Grounded;
 

@@ -9,6 +9,9 @@ public class TriggerSpace : MonoBehaviour
     public bool Damage;
     public bool canHeal = true;
     bool canPress = false;
+    public GameObject Bullet;
+    public Transform shootPos;
+    public Movement movementScript;
 
     //Particles and animations
     public ParticleSystem Explosion;
@@ -16,8 +19,12 @@ public class TriggerSpace : MonoBehaviour
     
      [SerializeField] GameObject pla;
 
+    [HideInInspector]
+    public bool canShoot;
+
     void Start(){
         animator = GetComponent<Animator>();
+        canShoot = true;
     }
     
      void Awake()
@@ -31,8 +38,16 @@ public class TriggerSpace : MonoBehaviour
      {
          transform.SetAsLastSibling();
 
-        if (Input.GetKeyDown(KeyCode.Space) && canPress)
+        if (Input.GetKeyDown(KeyCode.Space) && canPress && canShoot)
         {
+            if(Input.GetKeyDown(KeyCode.E)){
+                
+                    GameObject newBullet = Instantiate(Bullet, shootPos.position, Quaternion.identity);
+                    newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(movementScript.shootSpeed * movementScript.moveVelocity * Time.fixedDeltaTime, 0f);    
+
+                
+            }
+
             Explosion.Play();
             CinemachineShake.Instance.ShakeCamera(0.05F, .1F);
             animator.SetBool("isHealing", true);
@@ -69,6 +84,7 @@ public class TriggerSpace : MonoBehaviour
     {
 
         canPress = true;
+        canShoot = true;
 
     }
 
@@ -76,6 +92,7 @@ public class TriggerSpace : MonoBehaviour
     {
 
         canPress = false;
+        canShoot = false;
 
         if (Damage)
         {
