@@ -5,21 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-
+    //Health Bar Attributes
     private int minHealth = 0;
     public int maxHealth = 20;
     public int currentHealth;
 
+    private int minPower = 0;
+    public int maxPower = 3;
+    public int currentPower;
+
     public HealthBar healthBar;
+    public powerBar powerBar;
 
     private Rigidbody2D rb2d;
-
-
 
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth); 
+
+        currentPower = maxPower;
+        powerBar.SetMaxPower(maxPower); 
     }
 
     void Update()
@@ -34,7 +40,10 @@ public class Player : MonoBehaviour
         {
             Restart();
         }
-
+        if (currentPower <= minPower)
+        {
+            currentPower = minPower;
+        }
     }
 
 
@@ -52,7 +61,17 @@ public class Player : MonoBehaviour
         healthBar.SetHeatlh(currentHealth);
     }
 
+    public void UsePower(){
+        currentPower -= 3;
+        powerBar.SetPowerPoints(currentPower);
+    }
 
+    public void RegainPower()
+    {
+        currentPower += 1;
+
+        powerBar.SetPowerPoints(currentPower);
+    }
 
     void Restart()
     {
@@ -64,9 +83,7 @@ public class Player : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
 
-
-
-        if (other.gameObject.tag == "Enemy")
+    if (other.gameObject.tag == "Enemy")
         {
             TakeDamage(1);
         }

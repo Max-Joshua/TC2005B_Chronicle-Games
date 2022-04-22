@@ -7,7 +7,7 @@ public class powerBar : MonoBehaviour
 {
     public Slider slider;
 
-    public void SetPointsForPower(int powerPoints)
+    public void SetMaxPower(int powerPoints)
     {
         slider.maxValue = powerPoints;
         slider.value = powerPoints;

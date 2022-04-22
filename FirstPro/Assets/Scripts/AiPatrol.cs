@@ -20,7 +20,6 @@ public class AiPatrol : MonoBehaviour
     public GameObject Bullet;
 
     //Audio
-
     bool isPlaying = false;
 
     // Start is called before the first frame update

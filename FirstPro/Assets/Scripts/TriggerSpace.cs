@@ -6,9 +6,11 @@ public class TriggerSpace : MonoBehaviour
 {
     Player player;
     Lines line;
+
     public bool Damage;
     public bool canHeal = true;
     bool canPress = false;
+
     public GameObject Bullet;
     public Transform shootPos;
     public Movement movementScript;
@@ -25,6 +27,7 @@ public class TriggerSpace : MonoBehaviour
     void Start(){
         animator = GetComponent<Animator>();
         canShoot = true;
+        
     }
     
      void Awake()
@@ -40,17 +43,27 @@ public class TriggerSpace : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && canPress && canShoot)
         {
-            if(Input.GetKeyDown(KeyCode.E)){
+            if(Input.GetKeyDown(KeyCode.E) && (player.currentPower >= 0 && player.currentPower <= 3)){
                 
                     GameObject newBullet = Instantiate(Bullet, shootPos.position, Quaternion.identity);
-                    newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(movementScript.shootSpeed * movementScript.moveVelocity * Time.fixedDeltaTime, 0f);    
-
+                    
+                    if(player.transform.localScale.x < -1){
+                        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(movementScript.shootSpeed * -movementScript.speed * Time.fixedDeltaTime, 0f);    
+                        player.UsePower();
+                    }else{
+                        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(movementScript.shootSpeed * -movementScript.speed * Time.fixedDeltaTime, 0f);    
+                        player.UsePower();
+                    }
                 
             }
 
             Explosion.Play();
             CinemachineShake.Instance.ShakeCamera(0.05F, .1F);
             animator.SetBool("isHealing", true);
+
+            if((player.currentPower != player.maxPower) && canShoot && !Input.GetKeyDown(KeyCode.E) ){
+                player.RegainPower();
+            }
 
             Debug.Log("Pressed");
             if ((player.currentHealth != player.maxHealth) && canHeal )
