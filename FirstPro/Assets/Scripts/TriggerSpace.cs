@@ -24,10 +24,13 @@ public class TriggerSpace : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && canPress)
         {
+            Explosion.Play();
+            CinemachineShake.Instance.ShakeCamera(0.05F, .1F);
+
             Debug.Log("Pressed");
             if ((player.currentHealth != player.maxHealth) && canHeal )
             {
-                Explosion.Play();
+                
                 player.Heal(1);
                 Debug.Log("Healed!");
                 canHeal = false;
