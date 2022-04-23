@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AiPatrol : MonoBehaviour
 {
-    public float walkSpeed, range, timeBTWShots, shootSpeed;
+    public float walkSpeed, range, timeBTWShots, shootSpeed, health;
     private float distToPlayer;
 
     [HideInInspector]
@@ -14,13 +14,14 @@ public class AiPatrol : MonoBehaviour
     public Rigidbody2D rb;
     public Transform groundCheckPosition;
     public LayerMask groundLayer;
+    public LayerMask Enemies;
     public Collider2D bodyCollider;
     public Transform player, shootPos;
     public GameObject Bullet;
 
     //Audio
-
     bool isPlaying = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class AiPatrol : MonoBehaviour
 
         mustPatrol = true;
         canShoot = true;
+        
     }
 
     // Update is called once per frame
@@ -43,8 +45,9 @@ public class AiPatrol : MonoBehaviour
 
             if(player.position.x > transform.position.x && transform.localScale.x < 0
                 || player.position.x < transform.position.x && transform.localScale.x > 0){
-                
+
                 Flip();
+
                 
             }
 
@@ -68,13 +71,15 @@ public class AiPatrol : MonoBehaviour
     }
 
     void Patrol(){
-        if(mustTurn || bodyCollider.IsTouchingLayers(groundLayer)){
+        if(mustTurn || bodyCollider.IsTouchingLayers(groundLayer) || bodyCollider.IsTouchingLayers(Enemies)){
+
             Flip();
         }
         rb.velocity = new Vector2(walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
     }
 
     void Flip(){
+
         mustPatrol = false;
         gameObject.transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         walkSpeed *= -1;
@@ -87,9 +92,32 @@ public class AiPatrol : MonoBehaviour
         yield return new WaitForSeconds(timeBTWShots);
         GameObject newBullet = Instantiate(Bullet, shootPos.position, Quaternion.identity);
 
-        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * walkSpeed * Time.fixedDeltaTime, 0f);    
-            
+        if(gameObject.transform.localScale.x <= -1){
+            Debug.Log("Shoot Left");
+            newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * walkSpeed * Time.fixedDeltaTime, 0f);
+            newBullet.transform.localScale = new Vector2(transform.localScale.x + .3f, transform.localScale.y - .3f);      
+        }else{
+            Debug.Log("Shoot Right");
+            newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * walkSpeed * Time.fixedDeltaTime, 0f);
+        
+        }
         canShoot = true;
         
     }
-}       
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if(health <= 0){
+            Die();
+        }
+    }
+
+    public void Die(){
+        Score.scoreValue += 10;
+        
+        Destroy(gameObject);
+    }
+
+}

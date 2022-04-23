@@ -20,9 +20,9 @@ public class Movement : MonoBehaviour
     bool isWalking;
 
     //Movement
-    public float speed;
+    public float speed, shootSpeed;
     public float jump;
-    float moveVelocity;
+    public float moveVelocity;
     private Animator animator;
     public bool Grounded;
 
@@ -86,7 +86,7 @@ public class Movement : MonoBehaviour
                 animator.SetBool("isWalking", true);
             }
 
-            GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveVelocity, GetComponent<Rigidbody2D> ().velocity.y);
+            GetComponent<Rigidbody2D>().velocity = new Vector2 (moveVelocity, GetComponent<Rigidbody2D> ().velocity.y);
 
             if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)){
                 isWalking = true;

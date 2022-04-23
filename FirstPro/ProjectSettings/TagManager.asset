@@ -8,6 +8,8 @@ TagManager:
   - Rhythm
   - Enemy
   - crowBullet
+  - playerBullet
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - Enemies
+  - Bullets
   - 
   - 
   - 
