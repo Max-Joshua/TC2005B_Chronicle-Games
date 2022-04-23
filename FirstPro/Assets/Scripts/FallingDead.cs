@@ -31,6 +31,7 @@ public class FallingDead : MonoBehaviour
 
     void Restart()
     {
+        Score.scoreValue = 0;
         SceneManager.LoadScene(1);
     }
 }

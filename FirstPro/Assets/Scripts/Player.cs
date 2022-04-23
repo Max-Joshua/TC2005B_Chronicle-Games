@@ -97,6 +97,7 @@ public class Player : MonoBehaviour
     IEnumerator deadScreen(){
         yield return new WaitForSeconds(8f);
 
+        Score.scoreValue = 0;
         Restart();
     }
 
