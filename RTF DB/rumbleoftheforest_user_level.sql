@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS `user_level`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_level` (
   `id_user_level` int unsigned NOT NULL AUTO_INCREMENT,
-  `id_score` int unsigned NOT NULL,
-  `id_user_info` int unsigned NOT NULL,
+  `id_score` int unsigned DEFAULT NULL,
+  `id_user_info` int unsigned DEFAULT NULL,
   PRIMARY KEY (`id_user_level`),
   KEY `id_score_idx` (`id_score`),
   KEY `id_user_info_idx` (`id_user_info`),
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-21 14:09:56
+-- Dump completed on 2022-04-22 20:13:02

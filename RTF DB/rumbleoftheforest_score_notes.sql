@@ -27,10 +27,11 @@ DROP TABLE IF EXISTS `score_notes`;
 CREATE TABLE `score_notes` (
   `id_score_notes` int unsigned NOT NULL AUTO_INCREMENT,
   `notes` int NOT NULL,
-  `id_notes` int unsigned NOT NULL,
+  `id_notes` int unsigned DEFAULT NULL,
   PRIMARY KEY (`id_score_notes`),
   KEY `id_score_notes_idx` (`id_score_notes`),
-  CONSTRAINT `id_notes` FOREIGN KEY (`id_score_notes`) REFERENCES `score_notes` (`id_score_notes`) ON DELETE RESTRICT ON UPDATE CASCADE
+  KEY `id_notes_idx` (`id_notes`),
+  CONSTRAINT `id_notes` FOREIGN KEY (`id_notes`) REFERENCES `notes` (`id_notes`) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-21 14:09:56
+-- Dump completed on 2022-04-22 20:13:01

@@ -30,14 +30,14 @@ CREATE TABLE `score` (
   `lost_life` int NOT NULL,
   `damage_taken` int NOT NULL,
   `damage_inflicted` int NOT NULL,
-  `id_score_enemies` int unsigned NOT NULL,
-  `id_score_notes` int unsigned NOT NULL,
+  `id_score_enemies` int unsigned DEFAULT NULL,
+  `id_score_notes` int unsigned DEFAULT NULL,
   PRIMARY KEY (`id_score`),
-  KEY `id_score_enemies` (`id_score_enemies`),
+  KEY `id_score_enemies_idx` (`id_score_enemies`),
   KEY `id_score_notes` (`id_score_notes`),
   CONSTRAINT `id_score_enemies` FOREIGN KEY (`id_score_enemies`) REFERENCES `score_enemies` (`id_score_enemies`) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT `id_score_notes` FOREIGN KEY (`id_score_notes`) REFERENCES `score_notes` (`id_score_notes`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -58,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-21 14:09:56
+-- Dump completed on 2022-04-22 20:13:01
