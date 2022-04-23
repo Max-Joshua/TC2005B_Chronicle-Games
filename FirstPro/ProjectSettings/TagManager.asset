@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - crowBullet
   - playerBullet
+  - Boss
   layers:
   - Default
   - TransparentFX

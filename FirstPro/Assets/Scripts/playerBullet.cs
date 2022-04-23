@@ -6,6 +6,7 @@ public class playerBullet : MonoBehaviour
 {
 
     AiPatrol aiScript;
+    tempTenochAI tenochAI;
     public float dieTime;
     public int damage;
     public GameObject die;
@@ -34,6 +35,14 @@ public class playerBullet : MonoBehaviour
 
         }if(collisionGameObject.tag == "crowBullet"){
 
+        }if(collisionGameObject.tag == "Boss"){
+                Debug.Log("DAMAGING BOSS");
+                collisionGameObject.GetComponent<tempTenochAI>().TakeDamage(damage);
+                AudioSource.PlayClipAtPoint(hitSource, transform.position);
+            
+            StartCoroutine(quickDead());
+
+            quickDead();
         }else{
             Die();
 

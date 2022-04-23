@@ -6,7 +6,7 @@ public class LinesR : MonoBehaviour
 {
 
     Player player;
-    public float HorizontalSpeed = -100 ;
+     public float HorizontalSpeed = -100 ;
      public float MaxHorizontalPosition = 8 ;
      public float MinHorizontalPosition = 460 ;
        

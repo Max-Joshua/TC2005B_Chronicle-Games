@@ -43,6 +43,8 @@ public class TriggerSpace : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && canPress && canShoot)
         {
+            addPoints(1);
+
             if(Input.GetKeyDown(KeyCode.E) && (player.currentPower >= 0 && player.currentPower == 3)){
                 
                     GameObject newBullet = Instantiate(Bullet, shootPos.position, Quaternion.identity);
@@ -61,15 +63,17 @@ public class TriggerSpace : MonoBehaviour
             Explosion.Play();
             CinemachineShake.Instance.ShakeCamera(0.05F, .1F);
             animator.SetBool("isHealing", true);
+            animator.SetBool("isHurt", false);
 
             if((player.currentPower != player.maxPower) && canShoot && !Input.GetKeyDown(KeyCode.E) ){
+
                 player.RegainPower();
             }
 
             Debug.Log("Pressed");
             if ((player.currentHealth != player.maxHealth) && canHeal )
             {
-                
+
                 player.Heal(1);
                 Debug.Log("Healed!");
                 canHeal = false;
@@ -83,12 +87,18 @@ public class TriggerSpace : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && !canPress)
         {
+            substractPoints(1);
             player.TakeDamage(0);
 
             Debug.Log("Missed!");
+            animator.SetBool("isHurt", true);
             animator.SetBool("isHealing", false);
         }
-
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Damage") && 
+            animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+            {
+                animator.SetBool("isHurt", false);
+            }
      }
 
 
@@ -116,6 +126,14 @@ public class TriggerSpace : MonoBehaviour
 
         Damage = true;
         canHeal = true;
+    }
+
+    void addPoints(int points){
+        Score.scoreValue += points;
+    }
+
+    void substractPoints(int points){
+        Score.scoreValue -= points;
     }
 
 }

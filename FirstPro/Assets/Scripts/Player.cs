@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -16,11 +17,14 @@ public class Player : MonoBehaviour
 
     public HealthBar healthBar;
     public powerBar powerBar;
+    private Animator animator;
+    [SerializeField] Text gameOver;
 
     private Rigidbody2D rb2d;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth); 
 
@@ -38,7 +42,9 @@ public class Player : MonoBehaviour
 
         if (currentHealth <= minHealth)
         {
-            Restart();
+            StartCoroutine(deadScreen());
+            gameOver.text = "GAME OVER!";
+            animator.SetBool("isDead", true);
         }
         if (currentPower <= minPower)
         {
@@ -88,6 +94,10 @@ public class Player : MonoBehaviour
             TakeDamage(1);
         }
     }
+    IEnumerator deadScreen(){
+        yield return new WaitForSeconds(8f);
 
+        Restart();
+    }
 
 }

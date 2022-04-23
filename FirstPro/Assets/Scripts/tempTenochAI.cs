@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class AiPatrol : MonoBehaviour
+
+public class tempTenochAI : MonoBehaviour
 {
     public float walkSpeed, range, timeBTWShots, shootSpeed, health;
     private float distToPlayer;
@@ -18,6 +20,7 @@ public class AiPatrol : MonoBehaviour
     public Collider2D bodyCollider;
     public Transform player, shootPos;
     public GameObject Bullet;
+    [SerializeField] Text gameOver;
 
     //Audio
     bool isPlaying = false;
@@ -35,9 +38,6 @@ public class AiPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(mustPatrol){
-            Patrol();
-        }
 
         distToPlayer = Vector2.Distance(transform.position, player.position);
 
@@ -45,8 +45,6 @@ public class AiPatrol : MonoBehaviour
 
             if(player.position.x > transform.position.x && transform.localScale.x < 0
                 || player.position.x < transform.position.x && transform.localScale.x > 0){
-
-                Flip();
 
                 
             }
@@ -62,28 +60,6 @@ public class AiPatrol : MonoBehaviour
             mustPatrol = true;
         }
 
-    }
-
-    private void FixedUpdate() {
-        if(mustPatrol){
-            mustTurn = !Physics2D.OverlapCircle(groundCheckPosition.position, 0.1f, groundLayer);
-        }
-    }
-
-    void Patrol(){
-        if(mustTurn || bodyCollider.IsTouchingLayers(groundLayer) || bodyCollider.IsTouchingLayers(Enemies)){
-
-            Flip();
-        }
-        rb.velocity = new Vector2(walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
-    }
-
-    void Flip(){
-
-        mustPatrol = false;
-        gameObject.transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-        walkSpeed *= -1;
-        mustPatrol = true;
     }
 
     IEnumerator Shoot(){
@@ -115,7 +91,8 @@ public class AiPatrol : MonoBehaviour
     }
 
     public void Die(){
-        Score.scoreValue += 10;
+        Score.scoreValue += 100;
+        gameOver.text = "VICTORY!";
         
         Destroy(gameObject);
     }
