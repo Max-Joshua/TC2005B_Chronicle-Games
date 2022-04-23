@@ -10,10 +10,10 @@ public class constant_movement : MonoBehaviour
     float moveVelocity;
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        moveVelocity = speed;
+
+     void Update()
+     {
+         moveVelocity = speed;
         GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveVelocity, GetComponent<Rigidbody2D> ().velocity.y);
-    }
+     }
 }
