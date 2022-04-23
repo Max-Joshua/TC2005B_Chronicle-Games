@@ -1,5 +1,5 @@
 import mysql from 'mysql'
-import { getRandomName, getRandomWord } from './fetch_random.js'
+import { getRandomName, getRandomStatistic, getRandomScore, getRandomScoreEnemies } from './fetch_random.js'
 
 function randomString(length) 
 {
@@ -14,7 +14,9 @@ function randomString(length)
 }
 
 const names = await getRandomName(20)
-const words = await getRandomWord(10)
+const pointer = await getRandomStatistic(20)
+const scores = await getRandomScore(20)
+const scoresE = await getRandomScoreEnemies(20)
 
 const connection = mysql.createConnection(
     {
@@ -42,45 +44,41 @@ for(const n of names)
     })
 }
 
-// for(const w of words)
-// {
-//     const types = ['standard', 'speed run', 'versus']
+for(const s of pointer)
+{
+    let [accuracy, game_time, deaths] = s.split(" ")
+    const statistics = {accuracy: accuracy, game_time: game_time, deaths: deaths}
 
-//     const level_data =
-//     {
-//          name: w,
-//          type: types[Math.floor(Math.random() * types.length)],
-//          description: randomString(20),
-//          creation_date: new Date()
-//     }
+    connection.query('insert into statistics set ?', statistics, (error, rows, fields)=> 
+    {
+        if(error) console.log(error)
+        console.log(`Added ${accuracy} ${game_time} ${deaths} successfully!`)
+    })
+}
 
-//     connection.query('insert into levels set ?', level_data, (error, rows, fields)=> 
-//     {
-//         if(error) console.log(error)
-//         console.log(`Added level ${w} successfully!`)
-//     })
-// }
+for(const sc of scores)
+{
+    let [total_score, lost_life, damage_taken, damage_inflicted] = sc.split(" ")
+    const score = {total_score: total_score, lost_life: lost_life, damage_taken: damage_taken, damage_inflicted: damage_inflicted}
 
-// for(let i = 0; i<20; i++)
-// {
-//     const user_id = Math.floor(Math.random() * 20)+1
-//     const level_id = Math.floor(Math.random() * 10)+1
-//     const attempt_date = new Date()
-//     const completed = Math.floor(Math.random() * 2)
+    connection.query('insert into score set ?', score, (error, rows, fields)=> 
+    {
+        if(error) console.log(error)
+        console.log(`Added ${total_score} ${lost_life} ${damage_taken} ${damage_inflicted} successfully!`)
+    })
+}
 
-//     const user_level_data = {
-//         id_user: user_id,
-//         id_level: level_id,
-//         attempt_date: attempt_date,
-//         completed:  completed
-//     }
+for(const se of scoresE)
+{
+    let [num_of_enemies] = se.split(" ")
+    const score_enemies = {num_of_enemies: num_of_enemies}
 
-//     connection.query('insert into user_level set ?', user_level_data, (error, rows, fields)=> 
-//     {
-//         if(error) console.log(error)
-//         console.log(`Added attempt successfully!`)
-//     })
-// }
+    connection.query('insert into score_enemies set ?', score_enemies, (error, rows, fields)=> 
+    {
+        if(error) console.log(error)
+        console.log(`Added ${num_of_enemies} successfully!`)
+    })
+}
 
 connection.end(error=>
     {

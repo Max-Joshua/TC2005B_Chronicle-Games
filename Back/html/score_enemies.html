@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/mysqlUseCases.css">
+    <script type="module" defer src="../js/score_enemies.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="section">
+        <div class="formInput">
+            <h1>Show enemies score</h1>
+            <form id="formSelect">
+                <input type="submit" value="Show enemies score">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p>When the request ends, the result will be displayed here.</p>
+            <div id="getResults"></div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Add enemies score</h1>
+            <form id="formInsert" method="post" action="http://localhost:5003/api/score_enemies">
+                <input type="text" name="num_of_enemies" placeholder="Type the number of enemies">
+                <input type="submit" value="Add Score Enemies">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="postResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Update enemies score</h1>
+            <form id="formUpdate" method="put">
+                <input type="text" name="score_enemiesID" placeholder="Type your score_enemiesID">
+                <input type="text" name="num_of_enemies" placeholder="Type the number of enemies">
+                <input type="submit" value="Update Score Enemies">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="putResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Delete Score Enemies</h1>
+            <form id="formDelete" method="delete">
+                <input type="text" name="score_enemiesID" placeholder="Type your score_enemiesID">
+                <input type="submit" value="Delete Score Enemies">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="deleteResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+</body>
+</html>

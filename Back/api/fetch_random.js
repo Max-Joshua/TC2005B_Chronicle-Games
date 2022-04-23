@@ -251,22 +251,56 @@ async function getRandomName(amount=1)
     return name_list
 }
 
-async function getRandomWord(amount=1)
+async function getRandomStatistic(amount=1)
 {    
     if(amount<=0) amount = 1
 
-    const base_url = 'https://www.randomlists.com/data/words.json'
-    const words = await fetchData(base_url)
-
-    let word_list = []
+    let statistics_list = []
 
     for(let i =0; i< amount; i++)
     {
-        let word = pickRandomElement(words.data)
-        word_list.push(word)
+        let accuracy = (Math.random() * 100)
+        let game_time = Math.floor(Math.random() * 500)
+        let deaths = Math.floor(Math.random() * 250)
+
+        statistics_list.push(`${accuracy} ${game_time} ${deaths}`)
     }
 
-    return word_list
+    return statistics_list
 }
 
-export {getRandomName, getRandomWord}
+async function getRandomScore(amount=1)
+{    
+    if(amount<=0) amount = 1
+
+    let score_list = []
+
+    for(let i =0; i< amount; i++)
+    {
+        let total_score = (Math.random() * 1000000)
+        let lost_life = Math.floor(Math.random() * 100)
+        let damage_taken = Math.floor(Math.random() * 750)
+        let damage_inflicted = Math.floor(Math.random() * 2000)
+
+        score_list.push(`${total_score} ${lost_life} ${damage_taken} ${damage_inflicted}`)
+    }
+
+    return score_list
+}
+
+async function getRandomScoreEnemies(amount=1)
+{    
+    if(amount<=0) amount = 1
+
+    let scoreEnemies_list = []
+
+    for(let i =0; i< amount; i++)
+    {
+        let num_of_enemies = (Math.random() * 1000)
+        scoreEnemies_list.push(`${num_of_enemies}`)
+    }
+
+    return scoreEnemies_list
+}
+
+export {getRandomName, getRandomStatistic, getRandomScore, getRandomScoreEnemies}

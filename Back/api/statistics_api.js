@@ -5,7 +5,7 @@ import mysql from 'mysql'
 import fs from 'fs'
 
 const app = express();
-const port = 5000;
+const port = 5001;
 
 app.use(express.json());
 
@@ -24,21 +24,21 @@ function connectToDB()
 }
 
 app.get('/', (request,response)=>{
-    fs.readFile('./html/user_info.html', 'utf8', (err, html)=>{
+    fs.readFile('./html/statistics.html', 'utf8', (err, html)=>{
         if(err) response.status(500).send('There was an error: ' + err);
         console.log('Loading page...');
         response.send(html);
     })
 });
 
-app.get('/api/user_info', (request, response)=>{
+app.get('/api/statistics', (request, response)=>{
     let connection = connectToDB();
 
     try{
 
         connection.connect();
 
-        connection.query('select * from user_info', (error, results, fields)=>{
+        connection.query('select * from statistics', (error, results, fields)=>{
             if(error) console.log(error);
             console.log(JSON.stringify(results));
             response.json(results);
@@ -53,7 +53,7 @@ app.get('/api/user_info', (request, response)=>{
     }
 });
 
-app.post('/api/user_info', (request, response)=>{
+app.post('/api/statistics', (request, response)=>{
 
     try{
         console.log(request.headers);
@@ -61,7 +61,7 @@ app.post('/api/user_info', (request, response)=>{
         let connection = connectToDB();
         connection.connect();
 
-        const query = connection.query('insert into user_info set ?', request.body ,(error, results, fields)=>{
+        const query = connection.query('insert into statistics set ?', request.body ,(error, results, fields)=>{
             if(error) 
                 console.log(error);
             else
@@ -77,12 +77,12 @@ app.post('/api/user_info', (request, response)=>{
     }
 });
 
-app.put('/api/user_info', (request, response)=>{
+app.put('/api/statistics', (request, response)=>{
     try{
         let connection = connectToDB();
         connection.connect();
 
-        const query = connection.query('update user_info set name = ?, mail = ?, age = ?, country = ? where id_user_info= ?', [request.body['name'], request.body['mail'], request.body['age'], request.body['country'], request.body['userID']] ,(error, results, fields)=>{
+        const query = connection.query('update statistics set accuracy = ?, game_time = ?, deaths = ? where id_statistics= ?', [request.body['accuracy'], request.body['game_time'], request.body['deaths'], request.body['statisticsID']] ,(error, results, fields)=>{
             if(error) 
                 console.log(error);
             else
@@ -98,13 +98,13 @@ app.put('/api/user_info', (request, response)=>{
     }
 });
 
-app.delete('/api/user_info', (request, response)=>{
+app.delete('/api/statistics', (request, response)=>{
     try
     {
         let connection = connectToDB();
         connection.connect();
 
-        const query = connection.query('delete from user_info where id_user_info= ?', [request.body['userID']] ,(error, results, fields)=>{
+        const query = connection.query('delete from statistics where id_statistics= ?', [request.body['statisticsID']] ,(error, results, fields)=>{
             if(error) 
                 console.log(error);
             else
