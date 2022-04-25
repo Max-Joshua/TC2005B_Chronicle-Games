@@ -7073,9 +7073,10 @@ GameObject:
   m_Component:
   - component: {fileID: 326015343}
   - component: {fileID: 326015345}
+  - component: {fileID: 326015346}
   - component: {fileID: 326015344}
   m_Layer: 5
-  m_Name: Heart
+  m_Name: PowerPot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7100,7 +7101,34 @@ RectTransform:
   m_AnchoredPosition: {x: -5.6, y: -0.7785}
   m_SizeDelta: {x: 41.1727, y: 40.6745}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &326015344
+--- !u!95 &326015344
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326015342}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f3be55693ed89b942b3150a5516eafca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!222 &326015345
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326015342}
+  m_CullTransparentMesh: 1
+--- !u!114 &326015346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7113,14 +7141,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.4842956, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f5e20ca463667e24f8d066e9526804a2, type: 3}
+  m_Sprite: {fileID: -6148219200483781905, guid: 6f480224363a5604bb5d4d6abd620402, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7130,14 +7158,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &326015345
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326015342}
-  m_CullTransparentMesh: 1
 --- !u!1 &326592907
 GameObject:
   m_ObjectHideFlags: 0
@@ -10119,6 +10139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 683894169}
+  powerAnimation: {fileID: 326015344}
 --- !u!114 &683894169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15263,7 +15284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6431373, g: 0.1254902, b: 0.1254902, a: 1}
+  m_Color: {r: 0.23529413, g: 0.20000002, b: 0.6784314, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
