@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 759097030273369600}
   - component: {fileID: 2338495076600906748}
   - component: {fileID: -8352307161547728364}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bullet Player
   m_TagString: playerBullet
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 889083593100214158}
   - component: {fileID: 6030828527886372629}
   - component: {fileID: 5826711075158939264}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Note Explotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5251,7 +5251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3351099475630139057}
   - component: {fileID: 3899525868286475642}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
