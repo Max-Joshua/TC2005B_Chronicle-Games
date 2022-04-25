@@ -89,8 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3975d61efe633e43bacf7819c96517d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalSpeed: 600
-  MaxHorizontalPosition: 475
+  HorizontalSpeed: 450
+  MaxHorizontalPosition: 500
   MinHorizontalPosition: 0
   rectTransform: {fileID: 0}
 --- !u!61 &5574879558560582674

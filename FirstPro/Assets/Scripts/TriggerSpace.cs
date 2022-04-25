@@ -44,6 +44,7 @@ public class TriggerSpace : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && canPress && canShoot)
         {
             addPoints(1);
+            StartCoroutine(pressE());
 
             if(Input.GetKeyDown(KeyCode.E) && (player.currentPower >= 0 && player.currentPower == 3)){
                 
@@ -134,6 +135,12 @@ public class TriggerSpace : MonoBehaviour
 
     void substractPoints(int points){
         Score.scoreValue -= points;
+    }
+
+        IEnumerator pressE(){
+        yield return new WaitForSeconds(1f);
+
+        canShoot = false;
     }
 
 }

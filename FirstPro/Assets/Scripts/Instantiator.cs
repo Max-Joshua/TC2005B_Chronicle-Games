@@ -16,7 +16,6 @@ public float Timer;
     {
         Transform Rhythm = GameObject.FindWithTag("Rhythm").transform;  
         transform.SetParent(Rhythm, false);  
-        Timer =  (60f/70f)/2;
         /*StartCoroutine(CreateBar());*/
     }
 
