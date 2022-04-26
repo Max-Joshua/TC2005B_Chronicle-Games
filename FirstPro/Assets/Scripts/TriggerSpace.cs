@@ -44,9 +44,8 @@ public class TriggerSpace : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && canPress && canShoot)
         {
             addPoints(1);
-            StartCoroutine(pressE());
 
-            if(Input.GetKeyDown(KeyCode.E) && (player.currentPower >= 0 && player.currentPower == 3)){
+            if(Input.GetKey(KeyCode.E) && (player.currentPower >= 0 && player.currentPower == 3)){
                 
                     GameObject newBullet = Instantiate(Bullet, shootPos.position, Quaternion.identity);
                     
@@ -66,7 +65,7 @@ public class TriggerSpace : MonoBehaviour
             animator.SetBool("isHealing", true);
             animator.SetBool("isHurt", false);
 
-            if((player.currentPower != player.maxPower) && canShoot && !Input.GetKeyDown(KeyCode.E) ){
+            if((player.currentPower != player.maxPower) && canShoot && !Input.GetKey(KeyCode.E) ){
 
                 player.RegainPower();
             }
@@ -137,10 +136,5 @@ public class TriggerSpace : MonoBehaviour
         Score.scoreValue -= points;
     }
 
-        IEnumerator pressE(){
-        yield return new WaitForSeconds(1f);
-
-        canShoot = false;
-    }
 
 }
