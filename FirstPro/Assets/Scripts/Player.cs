@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+/* 
+Chronicle Games
+04/05/2022
+
+-> Controlls the player's health and power levels
+
+*/
 
 public class Player : MonoBehaviour
 {

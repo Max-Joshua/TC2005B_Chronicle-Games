@@ -2,7 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+/* 
+Chronicle Games
+04/16/2022
 
+->kills the player when he/she touches the object which posseses this scrip.
+
+*/
 public class FallingDead : MonoBehaviour
 {
     Player player;

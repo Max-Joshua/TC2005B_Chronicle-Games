@@ -1,7 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/* 
+Chronicle Games
+04/10/2022
 
+Player bullet attributes and behavour
+
+->The bullet will recognize what it is about to touch
+->The bullet will ignore the "crowBullet" tag objects
+->The bullet collide with the "Enemy" and "Boss" tag objects
+
+*/
 public class playerBullet : MonoBehaviour
 {
 

@@ -1,7 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/* 
+Chronicle Games
+04/10/2022
 
+-> Detects when the player can or can't attack, gain points/health or loose points/health based on the position of the "rhythm bars"
+
+
+*/
 public class TriggerSpace : MonoBehaviour
 {
     Player player;
@@ -9,8 +16,9 @@ public class TriggerSpace : MonoBehaviour
 
     public bool Damage;
     public bool canHeal = true;
-    bool canPress = false;
-
+    bool canPress = false;          //Determines when the player will be able to gain points/health from a "rhythm bar" 
+                                    //If the "rhythm bar" enters the collision box of the "RhythmHearSpace" object
+                                    // "canPress" will become true, otherwise it will remain false.
     public GameObject Bullet;
     public Transform shootPos;
     public Movement movementScript;
@@ -41,6 +49,7 @@ public class TriggerSpace : MonoBehaviour
      {
          transform.SetAsLastSibling();
 
+        
         if (Input.GetKeyDown(KeyCode.Space) && canPress && canShoot)
         {
             addPoints(1);
@@ -49,7 +58,8 @@ public class TriggerSpace : MonoBehaviour
                 
                     GameObject newBullet = Instantiate(Bullet, shootPos.position, Quaternion.identity);
                     
-                    if(player.transform.localScale.x <= -1){
+                    //If player is looking left, the clone of the bullet prefab will be inverted, so that the particles will follow and their directon makes sense.
+                    if(player.transform.localScale.x <= -1){ 
                         newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(movementScript.shootSpeed * -movementScript.speed * Time.fixedDeltaTime, 0f);
                         newBullet.transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);    
                         player.UsePower();
@@ -65,11 +75,12 @@ public class TriggerSpace : MonoBehaviour
             animator.SetBool("isHealing", true);
             animator.SetBool("isHurt", false);
 
+            //Does not let the player cheat, he/she will only be able to regain power if the "E" key is not constantlly pressed.
             if((player.currentPower != player.maxPower) && canShoot && !Input.GetKey(KeyCode.E) ){
 
                 player.RegainPower();
             }
-
+            
             Debug.Log("Pressed");
             if ((player.currentHealth != player.maxHealth) && canHeal )
             {
@@ -84,7 +95,7 @@ public class TriggerSpace : MonoBehaviour
             animator.SetBool("isHealing", false);
         }
         
-
+        //When the player misses the hitbox of the "RhythmHearSpace" object, he/she will take damage.
         if (Input.GetKeyDown(KeyCode.Space) && !canPress)
         {
             substractPoints(1);
@@ -102,8 +113,7 @@ public class TriggerSpace : MonoBehaviour
      }
 
 
-        //Tried to have another heart in the same pos with diferent collider so when the player pressed space, Gordilla heal and the bars disappear
-
+    //Activates when the "Rhythm bars" enter the "RhythmHearSpace" object collision box.
     void OnTriggerEnter2D(Collider2D other)
     {
 
@@ -111,7 +121,7 @@ public class TriggerSpace : MonoBehaviour
         canShoot = true;
 
     }
-
+    //Activates when the "Rhythm bars" exit the "RhythmHearSpace" object collision box.
     void OnTriggerExit2D(Collider2D other)
     {
 

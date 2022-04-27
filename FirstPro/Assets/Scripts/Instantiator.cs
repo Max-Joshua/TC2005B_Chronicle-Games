@@ -1,7 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/* 
+Chronicle Games
+04/04/2022
 
+-> Creates the "Rhythm Bar" according to the songs BPM
+
+
+*/
 public class Instantiator : MonoBehaviour
 {
 public GameObject prefab;
@@ -11,12 +18,13 @@ public float firstBeat;
 
 
 public float Timer;
+public float BPM;
 
     void Start()
     {
         Transform Rhythm = GameObject.FindWithTag("Rhythm").transform;  
         transform.SetParent(Rhythm, false);  
-        /*StartCoroutine(CreateBar());*/
+
     }
 
    // Update is called once per frame
@@ -24,19 +32,6 @@ public float Timer;
    {   
        CreateBar();
    }
-
-/*public void FirstBar()
-    {
-    Timer -= Time.deltaTime;
-
-       if (Timer == 0f){  
-            GameObject Bar = Instantiate(prefab, transform);
-            Destroy(Bar, time_del);
-            
-        }
-    } */
-
-//Original Func
 
     public void CreateBar ()
     {
@@ -46,28 +41,8 @@ public float Timer;
         {  
             GameObject Bar = Instantiate(prefab, transform);
             Destroy(Bar, time_del);
-            Timer = 60f/70f;
+            Timer = BPM/60;
         }
     }  
-
-
-/*
-    IEnumerator CreateBar(){
-
-        yield return new WaitForSeconds(beat);
-
-        GameObject Bar = Instantiate(prefab, transform);
-    } */
-/*
-    IEnumerator FirstBar(){
-        yield return new WaitForSeconds(firstBeat);
-
-        GameObject Bar = Instantiate(prefab, transform);
-        StartCoroutine(CreateBar());
-        
-    } */
-    /*void DestroyBar(){
-        Destroy(Bar);
-    }*/
 
 }

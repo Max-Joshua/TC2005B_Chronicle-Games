@@ -1,7 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/* 
+Chronicle Games
+04/10/2022
 
+Enemy bullet attributes and behaviour
+
+->When the bullet is created the timer "CountDownTimer" will get trigger, which will
+determine the lifespan of the bullet if it does not collide with either a wall or a Player,
+if it does, the bullet will be destroyed.
+
+*/
 public class enemyBullet : MonoBehaviour
 {
 
@@ -15,22 +25,15 @@ public class enemyBullet : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
-
-        
-        StartCoroutine(CountDownTimer());
+        StartCoroutine(CountDownTimer());                                   //Lifespan timer begins
         Transform Bullet = GameObject.FindWithTag("crowBullet").transform;
 
-    
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
         GameObject collisionGameObject = collision.gameObject;
 
-        if(collisionGameObject.tag == "Player"){
-
-            
-            Debug.Log("NRUDFJFFFFFFF");
+        if(collisionGameObject.tag == "Player"){ 
 
             if(collisionGameObject.GetComponent<Player>() != null){
                 
@@ -42,7 +45,6 @@ public class enemyBullet : MonoBehaviour
 
                 AudioSource.PlayClipAtPoint(hitSource, transform.position);
             }
-            
             
             StartCoroutine(quickDead());
             StartCoroutine(deadScreen());
