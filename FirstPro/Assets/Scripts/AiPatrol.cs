@@ -1,7 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/* 
+Chronicle Games
+04/09/2022
 
+Enemy AI script
+-> Controlls enemy movement
+-> Controlls enemy shooting behaviour
+-> Controlls the enemy's dead
+
+*/
 public class AiPatrol : MonoBehaviour
 {
     public float walkSpeed, range, timeBTWShots, shootSpeed, health;
@@ -64,15 +73,16 @@ public class AiPatrol : MonoBehaviour
 
     }
 
+//When the object "Ground Check Position" collision box does not detect a "ground layer" tile, mustTurn will become True
     private void FixedUpdate() {
         if(mustPatrol){
             mustTurn = !Physics2D.OverlapCircle(groundCheckPosition.position, 0.1f, groundLayer);
         }
     }
 
+//Behaviour where the enemy wont chase the player, it will patrol an area defined either by a void and/or a wall
     void Patrol(){
         if(mustTurn || bodyCollider.IsTouchingLayers(groundLayer) || bodyCollider.IsTouchingLayers(Enemies)){
-
             Flip();
         }
         rb.velocity = new Vector2(walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
@@ -86,6 +96,7 @@ public class AiPatrol : MonoBehaviour
         mustPatrol = true;
     }
 
+//Manages when the enemy can and can not shoot
     IEnumerator Shoot(){
         canShoot = false;
         //Shoot

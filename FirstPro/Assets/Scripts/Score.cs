@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+/* 
+Chronicle Games
+04/22/2022
 
+-> Controlls the score text value.
+
+*/
 public class Score : MonoBehaviour
 {
     
