@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 
     public Animator transition;
 
-    public float transitionTime = 1f;
+    public float transitionTime;
 
     public void PlayGame()
     {

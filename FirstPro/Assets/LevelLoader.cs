@@ -9,7 +9,7 @@ public class LevelLoader : MonoBehaviour
 
    public Animator transition;
 
-    public float transitionTime = 1f;
+    public float transitionTime;
 
     public Button startButton;
 
@@ -47,7 +47,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex +1));
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
 
