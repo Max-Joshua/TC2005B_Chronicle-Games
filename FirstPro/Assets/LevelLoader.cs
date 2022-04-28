@@ -9,23 +9,40 @@ public class LevelLoader : MonoBehaviour
 
    public Animator transition;
 
-    public float transitionTime;
+    public float transitionTime = 1f;
 
     public Button startButton;
 
 
+     public bool click = false;
+
+
     void Start()
-    {
-        startButton.onClick.AddListener(LoadNextLevel);
+     {
+        startButton.onClick.AddListener(clicked);
+
 
     }
-    // void Update()
-    // {
-        
-    //     LoadNextLevel();
-        
-        
-    // }
+
+    void Update()
+    {
+        // if (click)
+        // {
+        //  LoadNextLevel();
+        // }
+
+        if (click)
+        {
+            LoadNextLevel();
+        }
+
+
+    }
+
+    void clicked()
+    {
+        click = true;
+    }
      
 
     public void LoadNextLevel()

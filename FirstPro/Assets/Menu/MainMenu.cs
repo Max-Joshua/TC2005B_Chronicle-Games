@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 
     public Animator transition;
 
-    public float transitionTime;
+    public float transitionTime = 1f;
 
     public void PlayGame()
     {
@@ -21,6 +21,7 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
+
 
 
     IEnumerator LoadLevel (int levelIndex)
