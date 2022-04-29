@@ -14311,10 +14311,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6768e929396e2f4091e373479e7e202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DB: {fileID: 1506469088}
   maxHealth: 20
   currentHealth: 0
   maxPower: 3
   currentPower: 0
+  totalDamage: 0
   healthBar: {fileID: 902963878}
   powerBar: {fileID: 683894167}
   gameOver: {fileID: 332280381}
@@ -21876,6 +21878,67 @@ Transform:
   m_Father: {fileID: 2026622240}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1506469085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506469087}
+  - component: {fileID: 1506469086}
+  - component: {fileID: 1506469088}
+  m_Layer: 0
+  m_Name: DataBase
+  m_TagString: DataBase
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1506469086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506469085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee1496bd88edf744b4f598c399276ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1506469087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506469085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.7253017, y: -2.1055107, z: -15.935497}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1506469088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506469085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88987d2577d07574f9be1f663e77fec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1006492544}
+  url: 
+  getUsersEP: 
+  allScores:
+    lists: []
 --- !u!1 &1514606717
 GameObject:
   m_ObjectHideFlags: 0

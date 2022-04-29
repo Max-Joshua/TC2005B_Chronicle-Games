@@ -13,6 +13,8 @@ Chronicle Games
 
 public class Player : MonoBehaviour
 {
+
+    public APITest DB;
     //Health Bar Attributes
     private int minHealth = 0;
     public int maxHealth = 20;
@@ -21,6 +23,8 @@ public class Player : MonoBehaviour
     private int minPower = 0;
     public int maxPower = 3;
     public int currentPower;
+
+    public int totalDamage;
 
     public HealthBar healthBar;
     public powerBar powerBar;
@@ -49,9 +53,11 @@ public class Player : MonoBehaviour
 
         if (currentHealth <= minHealth)
         {
+            DB.addScore();
             StartCoroutine(deadScreen());
             gameOver.text = "GAME OVER!";
             animator.SetBool("isDead", true);
+            
         }
         if (currentPower <= minPower)
         {
@@ -63,6 +69,7 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        totalDamage += damage;
         healthBar.SetHeatlh(currentHealth);
 
     }
