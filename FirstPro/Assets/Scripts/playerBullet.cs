@@ -15,6 +15,7 @@ Player bullet attributes and behavour
 public class playerBullet : MonoBehaviour
 {
 
+    Player player;
     AiPatrol aiScript;
     tempTenochAI tenochAI;
     public float dieTime;
@@ -36,10 +37,12 @@ public class playerBullet : MonoBehaviour
 
         if(collisionGameObject.tag == "Enemy"){
                 Debug.Log("DAMAGING ENEMY");
+                
                 collisionGameObject.GetComponent<AiPatrol>().TakeDamage(damage);
                 AudioSource.PlayClipAtPoint(hitSource, transform.position);
+                
+                StartCoroutine(quickDead());
             
-            StartCoroutine(quickDead());
 
             quickDead();
 
@@ -49,7 +52,9 @@ public class playerBullet : MonoBehaviour
                 Debug.Log("DAMAGING BOSS");
                 collisionGameObject.GetComponent<tempTenochAI>().TakeDamage(damage);
                 AudioSource.PlayClipAtPoint(hitSource, transform.position);
-            
+
+                
+
             StartCoroutine(quickDead());
 
             quickDead();

@@ -119,7 +119,7 @@ public class AiPatrol : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-
+        player.GetComponent<Player>().InflictDamage(damage);
         if(health <= 0){
             Die();
         }

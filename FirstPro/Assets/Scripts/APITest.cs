@@ -12,6 +12,16 @@ public class DBScore{
     public int damage_taken;
 }
 
+/*
+public class DBStatistics{
+
+    public float accuracy;
+    public float game_time;
+    public int deaths;
+    public int damage_taken;
+}
+*/
+
 // Allow the class to be extracted from Unity
 [System.Serializable]
 public class ScoreList{
@@ -65,7 +75,7 @@ public class APITest : MonoBehaviour
         testScore.lost_life = player.currentHealth;
         testScore.damage_inflicted = player.damage_inflicted;
         testScore.damage_taken = player.damage_taken;
-        
+
 
         //Debug.Log("USER: " + testUser);
         string jsonData = JsonUtility.ToJson(testScore);

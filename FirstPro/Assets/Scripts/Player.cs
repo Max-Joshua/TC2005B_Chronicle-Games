@@ -14,6 +14,7 @@ Chronicle Games
 public class Player : MonoBehaviour
 {
 
+    /* int inGameTimer; */
     public APITest DB;
     //Health Bar Attributes
     private int minHealth = 0;
@@ -23,7 +24,7 @@ public class Player : MonoBehaviour
     public int maxPower = 3;
     public int currentPower;
     public int damage_taken;
-    public int damage_inflicted = 50;
+    public int damage_inflicted;
 
     public HealthBar healthBar;
     public powerBar powerBar;
@@ -44,7 +45,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-
+        /* inGameTimer += inGameTimer.deltaTime; */
         // if (Input.GetKeyDown(KeyCode.Space) && currentHealth != maxHealth)
         // {
         //     Heal(1);
@@ -90,6 +91,10 @@ public class Player : MonoBehaviour
 
         powerBar.SetPowerPoints(currentPower);
     }
+
+     public void InflictDamage(int damage){
+         damage_inflicted += damage;
+     }
 
     void Restart()
     {
