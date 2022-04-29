@@ -19,12 +19,11 @@ public class Player : MonoBehaviour
     private int minHealth = 0;
     public int maxHealth = 20;
     public int currentHealth;
-
     private int minPower = 0;
     public int maxPower = 3;
     public int currentPower;
-
-    public int totalDamage;
+    public int damage_taken;
+    public int damage_inflicted = 50;
 
     public HealthBar healthBar;
     public powerBar powerBar;
@@ -53,7 +52,6 @@ public class Player : MonoBehaviour
 
         if (currentHealth <= minHealth)
         {
-            DB.addScore();
             StartCoroutine(deadScreen());
             gameOver.text = "GAME OVER!";
             animator.SetBool("isDead", true);
@@ -69,7 +67,7 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        totalDamage += damage;
+        damage_taken += damage;
         healthBar.SetHeatlh(currentHealth);
 
     }
@@ -111,8 +109,10 @@ public class Player : MonoBehaviour
     IEnumerator deadScreen(){
         yield return new WaitForSeconds(8f);
 
+        DB.addScore();
         Score.scoreValue = 0;
         Restart();
+        
     }
 
 }

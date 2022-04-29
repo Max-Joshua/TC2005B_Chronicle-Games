@@ -12,7 +12,6 @@ Chronicle Games
 */
 public class Score : MonoBehaviour
 {
-    
     public static int scoreValue;
     Text score;
 

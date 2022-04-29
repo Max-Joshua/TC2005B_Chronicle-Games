@@ -3,10 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
+[System.Serializable]
+public class DBScore{
+
+    public int damage_inflicted;
+    public int total_score;
+    public int lost_life;
+    public int damage_taken;
+}
+
+// Allow the class to be extracted from Unity
+[System.Serializable]
+public class ScoreList{
+    public List<DBScore> lists;
+}
 public class APITest : MonoBehaviour
 {
     [SerializeField] Player player;
-    
+
     [SerializeField] string url;
     [SerializeField] string getUsersEP;
 
@@ -47,7 +61,11 @@ public class APITest : MonoBehaviour
 
         // Create the object to be sent as json
         DBScore testScore = new DBScore();
-        testScore.totalDamage = player.totalDamage;
+        testScore.total_score = Score.scoreValue;
+        testScore.lost_life = player.currentHealth;
+        testScore.damage_inflicted = player.damage_inflicted;
+        testScore.damage_taken = player.damage_taken;
+        
 
         //Debug.Log("USER: " + testUser);
         string jsonData = JsonUtility.ToJson(testScore);
