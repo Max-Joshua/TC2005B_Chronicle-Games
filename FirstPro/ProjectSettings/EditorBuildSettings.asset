@@ -6,11 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/TenochBattle.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: dd32682dfb92e40489ba40a825871eca
+  - enabled: 1
+    path: Assets/Scenes/SnowLevel.unity
+    guid: 07794d6fc08fa0c47bfcb9c260ad501d
+  - enabled: 1
+    path: Assets/Scenes/TlacuatzinBattle.unity
+    guid: 877af93bedf466240b2f2416803fe238
   - enabled: 1
     path: Assets/Scenes/FirstLevel.unity
     guid: 3be04a7eb566c7b43b4898a7d3743ef7
