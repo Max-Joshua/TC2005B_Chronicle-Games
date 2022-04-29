@@ -14120,7 +14120,7 @@ Transform:
   - {fileID: 2065179420}
   - {fileID: 37511499}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1006492537
 SpriteRenderer:
@@ -14232,8 +14232,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.12}
-  m_Size: {x: 0.3, y: 0.6}
+  m_Offset: {x: 0, y: -0.01}
+  m_Size: {x: 0.3, y: 0.5932569}
   m_Direction: 0
 --- !u!95 &1006492541
 Animator:
@@ -22206,7 +22206,7 @@ Transform:
   - {fileID: 830247108}
   - {fileID: 715403317}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1529436543
 GameObject:
@@ -34879,7 +34879,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 1873860420}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2c76e492b4b88a14a8d8fe0683c3b023, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
