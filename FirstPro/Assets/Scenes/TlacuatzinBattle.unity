@@ -3330,8 +3330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55a7af069a7b2d14cb98ca844e67b232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beatTempo: 200
-  hasStarted: 1
+  beatTempo: 140
+  hasStarted: 0
 --- !u!4 &780174267
 Transform:
   m_ObjectHideFlags: 0
