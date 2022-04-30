@@ -12,11 +12,12 @@ public class BossLoader : MonoBehaviour
 
     public bool toBoss = false;
 
+    [SerializeField] GameObject Fade;
+
 
     void Start()
     {
-
-
+        Fade.SetActive(false);
     }
 
     void Update()
@@ -24,22 +25,19 @@ public class BossLoader : MonoBehaviour
 
         if (toBoss)
         {
-            LoadNextLevel();
+            Fade.SetActive(true);
+            LoadNextLevel_();
+            
         }
 
 
     }
 
-    // void Boss()
-    // {
-    //     toBoss = true;
-    // }
 
-
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         //Check to see if the tag on the collider is equal to Enemy
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             Debug.Log("Triggered");
             toBoss = true;
@@ -47,15 +45,18 @@ public class BossLoader : MonoBehaviour
     }
      
 
-    public void LoadNextLevel()
+    public void LoadNextLevel_()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        StartCoroutine(LoadLevel_(SceneManager.GetActiveScene().buildIndex + 1));
+        
     }
+    
 
 
-    IEnumerator LoadLevel (int levelIndex)
+    IEnumerator LoadLevel_ (int levelIndex)
     {
-        transition.SetTrigger("Start");
+        transition.SetTrigger("StartBoss");
+        Debug.Log("Transition");
 
         yield return new WaitForSeconds(transitionTime);
 

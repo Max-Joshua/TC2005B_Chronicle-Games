@@ -26,10 +26,7 @@ public class LevelLoader : MonoBehaviour
 
     void Update()
     {
-        // if (click)
-        // {
-        //  LoadNextLevel();
-        // }
+ 
 
         if (click)
         {
