@@ -27,6 +27,7 @@ public class BossLoader : MonoBehaviour
         {
             Fade.SetActive(true);
             LoadNextLevel_();
+            
         }
 
 
