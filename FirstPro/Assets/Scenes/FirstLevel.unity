@@ -13212,6 +13212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07ba2bce3c61a246a2c02593fdfff5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalHitBars: 0
   Damage: 1
   canHeal: 1
   Bullet: {fileID: 1277532067253020870, guid: 182d5763bbd00fd4db981adeb717fcf1, type: 3}
@@ -14312,13 +14313,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6768e929396e2f4091e373479e7e202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inGameTimer: 0
   DB: {fileID: 1506469088}
+  triggerSpace_scr: {fileID: 896294401}
+  instantiator_scr: {fileID: 1334608144}
+  accuracy: 0
   maxHealth: 20
   currentHealth: 0
   maxPower: 3
   currentPower: 0
   damage_taken: 0
   damage_inflicted: 50
+  deaths: 0
   healthBar: {fileID: 902963878}
   powerBar: {fileID: 683894167}
   gameOver: {fileID: 332280381}
@@ -21002,6 +21008,7 @@ MonoBehaviour:
   time_del: 1.21
   beat: 0.014285716
   firstBeat: 0.4285715
+  numOfLines: 0
   Timer: 0
   BPM: 70
 --- !u!114 &1334608145
@@ -21020,6 +21027,7 @@ MonoBehaviour:
   time_del: 1.21
   beat: 0.014285716
   firstBeat: 0.4285715
+  numOfLines: 0
   Timer: 0
   BPM: 70
 --- !u!1 &1349532306
@@ -22044,14 +22052,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1006492544}
-  url: localhost:5002
-  getUsersEP: /api/score
+  url: localhost:5000
+  getScoreEP: /api/score
+  getStatisticsEP: /api/statistics
+  getUsersEP: /api/user_info
   allScores:
-    lists:
-    - damage_inflicted: 0
-      total_score: 0
-      lost_life: 0
-      damage_taken: 0
+    _scorelists: []
 --- !u!1 &1514606717
 GameObject:
   m_ObjectHideFlags: 0
@@ -43560,7 +43566,7 @@ RectTransform:
   - {fileID: 332280379}
   - {fileID: 1259279662}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

@@ -16,6 +16,8 @@ public float time_del;
 public float beat; 
 public float firstBeat;
 
+public float numOfLines;
+
 
 public float Timer;
 public float BPM;
@@ -33,13 +35,14 @@ public float BPM;
        CreateBar();
    }
 
-    public void CreateBar ()
+    public void CreateBar()
     {
         Timer -= Time.deltaTime;
 
        if (Timer <= 0f)
         {  
             GameObject Bar = Instantiate(prefab, transform);
+            numOfLines += 1;
             Destroy(Bar, time_del);
             Timer = BPM/60;
         }

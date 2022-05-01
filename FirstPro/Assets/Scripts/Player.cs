@@ -14,8 +14,11 @@ Chronicle Games
 public class Player : MonoBehaviour
 {
 
-    /* int inGameTimer; */
+    public float inGameTimer;
     public APITest DB;
+    public TriggerSpace triggerSpace_scr;
+    public Instantiator instantiator_scr;
+    public float accuracy;
     //Health Bar Attributes
     private int minHealth = 0;
     public int maxHealth = 20;
@@ -25,6 +28,8 @@ public class Player : MonoBehaviour
     public int currentPower;
     public int damage_taken;
     public int damage_inflicted;
+
+    public int deaths;
 
     public HealthBar healthBar;
     public powerBar powerBar;
@@ -45,7 +50,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        /* inGameTimer += inGameTimer.deltaTime; */
         // if (Input.GetKeyDown(KeyCode.Space) && currentHealth != maxHealth)
         // {
         //     Heal(1);
@@ -54,6 +58,7 @@ public class Player : MonoBehaviour
         if (currentHealth <= minHealth)
         {
             StartCoroutine(deadScreen());
+            accuracy = (triggerSpace_scr.totalHitBars / instantiator_scr.numOfLines) * 100;
             gameOver.text = "GAME OVER!";
             animator.SetBool("isDead", true);
             
@@ -62,6 +67,7 @@ public class Player : MonoBehaviour
         {
             currentPower = minPower;
         }
+        inGameTimer += Time.deltaTime;
     }
 
 
@@ -114,7 +120,10 @@ public class Player : MonoBehaviour
     IEnumerator deadScreen(){
         yield return new WaitForSeconds(8f);
 
+        deaths += 1;
         DB.addScore();
+        DB.addStatistics();
+        DB.addUsers();
         Score.scoreValue = 0;
         Restart();
         

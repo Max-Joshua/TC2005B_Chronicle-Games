@@ -13,7 +13,7 @@ public class TriggerSpace : MonoBehaviour
 {
     Player player;
     Lines line;
-
+    public float totalHitBars;
     public bool Damage;
     public bool canHeal = true;
     bool canPress = false;          //Determines when the player will be able to gain points/health from a "rhythm bar" 
@@ -48,11 +48,11 @@ public class TriggerSpace : MonoBehaviour
      void Update()
      {
          transform.SetAsLastSibling();
-
         
         if (Input.GetKeyDown(KeyCode.Space) && canPress && canShoot)
         {
             addPoints(1);
+            totalHitBars += 1f;
 
             if(Input.GetKey(KeyCode.E) && (player.currentPower >= 0 && player.currentPower == 3)){
                 
@@ -77,7 +77,7 @@ public class TriggerSpace : MonoBehaviour
 
             //Does not let the player cheat, he/she will only be able to regain power if the "E" key is not constantlly pressed.
             if((player.currentPower != player.maxPower) && canShoot && !Input.GetKey(KeyCode.E) ){
-
+                
                 player.RegainPower();
             }
             
@@ -116,9 +116,10 @@ public class TriggerSpace : MonoBehaviour
     //Activates when the "Rhythm bars" enter the "RhythmHearSpace" object collision box.
     void OnTriggerEnter2D(Collider2D other)
     {
-
+        
         canPress = true;
         canShoot = true;
+        
 
     }
     //Activates when the "Rhythm bars" exit the "RhythmHearSpace" object collision box.
