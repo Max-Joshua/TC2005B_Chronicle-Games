@@ -24561,6 +24561,8 @@ MonoBehaviour:
   Explosion: {fileID: 1264416551}
   pla: {fileID: 2058579190}
   canShoot: 0
+  play: {fileID: 1099496080}
+  musicIsPlaying: 0
 --- !u!50 &1294430090
 Rigidbody2D:
   serializedVersion: 4

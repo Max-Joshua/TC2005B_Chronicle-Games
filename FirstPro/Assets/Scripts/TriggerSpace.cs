@@ -32,9 +32,14 @@ public class TriggerSpace : MonoBehaviour
     [HideInInspector]
     public bool canShoot;
 
+    public AudioSource play;
+
+    public bool musicIsPlaying = false;
+
     void Start(){
         animator = GetComponent<Animator>();
         canShoot = true;
+
         
     }
     
@@ -121,6 +126,11 @@ public class TriggerSpace : MonoBehaviour
         canShoot = true;
         
 
+        if(!musicIsPlaying)
+        {
+        play.Play();
+        musicIsPlaying = true;
+        }
     }
     //Activates when the "Rhythm bars" exit the "RhythmHearSpace" object collision box.
     void OnTriggerExit2D(Collider2D other)

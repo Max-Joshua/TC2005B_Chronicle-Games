@@ -13221,6 +13221,8 @@ MonoBehaviour:
   Explosion: {fileID: 2065179422}
   pla: {fileID: 1006492535}
   canShoot: 0
+  play: {fileID: 2136161195}
+  musicIsPlaying: 0
 --- !u!50 &896294402
 Rigidbody2D:
   serializedVersion: 4
@@ -43914,7 +43916,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6d1ffcb9b12dab04393f46561eb8ff4e, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
