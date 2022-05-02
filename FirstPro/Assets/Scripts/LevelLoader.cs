@@ -48,6 +48,7 @@ public class LevelLoader : MonoBehaviour
 
     void Update()
     {
+        StoreInfo();
 
         if (click)
         {
