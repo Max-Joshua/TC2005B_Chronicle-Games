@@ -8,14 +8,7 @@ public class MainMenu : MonoBehaviour
 
 
 
-<<<<<<< Updated upstream
-    public void PlayGame()
-    {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-    }
-=======
- 
->>>>>>> Stashed changes
+
 
     public void QuitGame()
     {
