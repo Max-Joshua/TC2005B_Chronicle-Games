@@ -20,6 +20,7 @@ public class AiPatrol : MonoBehaviour
     public bool mustPatrol;
     public bool mustTurn, canShoot;
 
+    public int scoreEValue;
     public Rigidbody2D rb;
     public Transform groundCheckPosition;
     public LayerMask groundLayer;
@@ -126,7 +127,7 @@ public class AiPatrol : MonoBehaviour
     }
 
     public void Die(){
-        Score.scoreValue += 10;
+        Score.scoreValue += scoreEValue;
         
         Destroy(gameObject);
     }

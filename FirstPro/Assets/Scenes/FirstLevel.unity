@@ -764,6 +764,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 10
   rb: {fileID: 57310054}
   groundCheckPosition: {fileID: 190540065}
   groundLayer:
@@ -1082,6 +1083,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 10
   rb: {fileID: 139789193}
   groundCheckPosition: {fileID: 1654041759}
   groundLayer:
@@ -7004,6 +7006,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 8
   rb: {fileID: 322397691}
   groundCheckPosition: {fileID: 1202886797}
   groundLayer:
@@ -7336,6 +7339,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 15
   rb: {fileID: 326891033}
   groundCheckPosition: {fileID: 1046408640}
   groundLayer:
@@ -9093,6 +9097,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 10
   rb: {fileID: 563874880}
   groundCheckPosition: {fileID: 1453161577}
   groundLayer:
@@ -9682,6 +9687,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 15
   rb: {fileID: 639065210}
   groundCheckPosition: {fileID: 1349532307}
   groundLayer:
@@ -10790,6 +10796,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 8
   rb: {fileID: 704200462}
   groundCheckPosition: {fileID: 1766880335}
   groundLayer:
@@ -12772,6 +12779,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 8
   rb: {fileID: 842156514}
   groundCheckPosition: {fileID: 326592908}
   groundLayer:
@@ -20634,6 +20642,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 8
   rb: {fileID: 1299328855}
   groundCheckPosition: {fileID: 1563239202}
   groundLayer:
@@ -21934,6 +21943,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 10
   rb: {fileID: 1502749781}
   groundCheckPosition: {fileID: 1662262469}
   groundLayer:
@@ -22020,6 +22030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1506469087}
   - component: {fileID: 1506469088}
+  - component: {fileID: 1506469086}
   m_Layer: 0
   m_Name: DataBase
   m_TagString: DataBase
@@ -22027,6 +22038,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1506469086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506469085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94fc27a42142c1f499f7bc2bc80eb229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textPrefab: {fileID: 1310484500271410816, guid: 727ff2a27e4a47d478794eb56356226f, type: 3}
+  contentTransform: {fileID: 2090308475}
 --- !u!4 &1506469087
 Transform:
   m_ObjectHideFlags: 0
@@ -22062,7 +22087,11 @@ MonoBehaviour:
   getScoreNotesEP: 
   getScoreEnemiesEP: 
   allScores:
-    _scorelists: []
+    _scorelists:
+    - damage_inflicted: 10
+      total_score: 40
+      lost_life: 2
+      damage_taken: 65
 --- !u!1 &1514606717
 GameObject:
   m_ObjectHideFlags: 0
@@ -22422,6 +22451,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 8
   rb: {fileID: 1534737232}
   groundCheckPosition: {fileID: 1486896881}
   groundLayer:
@@ -22873,155 +22903,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1583227337
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1583227338}
-  - component: {fileID: 1583227341}
-  - component: {fileID: 1583227340}
-  - component: {fileID: 1583227339}
-  m_Layer: 5
-  m_Name: HighScores
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1583227338
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583227337}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2090308475}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1583227339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583227337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94fc27a42142c1f499f7bc2bc80eb229, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textPrefab: {fileID: 1583227337}
-  contentTransform: {fileID: 1583227338}
---- !u!114 &1583227340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583227337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1583227341
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583227337}
-  m_CullTransparentMesh: 1
 --- !u!1 &1587099132
 GameObject:
   m_ObjectHideFlags: 0
@@ -23705,6 +23586,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 10
   rb: {fileID: 1741995338}
   groundCheckPosition: {fileID: 1827749865}
   groundLayer:
@@ -24019,6 +23901,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 10
   rb: {fileID: 1785172623}
   groundCheckPosition: {fileID: 1598617908}
   groundLayer:
@@ -24197,6 +24080,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 15
   rb: {fileID: 1807773255}
   groundCheckPosition: {fileID: 914629666}
   groundLayer:
@@ -37699,6 +37583,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 10
   rb: {fileID: 1955310706}
   groundCheckPosition: {fileID: 1783867631}
   groundLayer:
@@ -37841,6 +37726,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 8
   rb: {fileID: 1958482809}
   groundCheckPosition: {fileID: 1381332268}
   groundLayer:
@@ -38065,6 +37951,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 15
   rb: {fileID: 1993974151}
   groundCheckPosition: {fileID: 998164271}
   groundLayer:
@@ -38207,6 +38094,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 15
   rb: {fileID: 1995867501}
   groundCheckPosition: {fileID: 901383145}
   groundLayer:
@@ -43719,7 +43607,6 @@ RectTransform:
   - {fileID: 1239786118}
   - {fileID: 332280379}
   - {fileID: 1259279662}
-  - {fileID: 1583227338}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

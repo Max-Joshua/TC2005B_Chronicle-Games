@@ -86,7 +86,8 @@ public class APITest : MonoBehaviour
 
     public void QueryScores()
     {
-        StartCoroutine(GetScores());
+        Debug.Log("PRINTING RESULTS SCORE");
+        StartCoroutine("GetScores");
     }
 
     public void addScore(){
@@ -102,7 +103,7 @@ public class APITest : MonoBehaviour
             //Debug.Log("Response: " + www.downloadHandler.text);
             // Compose the response to look like the object we want to extract
             // https://answers.unity.com/questions/1503047/json-must-represent-an-object-type.html
-            string jsonString = "{\"score\":" + www.downloadHandler.text + "}";
+            string jsonString = "{\"score.api\":" + www.downloadHandler.text + "}";
             allScores = JsonUtility.FromJson<ScoreList>(jsonString);
             DisplayScores();
         } else {

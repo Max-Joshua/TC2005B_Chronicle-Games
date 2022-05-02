@@ -60,7 +60,6 @@ public class Player : MonoBehaviour
             StartCoroutine(deadScreen());
             accuracy = (triggerSpace_scr.totalHitBars / instantiator_scr.numOfLines) * 100;
             gameOver.text = "GAME OVER!";
-            DB.QueryScores();
             animator.SetBool("isDead", true);
             
         }

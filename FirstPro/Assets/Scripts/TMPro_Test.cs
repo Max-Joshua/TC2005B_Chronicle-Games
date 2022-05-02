@@ -16,6 +16,7 @@ public class TMPro_Test : MonoBehaviour
 
     public void LoadScores(ScoreList allScores)
     {
+        
         for (int i=0; i<allScores._scorelists.Count; i++) {
             // Create new text objects
             GameObject textTMP = Instantiate(textPrefab);
