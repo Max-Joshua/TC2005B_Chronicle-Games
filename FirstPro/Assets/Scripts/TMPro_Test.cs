@@ -32,5 +32,4 @@ public class TMPro_Test : MonoBehaviour
             //Debug.Log("ID: " + us.id_users + " | " + us.name + " " + us.surname);
         }
     }
-
 }

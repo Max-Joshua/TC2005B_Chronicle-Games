@@ -83,6 +83,12 @@ public class APITest : MonoBehaviour
     // Update is called once per frame
 
     //DBScore functions
+
+    public void QueryScores()
+    {
+        StartCoroutine(GetScores());
+    }
+
     public void addScore(){
         StartCoroutine("AddScore");
     }
