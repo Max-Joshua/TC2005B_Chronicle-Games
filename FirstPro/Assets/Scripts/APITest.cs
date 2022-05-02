@@ -16,6 +16,7 @@ public class DBStatistics{
     public float accuracy;
     public float game_time;
     public int deaths;
+    
 }
 public class DBUsers{
 
@@ -78,7 +79,7 @@ public class APITest : MonoBehaviour
     public ScoreList allScores;
     public StatisticsList allStatistics;
     public UsersList allUsers;
-    
+
     //public NotesList allNotes;
     public ScoreEnemiesList allScoreEnemies;
 
