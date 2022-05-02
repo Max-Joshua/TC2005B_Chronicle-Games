@@ -18965,7 +18965,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1e84c8f22fc593946a0671849afad2d4, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -24553,6 +24553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07ba2bce3c61a246a2c02593fdfff5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalHitBars: 0
   Damage: 1
   canHeal: 1
   Bullet: {fileID: 1277532067253020870, guid: 182d5763bbd00fd4db981adeb717fcf1, type: 3}
@@ -26789,6 +26790,7 @@ MonoBehaviour:
   time_del: 1.21
   beat: 0.014285716
   firstBeat: 0.4285715
+  numOfLines: 0
   Timer: 0
   BPM: 110
 --- !u!114 &1612240918
@@ -26807,6 +26809,7 @@ MonoBehaviour:
   time_del: 1.21
   beat: 0.014285716
   firstBeat: 0.4285715
+  numOfLines: 0
   Timer: 0
   BPM: 110
 --- !u!1 &1613306605
@@ -28939,10 +28942,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6768e929396e2f4091e373479e7e202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inGameTimer: 0
+  DB: {fileID: 0}
+  triggerSpace_scr: {fileID: 0}
+  instantiator_scr: {fileID: 0}
+  accuracy: 0
   maxHealth: 20
   currentHealth: 0
   maxPower: 3
   currentPower: 0
+  damage_taken: 0
+  damage_inflicted: 0
+  deaths: 0
   healthBar: {fileID: 288819901}
   powerBar: {fileID: 583947345}
   gameOver: {fileID: 751841376}
