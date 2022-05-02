@@ -1484,7 +1484,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -408}
+  m_AnchoredPosition: {x: 8.999976, y: -367.00003}
   m_SizeDelta: {x: 753.2, y: 86.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &261812770
@@ -3132,7 +3132,7 @@ GameObject:
   - component: {fileID: 528733182}
   - component: {fileID: 528733181}
   m_Layer: 0
-  m_Name: GamesPlusJames - Rhythm Tutorial (extended)
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9214,7 +9214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -340}
+  m_AnchoredPosition: {x: 9, y: -299}
   m_SizeDelta: {x: 459.7, y: 86.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1931373123
