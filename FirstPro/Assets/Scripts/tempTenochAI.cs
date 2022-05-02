@@ -23,7 +23,7 @@ public class tempTenochAI : MonoBehaviour
     [SerializeField] Text gameOver;
 
     //Audio
-    bool isPlaying = false;
+    //bool isPlaying = false;
     
 
     // Start is called before the first frame update

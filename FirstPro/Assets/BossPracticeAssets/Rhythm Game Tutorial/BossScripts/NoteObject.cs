@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class NoteObject : MonoBehaviour
 {
+
+    public GameObject hitEffect, goodEffect, perfectEffect, missEffect;
+
     public bool canBePressed;
 
     public KeyCode keyToPress;
@@ -23,10 +26,28 @@ public class NoteObject : MonoBehaviour
             if(canBePressed)
             {
 
-                GameManager.instance.NoteHit();
+                //GameManager.instance.NoteHit();
 
                 gameObject.SetActive(false);
-                
+
+                if(Mathf.Abs(transform.position.y) > 0.25f)
+                {
+                    GameManager.instance.NormalHit();
+                    Debug.Log("Normal");
+                    Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
+                }
+                else if (Mathf.Abs(transform.position.y) > 0.05f)
+                {
+                    GameManager.instance.GoodHit();
+                     Debug.Log("Good");
+                     Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
+                }
+                else
+                {
+                    GameManager.instance.PerfectHit();
+                    Debug.Log("Perfect");
+                    Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
+                }
             }
         }
     }
@@ -46,6 +67,7 @@ public class NoteObject : MonoBehaviour
             canBePressed = false;
 
             GameManager.instance.NoteMissed();
+            Instantiate(missEffect, transform.position, missEffect.transform.rotation);
             
         }
     }
