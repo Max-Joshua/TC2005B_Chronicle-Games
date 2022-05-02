@@ -3473,7 +3473,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560365966}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 0, z: 0}
+  m_LocalPosition: {x: 1.49, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 732040605}
@@ -5119,13 +5119,26 @@ MonoBehaviour:
   theBS: {fileID: 780174266}
   currentScore: 0
   scorePerNote: 10
-  scorePerGoodNote: 150
-  scorePerPerfectNote: 200
+  scorePerGoodNote: 15
+  scorePerPerfectNote: 20
   currentMultiplier: 1
   multiplierTracker: 0
   multiplierThresholds: 040000000800000010000000
   scoreText: {fileID: 2008613601}
   multiText: {fileID: 1033772521}
+  totalNotes: 0
+  normalHits: 0
+  goodHits: 0
+  perfectHits: 0
+  missedHits: 0
+  resutlScreen: {fileID: 1879556280}
+  percentHitText: {fileID: 210091309}
+  normalText: {fileID: 370956001}
+  goodText: {fileID: 2137619954}
+  perfectText: {fileID: 1796046037}
+  missedText: {fileID: 1745630535}
+  rankText: {fileID: 899064020}
+  finalScoreText: {fileID: 261812771}
 --- !u!4 &751343670
 Transform:
   m_ObjectHideFlags: 0
@@ -6333,7 +6346,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192052177}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 0, z: 1}
+  m_LocalPosition: {x: -1.51, y: 0, z: 1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 732040605}
@@ -7416,7 +7429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436989063}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: 1}
+  m_LocalPosition: {x: -0.51, y: 0, z: 1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 732040605}
@@ -8658,7 +8671,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822217428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0.49, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 732040605}
@@ -8976,7 +8989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1879556281
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9008,8 +9021,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -747.9, y: -92.2}
+  m_AnchoredPosition: {x: 21, y: 0}
+  m_SizeDelta: {x: -728.722, y: -46.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1879556282
 MonoBehaviour:

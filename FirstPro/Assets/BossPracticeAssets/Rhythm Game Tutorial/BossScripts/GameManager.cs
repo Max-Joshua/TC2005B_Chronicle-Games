@@ -17,11 +17,11 @@ public class GameManager : MonoBehaviour
 
     public int currentScore;
 
-    public int scorePerNote = 100;
+    public int scorePerNote = 10;
 
-    public int scorePerGoodNote = 150;
+    public int scorePerGoodNote = 15;
 
-    public int scorePerPerfectNote = 200;
+    public int scorePerPerfectNote = 20;
 
     public int currentMultiplier;
     public int multiplierTracker;
@@ -30,6 +30,13 @@ public class GameManager : MonoBehaviour
 
     public Text scoreText;
     public Text multiText;
+
+    public float totalNotes;
+    public float normalHits, goodHits, perfectHits, missedHits;
+
+    public GameObject resutlScreen;
+
+    public Text percentHitText, normalText, goodText, perfectText, missedText, rankText, finalScoreText;
 
     
     
@@ -40,6 +47,8 @@ public class GameManager : MonoBehaviour
         instance = this;
         scoreText.text = "Score: 0";
         currentMultiplier = 1;
+
+        totalNotes = FindObjectsOfType<NoteObject>().Length;
     }
 
     // Update is called once per frame
@@ -54,6 +63,19 @@ public class GameManager : MonoBehaviour
 
                 theMusic.Play();
             }
+        }
+        else
+        {
+            if(!theMusic.isPlaying && !resutlScreen.activeInHierarchy)
+            {
+                resutlScreen.SetActive(true);
+
+                normalText.text = normalHits.ToString();
+                goodText.text = goodHits.ToString();
+                perfectText.text = perfectHits.ToString();
+                missedText.text = missedHits.ToString();
+            }
+            
         }
     }
 
@@ -83,24 +105,32 @@ public class GameManager : MonoBehaviour
         currentMultiplier = 1;
         multiplierTracker = 0;
         multiText.text = "Multiplier: x" + currentMultiplier;
+
+        missedHits++;
     }
 
     public void NormalHit()
     {
         currentScore += scorePerNote * currentMultiplier;
         NoteHit();
+
+        normalHits++;
     }
 
     public void GoodHit()
     {
         currentScore += scorePerGoodNote * currentMultiplier;
         NoteHit();
+
+        goodHits++;
     }
 
     public void PerfectHit()
     {
         currentScore += scorePerPerfectNote * currentMultiplier;
         NoteHit();
+
+        perfectHits++;
     }
 
 
