@@ -78,7 +78,7 @@ public class LevelLoader : MonoBehaviour
     public void PlayGame()
     {
       
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex +1));
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 3));
         
      }
 
@@ -98,12 +98,16 @@ public class LevelLoader : MonoBehaviour
     void StoreInfo ()
     {
         userName = userField.GetComponent<Text>().text;
+        PlayerPrefs.SetString("userName", userName);
 
         age = ageField.GetComponent<Text>().text;
+        PlayerPrefs.SetInt("age", int.Parse(age));
 
         eMail = mailField.GetComponent<Text>().text;
+        PlayerPrefs.SetString("eMail", eMail);
 
         country = countryField.GetComponent<Text>().text;
+        PlayerPrefs.SetString("country", country);
 
         
 

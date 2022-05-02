@@ -12,6 +12,7 @@ TagManager:
   - Boss
   - Activator
   - DataBase
+  - UserInfoButton
   layers:
   - Default
   - TransparentFX
