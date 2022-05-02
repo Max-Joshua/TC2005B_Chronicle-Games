@@ -34,7 +34,7 @@ public class LevelLoader : MonoBehaviour
     public Button startButton;
 
 
-     public bool click = false;
+    public bool click = false;
 
 
 

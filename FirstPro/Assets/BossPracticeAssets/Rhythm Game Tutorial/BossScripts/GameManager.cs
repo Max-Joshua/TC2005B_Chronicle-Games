@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,15 +30,16 @@ public class GameManager : MonoBehaviour
     public int[] multiplierThresholds;
 
 
-    public Text scoreText;
-    public Text multiText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI multiText;
 
     public float totalNotes;
-    public float normalHits, goodHits, perfectHits, missedHits;
-
+    private float normalHits, goodHits, perfectHits, missedHits;
     public GameObject resutlScreen;
-
     public Text percentHitText, normalText, goodText, perfectText, missedText, rankText, finalScoreText;
+
+    public Button NL;
+    public bool click = false;
 
     
     
@@ -49,6 +52,12 @@ public class GameManager : MonoBehaviour
         currentMultiplier = 1;
 
         totalNotes = FindObjectsOfType<NoteObject>().Length;
+
+    }
+
+    void clicked()
+    {
+        click = true;
     }
 
     // Update is called once per frame
@@ -116,6 +125,13 @@ public class GameManager : MonoBehaviour
 
                 finalScoreText.text = currentScore.ToString();
 
+                NL.onClick.AddListener(clicked);
+
+                if (click)
+                {
+                    SceneManager.LoadScene("FirstLevel");
+                }
+
             }
             
         }
@@ -137,13 +153,12 @@ public class GameManager : MonoBehaviour
 
         multiText.text = "Multiplier: x" + currentMultiplier;
 
-        // currentScore += scorePerNote * currentMultiplier;
         scoreText.text = "Score: " + currentScore;
     }
 
     public void NoteMissed()
     {
-        Debug.Log("Missed Note");
+
         currentMultiplier = 1;
         multiplierTracker = 0;
         multiText.text = "Multiplier: x" + currentMultiplier;
@@ -174,6 +189,9 @@ public class GameManager : MonoBehaviour
 
         perfectHits++;
     }
+
+
+
 
 
 }

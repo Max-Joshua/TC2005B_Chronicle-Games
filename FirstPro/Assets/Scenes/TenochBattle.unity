@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 117616737}
   - component: {fileID: 117616736}
   m_Layer: 0
-  m_Name: GamesPlusJames - Rhythm Tutorial (extended)
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3835,7 +3835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -408}
+  m_AnchoredPosition: {x: 0, y: -367}
   m_SizeDelta: {x: 753.2, y: 86.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1525851616
@@ -4262,7 +4262,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -340}
+  m_AnchoredPosition: {x: 0, y: -299}
   m_SizeDelta: {x: 459.7, y: 86.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1755170922
@@ -4568,6 +4568,19 @@ MonoBehaviour:
   multiplierThresholds: 040000000800000010000000
   scoreText: {fileID: 1306775023}
   multiText: {fileID: 2115625189}
+  totalNotes: 0
+  normalHits: 0
+  goodHits: 0
+  perfectHits: 0
+  missedHits: 0
+  resutlScreen: {fileID: 1692187474}
+  percentHitText: {fileID: 1268872712}
+  normalText: {fileID: 2124747360}
+  goodText: {fileID: 92098169}
+  perfectText: {fileID: 2123734302}
+  missedText: {fileID: 1454238611}
+  rankText: {fileID: 104864176}
+  finalScoreText: {fileID: 1525851617}
 --- !u!4 &1818044608
 Transform:
   m_ObjectHideFlags: 0
