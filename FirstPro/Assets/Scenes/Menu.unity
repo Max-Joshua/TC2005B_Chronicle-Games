@@ -1970,15 +1970,7 @@ MonoBehaviour:
   getScoreNotesEP: 
   getScoreEnemiesEP: 
   allScores:
-    _scorelists:
-    - damage_inflicted: 10
-      total_score: 40
-      lost_life: 2
-      damage_taken: 65
-    - damage_inflicted: 10
-      total_score: 40
-      lost_life: 2
-      damage_taken: 65
+    _scorelists: []
 --- !u!4 &646777002
 Transform:
   m_ObjectHideFlags: 0
