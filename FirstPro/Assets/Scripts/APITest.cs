@@ -32,6 +32,10 @@ public class DBNotes{
     public string missed;
 
 }
+public class DBScoreEnemies{
+    public int numOfEnemies;
+
+}
 
 // Allow the class to be extracted from Unity
 [System.Serializable]
@@ -49,6 +53,16 @@ public class UsersList{
     public List<DBUsers> _usersList;
 
 }
+// [System.Serializable]
+// public class NotesList{
+//     public List<DBNotes> _usersList;
+
+// }
+[System.Serializable]
+public class ScoreEnemiesList{
+    public List<DBScoreEnemies> _scoreEnemiesList;
+
+}
 public class APITest : MonoBehaviour
 {
     [SerializeField] Player player;
@@ -56,11 +70,17 @@ public class APITest : MonoBehaviour
     [SerializeField] string getScoreEP;
     [SerializeField] string getStatisticsEP;
     [SerializeField] string getUsersEP;
+    [SerializeField] string getNotesEP;
+    [SerializeField] string getScoreEnemiesEP;
+
 
     // This is where the information from the api will be extracted
     public ScoreList allScores;
     public StatisticsList allStatistics;
     public UsersList allUsers;
+    
+    //public NotesList allNotes;
+    public ScoreEnemiesList allScoreEnemies;
 
     // Update is called once per frame
 
@@ -200,7 +220,7 @@ public class APITest : MonoBehaviour
             //Debug.Log("Response: " + www.downloadHandler.text);
             // Compose the response to look like the object we want to extract
             // https://answers.unity.com/questions/1503047/json-must-represent-an-object-type.html
-            string jsonString = "{\"statistics\":" + www.downloadHandler.text + "}";
+            string jsonString = "{\"user_info\":" + www.downloadHandler.text + "}";
             allUsers = JsonUtility.FromJson<UsersList>(jsonString);
             DisplayUsers();
         } else {
@@ -248,4 +268,126 @@ public class APITest : MonoBehaviour
         /*TMPro_Test texter = GetComponent<TMPro_Test>();
         texter.LoadNames(allStatistics);*/
     }
+
+    public void addScoreEnemies(){
+        StartCoroutine("AddScoreEnemies");
+    }
+    IEnumerator GetScoreEnemies()
+    {
+        UnityWebRequest www = UnityWebRequest.Get(url + getScoreEnemiesEP);
+        yield return www.SendWebRequest();
+
+        if (www.result == UnityWebRequest.Result.Success) {
+            //Debug.Log("Response: " + www.downloadHandler.text);
+            // Compose the response to look like the object we want to extract
+            // https://answers.unity.com/questions/1503047/json-must-represent-an-object-type.html
+            string jsonString = "{\"user_info\":" + www.downloadHandler.text + "}";
+            allScoreEnemies = JsonUtility.FromJson<ScoreEnemiesList>(jsonString);
+            DisplayUsers();
+        } else {
+            Debug.Log("Error: " + www.error);
+        }
+    }  
+    IEnumerator AddScoreEnemies()
+    {
+        /*
+        // This should work with an API that does not expect JSON
+        WWWForm form = new WWWForm();
+        form.AddField("name", "newGuy" + Random.Range(1000, 9000).ToString());
+        form.AddField("surname", "Tester" + Random.Range(1000, 9000).ToString());
+        Debug.Log(form);
+        */
+
+        // Create the object to be sent as json
+        DBScoreEnemies testScoreEnemies = new DBScoreEnemies();
+        testScoreEnemies.numOfEnemies = 10;
+
+
+        //Debug.Log("USER: " + testUser);
+        string jsonData = JsonUtility.ToJson(testScoreEnemies);
+        //Debug.Log("BODY: " + jsonData);
+        // Send using the Put method:
+        // https://stackoverflow.com/questions/68156230/unitywebrequest-post-not-sending-body
+        UnityWebRequest www = UnityWebRequest.Put(url + getScoreEnemiesEP, jsonData);
+        //UnityWebRequest www = UnityWebRequest.Post(url + getUsersEP, form);
+        // Set the method later, and indicate the encoding is JSON
+        www.method = "POST";
+        www.SetRequestHeader("Content-Type", "application/json");
+        yield return www.SendWebRequest();
+
+        if (www.result == UnityWebRequest.Result.Success) {
+            Debug.Log("Response: " + www.downloadHandler.text);
+        } else {
+            Debug.Log("Error: " + www.error);
+        }
+    } 
+    void DisplayScoreEnemies()
+    {
+        /*TMPro_Test texter = GetComponent<TMPro_Test>();
+        texter.LoadNames(allStatistics);*/
+    }
+
+    // public void addNotes(){
+    //     StartCoroutine("AddNotes");
+    // }
+    // IEnumerator GetNotes()
+    // {
+    //     UnityWebRequest www = UnityWebRequest.Get(url + getNotesEP);
+    //     yield return www.SendWebRequest();
+
+    //     if (www.result == UnityWebRequest.Result.Success) {
+    //         //Debug.Log("Response: " + www.downloadHandler.text);
+    //         // Compose the response to look like the object we want to extract
+    //         // https://answers.unity.com/questions/1503047/json-must-represent-an-object-type.html
+    //         string jsonString = "{\"notes\":" + www.downloadHandler.text + "}";
+    //         allNotes = JsonUtility.FromJson<UsersList>(jsonString);
+    //         DisplayNotes();
+    //     } else {
+    //         Debug.Log("Error: " + www.error);
+    //     }
+    // }
+
+    // IEnumerator AddNotes()
+    // {
+    //     /*
+    //     // This should work with an API that does not expect JSON
+    //     WWWForm form = new WWWForm();
+    //     form.AddField("name", "newGuy" + Random.Range(1000, 9000).ToString());
+    //     form.AddField("surname", "Tester" + Random.Range(1000, 9000).ToString());
+    //     Debug.Log(form);
+    //     */
+
+    //     // Create the object to be sent as json
+    //     DBNotes testNote = new DBNotes();
+    //     testUser.name = "Bansai";
+    //     testUser.mail = "bansai@gmail.com";
+    //     testUser.age = 28;
+    //     testUser.country = "Mexico";
+
+
+    //     //Debug.Log("USER: " + testUser);
+    //     string jsonData = JsonUtility.ToJson(testUser);
+    //     //Debug.Log("BODY: " + jsonData);
+    //     // Send using the Put method:
+    //     // https://stackoverflow.com/questions/68156230/unitywebrequest-post-not-sending-body
+    //     UnityWebRequest www = UnityWebRequest.Put(url + getUsersEP, jsonData);
+    //     //UnityWebRequest www = UnityWebRequest.Post(url + getUsersEP, form);
+    //     // Set the method later, and indicate the encoding is JSON
+    //     www.method = "POST";
+    //     www.SetRequestHeader("Content-Type", "application/json");
+    //     yield return www.SendWebRequest();
+
+    //     if (www.result == UnityWebRequest.Result.Success) {
+    //         Debug.Log("Response: " + www.downloadHandler.text);
+    //     } else {
+    //         Debug.Log("Error: " + www.error);
+    //     }
+    // } 
+
+    // void DisplayNotes()
+    // {
+    //     /*TMPro_Test texter = GetComponent<TMPro_Test>();
+    //     texter.LoadNames(allStatistics);*/
+    // }
+
 }
