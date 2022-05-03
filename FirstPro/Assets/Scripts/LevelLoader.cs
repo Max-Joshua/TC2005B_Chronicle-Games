@@ -31,7 +31,7 @@ public class LevelLoader : MonoBehaviour
 
     public float transitionTime;
 
-    public Button startButton;
+    //public Button startButton;
 
 
     public bool click = false;
@@ -39,12 +39,12 @@ public class LevelLoader : MonoBehaviour
 
 
 
-    void Start()
-     {
-        startButton.onClick.AddListener(clicked);
+    // void Start()
+    //  {
+    //     startButton.onClick.AddListener(clicked);
 
 
-    }
+    // }
 
     void Update()
     {
@@ -59,10 +59,10 @@ public class LevelLoader : MonoBehaviour
                 click = false;
             }
 
-            else
-            {
-                PlayGame();
-            }
+            // else
+            // {
+            //     PlayGame();
+            // }
 
         }
 
@@ -75,25 +75,25 @@ public class LevelLoader : MonoBehaviour
     }
      
 
-    public void PlayGame()
-    {
+    // public void PlayGame()
+    // {
       
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 3));
+    //     StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 0));
         
-     }
+    //  }
 
 
-    IEnumerator LoadLevel (int levelIndex)
-    {
-        transition.SetTrigger("Start");
+    // IEnumerator LoadLevel (int levelIndex)
+    // {
+    //     transition.SetTrigger("Start");
 
-        yield return new WaitForSeconds(transitionTime);
+    //     yield return new WaitForSeconds(transitionTime);
 
-        SceneManager.LoadScene(levelIndex);
+    //     SceneManager.LoadScene(levelIndex);
 
 
         
-    }
+    // }
 
     void StoreInfo ()
     {
