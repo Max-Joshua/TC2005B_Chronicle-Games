@@ -38,7 +38,7 @@ public class DBScoreEnemies{
 // Allow the class to be extracted from Unity
 [System.Serializable]
 public class ScoreList{
-    public List<DBScore> _scorelists;
+    public List<DBScore> score;
 }
 
 [System.Serializable]
@@ -86,7 +86,6 @@ public class APITest : MonoBehaviour
 
     public void QueryScores()
     {
-        Debug.Log("PRINTING RESULTS SCORE");
         StartCoroutine("GetScores");
     }
 

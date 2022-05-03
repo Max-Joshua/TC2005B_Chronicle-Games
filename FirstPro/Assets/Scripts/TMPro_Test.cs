@@ -16,20 +16,22 @@ public class TMPro_Test : MonoBehaviour
 
     public void LoadScores(ScoreList allScores)
     {
-        
-        for (int i=0; i<allScores._scorelists.Count; i++) {
+        Debug.Log("Trying to load scores");
+        for (int i=0; i<allScores.score.Count; i++) {
+            Debug.Log("PRINTING RESULTS SCORE");
             // Create new text objects
             GameObject textTMP = Instantiate(textPrefab);
             // Add them to the ScollView content
             textTMP.transform.SetParent(contentTransform);
             // Set the position of each element
             textTMP.GetComponent<RectTransform>().anchoredPosition =
-                new Vector2 (0, -50 * i);
+                new Vector2 (0, -80 * i);
             // Extract the text from the argument object
-            DBScore score = allScores._scorelists[i];
+            DBScore score = allScores.score[i];
             TextMeshProUGUI field = textTMP.GetComponent<TextMeshProUGUI>();
-            field.text = "Damage Inflicted: " + score.damage_inflicted + "Score: " + score.total_score +
-                         "Life left: " + score.lost_life + "Damage_Text" + score.damage_taken;
+            field.text = "Score: " + score.total_score + " Life left: " + score.lost_life + 
+                        " Damage taken: " + score.damage_taken +
+                        " Damage inflicted: " + score.damage_inflicted;
             //Debug.Log("ID: " + us.id_users + " | " + us.name + " " + us.surname);
         }
     }
