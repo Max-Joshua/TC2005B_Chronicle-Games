@@ -760,7 +760,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
-  health: 55
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -1079,7 +1079,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
-  health: 55
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -7002,7 +7002,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
-  health: 80
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -7335,7 +7335,7 @@ MonoBehaviour:
   range: 2
   timeBTWShots: 1
   shootSpeed: 5
-  health: 30
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -9093,7 +9093,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
-  health: 55
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -9683,7 +9683,7 @@ MonoBehaviour:
   range: 2
   timeBTWShots: 1
   shootSpeed: 5
-  health: 30
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -10792,7 +10792,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
-  health: 80
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -12775,7 +12775,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
-  health: 80
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -14245,8 +14245,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.01}
-  m_Size: {x: 0.3, y: 0.5932569}
+  m_Offset: {x: 0, y: -0.06382841}
+  m_Size: {x: 0.3, y: 0.7009138}
   m_Direction: 0
 --- !u!95 &1006492541
 Animator:
@@ -20640,7 +20640,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
-  health: 80
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -21941,7 +21941,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
-  health: 55
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -22445,7 +22445,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
-  health: 80
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -23580,7 +23580,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
-  health: 55
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -23895,7 +23895,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
-  health: 55
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -24074,7 +24074,7 @@ MonoBehaviour:
   range: 2
   timeBTWShots: 1
   shootSpeed: 5
-  health: 30
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -37577,7 +37577,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
-  health: 55
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -37720,7 +37720,7 @@ MonoBehaviour:
   range: 1.75
   timeBTWShots: 2
   shootSpeed: 5
-  health: 80
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -37945,7 +37945,7 @@ MonoBehaviour:
   range: 2
   timeBTWShots: 1
   shootSpeed: 5
-  health: 30
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -38088,7 +38088,7 @@ MonoBehaviour:
   range: 2
   timeBTWShots: 1
   shootSpeed: 5
-  health: 30
+  health: 20
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
@@ -43953,7 +43953,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6d1ffcb9b12dab04393f46561eb8ff4e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d08eb4918fbdbc4458f6b6e3a7d90f72, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
