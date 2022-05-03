@@ -25,11 +25,11 @@ public class TMPro_Test : MonoBehaviour
             textTMP.transform.SetParent(contentTransform);
             // Set the position of each element
             textTMP.GetComponent<RectTransform>().anchoredPosition =
-                new Vector2 (0, -80 * i);
+                new Vector2 (0, 1 * i);
             // Extract the text from the argument object
             DBScore score = allScores.score[i];
             TextMeshProUGUI field = textTMP.GetComponent<TextMeshProUGUI>();
-            field.text = "Score: " + score.total_score + " Life left: " + score.lost_life + 
+            field.text = "---------------------------\n" + "Score: " + score.total_score + " Life left: " + score.lost_life + 
                         " Damage taken: " + score.damage_taken +
                         " Damage inflicted: " + score.damage_inflicted;
             //Debug.Log("ID: " + us.id_users + " | " + us.name + " " + us.surname);
