@@ -26,8 +26,11 @@ DROP TABLE IF EXISTS `score_notes`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `score_notes` (
   `id_score_notes` int unsigned NOT NULL AUTO_INCREMENT,
-  `notes` int NOT NULL,
+  `num_notes_perfect` int NOT NULL,
   `id_notes` int unsigned DEFAULT NULL,
+  `num_notes_good` int NOT NULL,
+  `num_notes_bad` int NOT NULL,
+  `num_notes_missed` int NOT NULL,
   PRIMARY KEY (`id_score_notes`),
   KEY `id_score_notes_idx` (`id_score_notes`),
   KEY `id_notes_idx` (`id_notes`),
@@ -53,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-22 20:13:01
+-- Dump completed on 2022-05-03 12:13:07

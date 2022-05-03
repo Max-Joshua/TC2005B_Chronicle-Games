@@ -31,7 +31,7 @@ CREATE TABLE `score_enemies` (
   PRIMARY KEY (`id_score_enemies`),
   KEY `id_enemies` (`id_enemies`),
   CONSTRAINT `id_enemies` FOREIGN KEY (`id_enemies`) REFERENCES `enemies` (`id_enemies`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-22 20:13:01
+-- Dump completed on 2022-05-03 12:13:06

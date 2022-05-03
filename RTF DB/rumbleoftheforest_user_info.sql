@@ -34,7 +34,7 @@ CREATE TABLE `user_info` (
   PRIMARY KEY (`id_user_info`),
   KEY `id_statistics_idx` (`id_statistics`),
   CONSTRAINT `id_statistics` FOREIGN KEY (`id_statistics`) REFERENCES `statistics` (`id_statistics`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=162 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-22 20:13:01
+-- Dump completed on 2022-05-03 12:13:07
