@@ -24568,8 +24568,8 @@ MonoBehaviour:
   pla: {fileID: 2058579190}
   canShoot: 0
   play: {fileID: 1099496080}
-  heartBeat: {fileID: 0}
-  missedHeartBeat: {fileID: 0}
+  heartBeat: {fileID: 8300000, guid: ff8fa1036c798914390785a1a1818da5, type: 3}
+  missedHeartBeat: {fileID: 8300000, guid: facb25d477d24c34882803c48f96e160, type: 3}
   musicIsPlaying: 0
 --- !u!50 &1294430090
 Rigidbody2D:
