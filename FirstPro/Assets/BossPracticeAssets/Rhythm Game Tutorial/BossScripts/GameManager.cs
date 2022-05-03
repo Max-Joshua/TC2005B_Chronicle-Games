@@ -41,6 +41,10 @@ public class GameManager : MonoBehaviour
     public Button NL;
     public bool click = false;
 
+    public Animator transition;
+
+    public float transitionTime;
+
     
     
 
@@ -53,6 +57,8 @@ public class GameManager : MonoBehaviour
 
         totalNotes = FindObjectsOfType<NoteObject>().Length;
 
+        NL.onClick.AddListener(clicked);
+
     }
 
     void clicked()
@@ -63,6 +69,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
         if(!startPlaying)
         {
             if(Input.anyKeyDown)
@@ -125,15 +133,17 @@ public class GameManager : MonoBehaviour
 
                 finalScoreText.text = currentScore.ToString();
 
-                NL.onClick.AddListener(clicked);
+                
 
-                if (click)
-                {
-                    SceneManager.LoadScene("FirstLevel");
-                }
+                
 
             }
             
+        }
+
+        if (click)
+        {
+           NextLevel();
         }
     }
 
@@ -190,6 +200,25 @@ public class GameManager : MonoBehaviour
         perfectHits++;
     }
 
+
+    public void NextLevel()
+    {
+
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex +1));
+    
+    }
+
+     IEnumerator LoadLevel (int levelIndex)
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(levelIndex);
+
+
+        
+    }
 
 
 

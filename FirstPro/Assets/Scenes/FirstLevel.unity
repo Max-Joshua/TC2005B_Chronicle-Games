@@ -13230,6 +13230,8 @@ MonoBehaviour:
   pla: {fileID: 1006492535}
   canShoot: 0
   play: {fileID: 2136161195}
+  heartBeat: {fileID: 8300000, guid: ff8fa1036c798914390785a1a1818da5, type: 3}
+  missedHeartBeat: {fileID: 8300000, guid: facb25d477d24c34882803c48f96e160, type: 3}
   musicIsPlaying: 0
 --- !u!50 &896294402
 Rigidbody2D:
