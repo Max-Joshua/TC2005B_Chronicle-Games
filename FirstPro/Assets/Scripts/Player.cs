@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
 
     void Restart()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
 
