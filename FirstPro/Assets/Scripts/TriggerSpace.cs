@@ -34,6 +34,9 @@ public class TriggerSpace : MonoBehaviour
 
     public AudioSource play;
 
+    public AudioClip heartBeat;
+
+    public AudioClip missedHeartBeat;
     public bool musicIsPlaying = false;
 
     void Start(){
@@ -58,6 +61,7 @@ public class TriggerSpace : MonoBehaviour
         {
             addPoints(1);
             totalHitBars += 1f;
+            AudioSource.PlayClipAtPoint(heartBeat, player.transform.position);
 
             if(Input.GetKey(KeyCode.E) && (player.currentPower >= 0 && player.currentPower == 3)){
                 
@@ -104,6 +108,7 @@ public class TriggerSpace : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && !canPress)
         {
             substractPoints(1);
+            AudioSource.PlayClipAtPoint(missedHeartBeat, player.transform.position, 0.2f);
             player.TakeDamage(0);
 
             Debug.Log("Missed!");

@@ -292,7 +292,7 @@ MonoBehaviour:
   dieTime: 8
   damage: 20
   die: {fileID: 1277532067253020870}
-  hitSource: {fileID: 8300000, guid: 89819fafe90f78c4eaaa531d4d46c978, type: 3}
+  hitSource: {fileID: 8300000, guid: ff7ed4d8f285a7b41ad757c0ecf6231c, type: 3}
   playerPos: {fileID: 0}
 --- !u!212 &2338495076600906748
 SpriteRenderer:
