@@ -5203,14 +5203,14 @@ MonoBehaviour:
   scoreText: {fileID: 2138392627}
   multiText: {fileID: 5690491}
   totalNotes: 0
-  resutlScreen: {fileID: 0}
-  percentHitText: {fileID: 0}
-  normalText: {fileID: 0}
-  goodText: {fileID: 0}
-  perfectText: {fileID: 0}
-  missedText: {fileID: 0}
-  rankText: {fileID: 0}
-  finalScoreText: {fileID: 0}
+  resutlScreen: {fileID: 1197882633}
+  percentHitText: {fileID: 1741010023}
+  normalText: {fileID: 1054002123}
+  goodText: {fileID: 700503836}
+  perfectText: {fileID: 875204050}
+  missedText: {fileID: 1990596426}
+  rankText: {fileID: 605418202}
+  finalScoreText: {fileID: 1385195610}
   NL: {fileID: 1813844235}
   click: 0
   transition: {fileID: 685523627}

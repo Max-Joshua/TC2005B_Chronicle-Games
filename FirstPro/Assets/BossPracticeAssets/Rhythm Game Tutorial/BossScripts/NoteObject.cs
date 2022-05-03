@@ -15,8 +15,7 @@ public class NoteObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //gameObject.GetComponent<SpriteRenderer>().pivot = new Vector2(transform.position.x, transform.position.y - 1);
-
+        
         if(Input.GetKeyDown(keyToPress))
         {
             if(canBePressed)
