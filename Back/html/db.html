@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/mysqlUseCases.css">
+    <script type="module" defer src="../js/db.js"></script>
+    <!-- <script type="module" defer src="../js/user_info.js"></script>
+    <script type="module" defer src="../js/statistics.js"></script>
+    <script type="module" defer src="../js/score.js"></script>
+    <script type="module" defer src="../js/score_notes.js"></script>
+    <script type="module" defer src="../js/score_enemies.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+    <div class="section">
+        <div class="formInput">
+            <h1>Show users</h1>
+            <form id="formSelect">
+                <input type="submit" value="Show users">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p>When the request ends, the result will be displayed here.</p>
+            <div id="getResults"></div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Add user</h1>
+            <form id="formInsert" method="post" action="http://localhost:5000/api/user_info">
+                <input type="text" name="name" placeholder="Type your first name">
+                <input type="text" name="mail" placeholder="Type your mail">
+                <input type="text" name="age" placeholder="Type your age">
+                <input type="text" name="country" placeholder="Type your country">
+                <input type="submit" value="Add User">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="postResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Update user</h1>
+            <form id="formUpdate" method="put">
+                <input type="text" name="userID" placeholder="Type your userID">
+                <input type="text" name="name" placeholder="Type your new first name">
+                <input type="text" name="mail" placeholder="Type your new mail">
+                <input type="text" name="age" placeholder="Type your new age">
+                <input type="text" name="country" placeholder="Type your new country">
+                <input type="submit" value="Update User">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="putResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Delete user</h1>
+            <form id="formDelete" method="delete">
+                <input type="text" name="userID" placeholder="Type your userID">
+                <input type="submit" value="Delete User">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="deleteResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+
+
+
+    <div class="section">
+        <div class="formInput">
+            <h1>Show statistics</h1>
+            <form id="formSelect">
+                <input type="submit" value="Show statistics">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p>When the request ends, the result will be displayed here.</p>
+            <div id="getResults"></div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Add Statistic</h1>
+            <form id="formInsert" method="post" action="http://localhost:5000/api/statistics">
+                <input type="text" name="accuracy" placeholder="Type your accuracy">
+                <input type="text" name="game_time" placeholder="Type your game time">
+                <input type="text" name="deaths" placeholder="Type your deaths">
+                <input type="submit" value="Add Statistic">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="postResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Update statistics</h1>
+            <form id="formUpdate" method="put">
+                <input type="text" name="statisticsID" placeholder="Type your statisticsID">
+                <input type="text" name="accuracy" placeholder="Type your accuracy">
+                <input type="text" name="game_time" placeholder="Type your game time">
+                <input type="text" name="deaths" placeholder="Type your deaths">
+                <input type="submit" value="Update Statistic">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="putResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Delete statistics</h1>
+            <form id="formDelete" method="delete">
+                <input type="text" name="statisticsID" placeholder="Type your statisticsID">
+                <input type="submit" value="Delete Statistic">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="deleteResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+
+
+
+    <div class="section">
+        <div class="formInput">
+            <h1>Show score</h1>
+            <form id="formSelect">
+                <input type="submit" value="Show scores">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p>When the request ends, the result will be displayed here.</p>
+            <div id="getResults"></div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Add score</h1>
+            <form id="formInsert" method="post" action="http://localhost:5000/api/score">
+                <input type="text" name="total_score" placeholder="Type your total score">
+                <input type="text" name="lost_life" placeholder="Type your lost life">
+                <input type="text" name="damage_taken" placeholder="Type your damage taken">
+                <input type="text" name="damage_inflicted" placeholder="Type your damage inflicted">
+                <input type="submit" value="Add Score">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="postResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Update score</h1>
+            <form id="formUpdate" method="put">
+                <input type="text" name="scoreID" placeholder="Type your scoreID">
+                <input type="text" name="total_score" placeholder="Type your total score">
+                <input type="text" name="lost_life" placeholder="Type your lost life">
+                <input type="text" name="damage_taken" placeholder="Type your damage taken">
+                <input type="text" name="damage_inflicted" placeholder="Type your damage inflicted">
+                <input type="submit" value="Update score">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="putResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Delete score</h1>
+            <form id="formDelete" method="delete">
+                <input type="text" name="scoreID" placeholder="Type your scoreID">
+                <input type="submit" value="Delete Score">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="deleteResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+
+
+
+    <div class="section">
+        <div class="formInput">
+            <h1>Show score notes</h1>
+            <form id="formSelect">
+                <input type="submit" value="Show scores notes">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p>When the request ends, the result will be displayed here.</p>
+            <div id="getResults"></div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Add score notes</h1>
+            <form id="formInsert" method="post" action="http://localhost:5000/api/score_notes">
+                <input type="text" name="notes" placeholder="Type your number of notes">
+                <input type="submit" value="Add Score notes">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="postResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Update score notes</h1>
+            <form id="formUpdate" method="put">
+                <input type="text" name="score_notesID" placeholder="Type your score_notesID">
+                <input type="text" name="notes" placeholder="Type your number of notes">
+                <input type="submit" value="Update score notes">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="putResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Delete score notes</h1>
+            <form id="formDelete" method="delete">
+                <input type="text" name="score_notesID" placeholder="Type your score_notesID">
+                <input type="submit" value="Delete Score Notes">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="deleteResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+
+
+
+    <div class="section">
+        <div class="formInput">
+            <h1>Show enemies score</h1>
+            <form id="formSelect">
+                <input type="submit" value="Show enemies score">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p>When the request ends, the result will be displayed here.</p>
+            <div id="getResults"></div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Add enemies score</h1>
+            <form id="formInsert" method="post" action="http://localhost:5000/api/score_enemies">
+                <input type="text" name="num_of_enemies" placeholder="Type the number of enemies">
+                <input type="submit" value="Add Score Enemies">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="postResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Update enemies score</h1>
+            <form id="formUpdate" method="put">
+                <input type="text" name="score_enemiesID" placeholder="Type your score_enemiesID">
+                <input type="text" name="num_of_enemies" placeholder="Type the number of enemies">
+                <input type="submit" value="Update Score Enemies">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="putResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="formInput">
+            <h1>Delete Score Enemies</h1>
+            <form id="formDelete" method="delete">
+                <input type="text" name="score_enemiesID" placeholder="Type your score_enemiesID">
+                <input type="submit" value="Delete Score Enemies">
+            </form>
+        </div>
+        <div class="resultDisplay">
+            <h1>Result</h1>
+            <p id="deleteResults">When the request ends, the result will be displayed here.</p>
+        </div>
+    </div>
+</body>
+</html>
