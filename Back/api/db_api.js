@@ -63,7 +63,7 @@ app.post('/api/user_info', (request, response)=>{
 
         let connection = connectToDB();
         connection.connect();
-
+        console.log(request.body);
         const query = connection.query('insert into user_info set ?', request.body ,(error, results, fields)=>{
             if(error) 
                 console.log(error);

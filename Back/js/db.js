@@ -1,6 +1,6 @@
 function main()
 {
-    formSelect.onsubmit = async (e) =>{
+    formSelect_user.onsubmit = async (e) =>{
         e.preventDefault()
 
         let response = await fetch('http://localhost:5000/api/user_info',{
@@ -36,7 +36,7 @@ function main()
                 }
             }
 
-            const container = document.getElementById('getResults')
+            const container = document.getElementById('getResults_user')
             container.innerHTML = ''
             container.appendChild(table)
         }
@@ -45,21 +45,13 @@ function main()
         }
     }
 
-    formInsert.onsubmit = async(e)=>
+    formInsert_user.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formInsert)
+        const data = new FormData(formInsert_user)
         const dataObj = Object.fromEntries(data.entries())
-        // let data = {}
-        // console.log(formInsert.elements['firstName'].value)
-
-        // const test = new FormData(formInsert).entries()
-
-        // console.log(test)
-        // for(let [key, value] of test)
-        //     data[key] = value
-        // console.log(JSON.stringify(data))
+        console.log(dataObj)
 
         let response = await fetch('http://localhost:5000/api/user_info',{
             method: 'POST',
@@ -79,11 +71,11 @@ function main()
         }
     }
 
-    formUpdate.onsubmit = async(e)=>
+    formUpdate_user.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formUpdate)
+        const data = new FormData(formUpdate_user)
         const dataObj = Object.fromEntries(data.entries())
 
         let response = await fetch('http://localhost:5000/api/user_info',{
@@ -104,11 +96,11 @@ function main()
         }
     }
 
-    formDelete.onsubmit = async(e)=>
+    formDelete_user.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formDelete)
+        const data = new FormData(formDelete_user)
         const dataObj = Object.fromEntries(data.entries())
 
         let response = await fetch('http://localhost:5000/api/user_info',{
@@ -131,7 +123,7 @@ function main()
 
 
 
-    formSelect.onsubmit = async (e) =>{
+    formSelect_statistics.onsubmit = async (e) =>{
         e.preventDefault()
 
         let response = await fetch('http://localhost:5000/api/statistics',{
@@ -167,7 +159,7 @@ function main()
                 }
             }
 
-            const container = document.getElementById('getResults')
+            const container = document.getElementById('getResults_statistics')
             container.innerHTML = ''
             container.appendChild(table)
         }
@@ -176,11 +168,11 @@ function main()
         }
     }
 
-    formInsert.onsubmit = async(e)=>
+    formInsert_statistics.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formInsert)
+        const data = new FormData(formInsert_statistics)
         const dataObj = Object.fromEntries(data.entries())
 
         let response = await fetch('http://localhost:5000/api/statistics',{
@@ -201,11 +193,11 @@ function main()
         }
     }
 
-    formUpdate.onsubmit = async(e)=>
+    formUpdate_statistics.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formUpdate)
+        const data = new FormData(formUpdate_statistics)
         const dataObj = Object.fromEntries(data.entries())
 
         let response = await fetch('http://localhost:5000/api/statistics',{
@@ -226,11 +218,11 @@ function main()
         }
     }
 
-    formDelete.onsubmit = async(e)=>
+    formDelete_statistics.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formDelete)
+        const data = new FormData(formDelete_statistics)
         const dataObj = Object.fromEntries(data.entries())
 
         let response = await fetch('http://localhost:5000/api/statistics',{
@@ -253,7 +245,7 @@ function main()
 
 
 
-    formSelect.onsubmit = async (e) =>{
+    formSelect_score.onsubmit = async (e) =>{
         e.preventDefault()
 
         let response = await fetch('http://localhost:5000/api/score',{
@@ -289,7 +281,7 @@ function main()
                 }
             }
 
-            const container = document.getElementById('getResults')
+            const container = document.getElementById('getResults_score')
             container.innerHTML = ''
             container.appendChild(table)
         }
@@ -298,11 +290,11 @@ function main()
         }
     }
 
-    formInsert.onsubmit = async(e)=>
+    formInsert_score.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formInsert)
+        const data = new FormData(formInsert_score)
         const dataObj = Object.fromEntries(data.entries())
 
         let response = await fetch('http://localhost:5000/api/score',{
@@ -323,11 +315,11 @@ function main()
         }
     }
 
-    formUpdate.onsubmit = async(e)=>
+    formUpdate_score.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formUpdate)
+        const data = new FormData(formUpdate_score)
         const dataObj = Object.fromEntries(data.entries())
 
         let response = await fetch('http://localhost:5000/api/score',{
@@ -348,11 +340,11 @@ function main()
         }
     }
 
-    formDelete.onsubmit = async(e)=>
+    formDelete_score.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formDelete)
+        const data = new FormData(formDelete_score)
         const dataObj = Object.fromEntries(data.entries())
 
         let response = await fetch('http://localhost:5000/api/score',{
@@ -373,7 +365,7 @@ function main()
         }
     }
 
-    formSelect.onsubmit = async (e) =>{
+    formSelect_score_notes.onsubmit = async (e) =>{
         e.preventDefault()
 
         let response = await fetch('http://localhost:5000/api/score_notes',{
@@ -409,7 +401,7 @@ function main()
                 }
             }
 
-            const container = document.getElementById('getResults')
+            const container = document.getElementById('getResults_score_notes')
             container.innerHTML = ''
             container.appendChild(table)
         }
@@ -418,11 +410,11 @@ function main()
         }
     }
 
-    formInsert.onsubmit = async(e)=>
+    formInsert_score_notes.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formInsert)
+        const data = new FormData(formInsert_score_notes)
         const dataObj = Object.fromEntries(data.entries())
 
         let response = await fetch('http://localhost:5000/api/score_notes',{
@@ -443,11 +435,11 @@ function main()
         }
     }
 
-    formUpdate.onsubmit = async(e)=>
+    formUpdate_score_notes.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formUpdate)
+        const data = new FormData(formUpdate_score_notes)
         const dataObj = Object.fromEntries(data.entries())
 
         let response = await fetch('http://localhost:5000/api/score_notes',{
@@ -468,11 +460,11 @@ function main()
         }
     }
 
-    formDelete.onsubmit = async(e)=>
+    formDelete_score_notes.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formDelete)
+        const data = new FormData(formDelete_score_notes)
         const dataObj = Object.fromEntries(data.entries())
 
         let response = await fetch('http://localhost:5000/api/score_notes',{
@@ -495,7 +487,7 @@ function main()
 
 
 
-    formSelect.onsubmit = async (e) =>{
+    formSelect_score_enemies.onsubmit = async (e) =>{
         e.preventDefault()
 
         let response = await fetch('http://localhost:5000/api/score_enemies',{
@@ -531,7 +523,7 @@ function main()
                 }
             }
 
-            const container = document.getElementById('getResults')
+            const container = document.getElementById('getResults_score_enemies')
             container.innerHTML = ''
             container.appendChild(table)
         }
@@ -540,11 +532,11 @@ function main()
         }
     }
 
-    formInsert.onsubmit = async(e)=>
+    formInsert_score_enemies.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formInsert)
+        const data = new FormData(formInsert_score_enemies)
         const dataObj = Object.fromEntries(data.entries())
 
         let response = await fetch('http://localhost:5000/api/score_enemies',{
@@ -565,11 +557,11 @@ function main()
         }
     }
 
-    formUpdate.onsubmit = async(e)=>
+    formUpdate_score_enemies.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formUpdate)
+        const data = new FormData(formUpdate_score_enemies)
         const dataObj = Object.fromEntries(data.entries())
 
         let response = await fetch('http://localhost:5000/api/score_enemies',{
@@ -590,11 +582,11 @@ function main()
         }
     }
 
-    formDelete.onsubmit = async(e)=>
+    formDelete_score_enemies.onsubmit = async(e)=>
     {
         e.preventDefault()
 
-        const data = new FormData(formDelete)
+        const data = new FormData(formDelete_score_enemies)
         const dataObj = Object.fromEntries(data.entries())
 
         let response = await fetch('http://localhost:5000/api/score_enemies',{
