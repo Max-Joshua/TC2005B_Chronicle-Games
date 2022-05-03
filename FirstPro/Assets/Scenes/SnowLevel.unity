@@ -206,6 +206,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 0
   rb: {fileID: 9538566}
   groundCheckPosition: {fileID: 792505885}
   groundLayer:
@@ -348,6 +349,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 0
   rb: {fileID: 16933886}
   groundCheckPosition: {fileID: 276381592}
   groundLayer:
@@ -1646,6 +1648,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 0
   rb: {fileID: 244399670}
   groundCheckPosition: {fileID: 1701150630}
   groundLayer:
@@ -2730,6 +2733,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 0
   rb: {fileID: 314773606}
   groundCheckPosition: {fileID: 1393117293}
   groundLayer:
@@ -7754,7 +7758,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375965685}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.34, y: -0.33, z: 0}
+  m_LocalPosition: {x: -2.03, y: -0.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 433372649}
@@ -7819,7 +7823,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4083272420583267098, guid: 16eff307abfd83547a46dbcaa9a7f44d, type: 3}
+  m_Sprite: {fileID: -5169375974990107763, guid: 659e2cda94e995b42b3e5b5d9c66b080, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7944,7 +7948,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433372648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 70.83, y: 0.3, z: 0}
+  m_LocalPosition: {x: 73.53, y: 0.3, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 375965686}
@@ -7985,7 +7989,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.89, y: -2.77}
+  m_Offset: {x: -0.37835693, y: -2.4958026}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7996,7 +8000,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.13, y: 5.23}
+  m_Size: {x: 6.3792725, y: 4.681606}
   m_EdgeRadius: 0
 --- !u!1 &435205183
 GameObject:
@@ -17650,6 +17654,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 0
   rb: {fileID: 910678633}
   groundCheckPosition: {fileID: 1545964818}
   groundLayer:
@@ -24563,6 +24568,8 @@ MonoBehaviour:
   pla: {fileID: 2058579190}
   canShoot: 0
   play: {fileID: 1099496080}
+  heartBeat: {fileID: 0}
+  missedHeartBeat: {fileID: 0}
   musicIsPlaying: 0
 --- !u!50 &1294430090
 Rigidbody2D:
@@ -24866,6 +24873,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 0
   rb: {fileID: 1320846666}
   groundCheckPosition: {fileID: 824342870}
   groundLayer:
@@ -26002,6 +26010,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
+  scoreEValue: 0
   rb: {fileID: 1467860751}
   groundCheckPosition: {fileID: 169922358}
   groundLayer:

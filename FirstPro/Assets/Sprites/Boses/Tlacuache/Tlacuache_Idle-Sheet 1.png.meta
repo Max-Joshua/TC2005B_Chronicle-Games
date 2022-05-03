@@ -1,46 +1,49 @@
 fileFormatVersion: 2
-guid: 16eff307abfd83547a46dbcaa9a7f44d
+guid: 659e2cda94e995b42b3e5b5d9c66b080
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4083272420583267098
-    second: Tlacuache_Idle-Sheet_0
+      213: -5169375974990107763
+    second: Tlacuache_Idle-Sheet 1_0
   - first:
-      213: 9200433137705087579
-    second: Tlacuache_Idle-Sheet_1
+      213: 6990436441515526148
+    second: Tlacuache_Idle-Sheet 1_1
   - first:
-      213: -7307717878275796043
-    second: Tlacuache_Idle-Sheet_2
+      213: -4386888628910113483
+    second: Tlacuache_Idle-Sheet 1_2
   - first:
-      213: 7536783952514061507
-    second: Tlacuache_Idle-Sheet_3
+      213: 4157048528272436976
+    second: Tlacuache_Idle-Sheet 1_3
   - first:
-      213: -2368232438964529372
-    second: Tlacuache_Idle-Sheet_4
+      213: -1353335896913178620
+    second: Tlacuache_Idle-Sheet 1_4
   - first:
-      213: 980053519640311630
-    second: Tlacuache_Idle-Sheet_5
+      213: 4095396143625571547
+    second: Tlacuache_Idle-Sheet 1_5
   - first:
-      213: -7386276275204592274
-    second: Tlacuache_Idle-Sheet_6
+      213: -3212155323513876440
+    second: Tlacuache_Idle-Sheet 1_6
   - first:
-      213: -898051574978422704
-    second: Tlacuache_Idle-Sheet_7
+      213: 4010529014077035321
+    second: Tlacuache_Idle-Sheet 1_7
   - first:
-      213: -2879164228577614759
-    second: Tlacuache_Idle-Sheet_8
+      213: 1660502171305947205
+    second: Tlacuache_Idle-Sheet 1_8
   - first:
-      213: 7270488890303325977
-    second: Tlacuache_Idle-Sheet_9
+      213: 9119974935484906378
+    second: Tlacuache_Idle-Sheet 1_9
   - first:
-      213: 3716496131742533345
-    second: Tlacuache_Idle-Sheet_10
+      213: 3494181624542568605
+    second: Tlacuache_Idle-Sheet 1_10
   - first:
-      213: -4401344078581138049
-    second: Tlacuache_Idle-Sheet_11
+      213: 3789677829695180596
+    second: Tlacuache_Idle-Sheet 1_11
   - first:
-      213: 3548155870696962561
-    second: Tlacuache_Idle-Sheet_12
+      213: -8940123557350498964
+    second: Tlacuache_Idle-Sheet 1_12
+  - first:
+      213: 1834131173204080103
+    second: Tlacuache_Idle-Sheet 1_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -142,7 +145,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tlacuache_Idle-Sheet_0
+      name: Tlacuache_Idle-Sheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -156,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e42cf91e5d4557c0800000000000000
-      internalID: -4083272420583267098
+      spriteID: d8ba64470ffa248b0800000000000000
+      internalID: -5169375974990107763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tlacuache_Idle-Sheet_1
+      name: Tlacuache_Idle-Sheet 1_1
       rect:
         serializedVersion: 2
         x: 160
@@ -177,14 +180,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b52f4a851318eaf70800000000000000
-      internalID: 9200433137705087579
+      spriteID: 4088a7918e4030160800000000000000
+      internalID: 6990436441515526148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tlacuache_Idle-Sheet_2
+      name: Tlacuache_Idle-Sheet 1_2
       rect:
         serializedVersion: 2
         x: 320
@@ -198,14 +201,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b39992ce45c59a90800000000000000
-      internalID: -7307717878275796043
+      spriteID: 53dbc94e804ae13c0800000000000000
+      internalID: -4386888628910113483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tlacuache_Idle-Sheet_3
+      name: Tlacuache_Idle-Sheet 1_3
       rect:
         serializedVersion: 2
         x: 480
@@ -219,14 +222,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c4177eb219089860800000000000000
-      internalID: 7536783952514061507
+      spriteID: 0fe2db98c9dc0b930800000000000000
+      internalID: 4157048528272436976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tlacuache_Idle-Sheet_4
+      name: Tlacuache_Idle-Sheet 1_4
       rect:
         serializedVersion: 2
         x: 640
@@ -240,14 +243,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42756f9e429522fd0800000000000000
-      internalID: -2368232438964529372
+      spriteID: 40094ba0c2cf73de0800000000000000
+      internalID: -1353335896913178620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tlacuache_Idle-Sheet_5
+      name: Tlacuache_Idle-Sheet 1_5
       rect:
         serializedVersion: 2
         x: 800
@@ -261,14 +264,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e47380bcb79d99d00800000000000000
-      internalID: 980053519640311630
+      spriteID: bdc8e432815c5d830800000000000000
+      internalID: 4095396143625571547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tlacuache_Idle-Sheet_6
+      name: Tlacuache_Idle-Sheet 1_6
       rect:
         serializedVersion: 2
         x: 960
@@ -282,14 +285,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6de883acdcae7990800000000000000
-      internalID: -7386276275204592274
+      spriteID: 820539280c12c63d0800000000000000
+      internalID: -3212155323513876440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tlacuache_Idle-Sheet_7
+      name: Tlacuache_Idle-Sheet 1_7
       rect:
         serializedVersion: 2
         x: 1120
@@ -303,14 +306,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0585e63c9da7983f0800000000000000
-      internalID: -898051574978422704
+      spriteID: 933957db3e248a730800000000000000
+      internalID: 4010529014077035321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tlacuache_Idle-Sheet_8
+      name: Tlacuache_Idle-Sheet 1_8
       rect:
         serializedVersion: 2
         x: 1280
@@ -324,14 +327,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 954ae9973672b08d0800000000000000
-      internalID: -2879164228577614759
+      spriteID: 540b4755de94b0710800000000000000
+      internalID: 1660502171305947205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tlacuache_Idle-Sheet_9
+      name: Tlacuache_Idle-Sheet 1_9
       rect:
         serializedVersion: 2
         x: 1440
@@ -345,14 +348,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91724f10027f5e460800000000000000
-      internalID: 7270488890303325977
+      spriteID: a8b3b0652e8a09e70800000000000000
+      internalID: 9119974935484906378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tlacuache_Idle-Sheet_10
+      name: Tlacuache_Idle-Sheet 1_10
       rect:
         serializedVersion: 2
         x: 1600
@@ -366,14 +369,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e680ad7a85a39330800000000000000
-      internalID: 3716496131742533345
+      spriteID: d90ae8faca3dd7030800000000000000
+      internalID: 3494181624542568605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tlacuache_Idle-Sheet_11
+      name: Tlacuache_Idle-Sheet 1_11
       rect:
         serializedVersion: 2
         x: 1760
@@ -387,14 +390,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7df6ed31e84be2c0800000000000000
-      internalID: -4401344078581138049
+      spriteID: 43f872458e3a79430800000000000000
+      internalID: 3789677829695180596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tlacuache_Idle-Sheet_12
+      name: Tlacuache_Idle-Sheet 1_12
       rect:
         serializedVersion: 2
         x: 1920
@@ -408,8 +411,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10afb9827f49d3130800000000000000
-      internalID: 3548155870696962561
+      spriteID: c6d950ccdfc4ee380800000000000000
+      internalID: -8940123557350498964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tlacuache_Idle-Sheet 1_13
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5bc4a9594247910800000000000000
+      internalID: 1834131173204080103
       vertices: []
       indices: 
       edges: []
