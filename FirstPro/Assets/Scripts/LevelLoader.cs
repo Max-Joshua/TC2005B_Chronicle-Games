@@ -24,108 +24,65 @@ public class LevelLoader : MonoBehaviour
 
 
     public bool canPlay = false;
-
-
-
      public Animator transition;
 
     public float transitionTime;
 
-    //public Button startButton;
+    public Button startButton;
 
 
     public bool click = false;
 
-    int result;
+    int number;
 
-
-
-
-    // void Start()
-    //  {
-    //     startButton.onClick.AddListener(clicked);
-
-
-    // }
-
-    void Update()
+    void Start()
     {
-        StoreInfo();
-
-        if (click)
-        {
-            CheckInfo();
-
-            if (!canPlay)
-            {
-                click = false;
-            }
-
-
-        }
-
-
+        startButton.onClick.AddListener(clicked);
     }
 
     void clicked()
     {
-        click = true;
+        CheckInfo();
     }
-     
 
-    // public void PlayGame()
-    // {
-      
-    //     StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 0));
-        
-    //  }
+    public void PlayGame()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));   
+    }
+    IEnumerator LoadLevel (int levelIndex)
+    {
+        transition.SetTrigger("Start");
 
+        yield return new WaitForSeconds(transitionTime);
 
-    // IEnumerator LoadLevel (int levelIndex)
-    // {
-    //     transition.SetTrigger("Start");
+        SceneManager.LoadScene(levelIndex);
 
-    //     yield return new WaitForSeconds(transitionTime);
-
-    //     SceneManager.LoadScene(levelIndex);
-
-
-        
-    // }
-
+    }
     void StoreInfo ()
     {
         userName = userField.GetComponent<Text>().text;
         PlayerPrefs.SetString("userName", userName);
 
         age = ageField.GetComponent<Text>().text;
-        PlayerPrefs.SetInt("age", int.Parse(age));
+        PlayerPrefs.SetInt("age", number);
 
         eMail = mailField.GetComponent<Text>().text;
         PlayerPrefs.SetString("eMail", eMail);
 
         country = countryField.GetComponent<Text>().text;
         PlayerPrefs.SetString("country", country);
-
-        
-
     }
-
     public void CheckInfo()
     {
-
-        if (!string.IsNullOrEmpty(userName) && !string.IsNullOrEmpty(age) && !string.IsNullOrEmpty(eMail)  && !string.IsNullOrEmpty(country) )
+        if ((!string.IsNullOrEmpty(userName))
+            && (!string.IsNullOrEmpty(eMail))  
+            && (!string.IsNullOrEmpty(country) 
+            && (int.TryParse(age, out number) 
+            && (!string.IsNullOrEmpty(age)))))
         {
             Debug.Log("A jugarle");
-
-            canPlay = true;
+            StoreInfo();
+            PlayGame();
         }
-
-
-
-    
     }
-
-
-    
 }
