@@ -499,3 +499,25 @@ app.listen(port, ()=>
 {
     console.log(`App listening at http://localhost:${port}`);
 });
+
+app.get('/api/top_high_scores', (request, response)=>{
+    let connection = connectToDB();
+
+    try{
+
+        connection.connect();
+
+        connection.query('select * from top_high_scores', (error, results, fields)=>{
+            if(error) console.log(error);
+            console.log(JSON.stringify(results));
+            response.json(results);
+        });
+
+        connection.end();
+    }
+    catch(error)
+    {
+        response.json(error);
+        console.log(error);
+    }
+});
