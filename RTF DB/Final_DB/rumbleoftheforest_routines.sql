@@ -18,17 +18,20 @@ USE `rumbleoftheforest`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Temporary view structure for view `damage_compare`
+-- Temporary view structure for view `notes_stats`
 --
 
-DROP TABLE IF EXISTS `damage_compare`;
-/*!50001 DROP VIEW IF EXISTS `damage_compare`*/;
+DROP TABLE IF EXISTS `notes_stats`;
+/*!50001 DROP VIEW IF EXISTS `notes_stats`*/;
 SET @saved_cs_client     = @@character_set_client;
 /*!50503 SET character_set_client = utf8mb4 */;
-/*!50001 CREATE VIEW `damage_compare` AS SELECT 
+/*!50001 CREATE VIEW `notes_stats` AS SELECT 
  1 AS `name`,
- 1 AS `damage_taken`,
- 1 AS `damage_inflicted`*/;
+ 1 AS `total_notes`,
+ 1 AS `perfect_percentage`,
+ 1 AS `good_percentage`,
+ 1 AS `hit_percentage`,
+ 1 AS `missed_percentage`*/;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -48,20 +51,17 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `notes_stats`
+-- Temporary view structure for view `damage_compare`
 --
 
-DROP TABLE IF EXISTS `notes_stats`;
-/*!50001 DROP VIEW IF EXISTS `notes_stats`*/;
+DROP TABLE IF EXISTS `damage_compare`;
+/*!50001 DROP VIEW IF EXISTS `damage_compare`*/;
 SET @saved_cs_client     = @@character_set_client;
 /*!50503 SET character_set_client = utf8mb4 */;
-/*!50001 CREATE VIEW `notes_stats` AS SELECT 
+/*!50001 CREATE VIEW `damage_compare` AS SELECT 
  1 AS `name`,
- 1 AS `total_notes`,
- 1 AS `perfect_percentage`,
- 1 AS `good_percentage`,
- 1 AS `hit_percentage`,
- 1 AS `missed_percentage`*/;
+ 1 AS `damage_taken`,
+ 1 AS `damage_inflicted`*/;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -78,10 +78,10 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = @saved_cs_client;
 
 --
--- Final view structure for view `damage_compare`
+-- Final view structure for view `notes_stats`
 --
 
-/*!50001 DROP VIEW IF EXISTS `damage_compare`*/;
+/*!50001 DROP VIEW IF EXISTS `notes_stats`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
@@ -90,7 +90,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `damage_compare` AS select `ui`.`name` AS `name`,`sc`.`damage_taken` AS `damage_taken`,`sc`.`damage_inflicted` AS `damage_inflicted` from (`score` `sc` join `user_info` `ui` on((`ui`.`id_user_info` = `sc`.`id_score`))) */;
+/*!50001 VIEW `notes_stats` AS select `ui`.`name` AS `name`,(((coalesce(`sn`.`num_notes_perfect`) + coalesce(`sn`.`num_notes_good`)) + coalesce(`sn`.`num_notes_hit`)) + coalesce(`sn`.`num_notes_missed`)) AS `total_notes`,((coalesce(`sn`.`num_notes_perfect`) * 100) / (((coalesce(`sn`.`num_notes_perfect`) + coalesce(`sn`.`num_notes_good`)) + coalesce(`sn`.`num_notes_hit`)) + coalesce(`sn`.`num_notes_missed`))) AS `perfect_percentage`,((coalesce(`sn`.`num_notes_good`) * 100) / (((coalesce(`sn`.`num_notes_perfect`) + coalesce(`sn`.`num_notes_good`)) + coalesce(`sn`.`num_notes_hit`)) + coalesce(`sn`.`num_notes_missed`))) AS `good_percentage`,((coalesce(`sn`.`num_notes_hit`) * 100) / (((coalesce(`sn`.`num_notes_perfect`) + coalesce(`sn`.`num_notes_good`)) + coalesce(`sn`.`num_notes_hit`)) + coalesce(`sn`.`num_notes_missed`))) AS `hit_percentage`,((coalesce(`sn`.`num_notes_missed`) * 100) / (((coalesce(`sn`.`num_notes_perfect`) + coalesce(`sn`.`num_notes_good`)) + coalesce(`sn`.`num_notes_hit`)) + coalesce(`sn`.`num_notes_missed`))) AS `missed_percentage` from (`user_info` `ui` join `score_notes` `sn` on((`ui`.`id_user_info` = `sn`.`id_score_notes`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -108,16 +108,16 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `top_high_scores` AS select `ui`.`name` AS `name`,`s`.`total_score` AS `total_score`,`ui`.`age` AS `age`,`st`.`accuracy` AS `accuracy`,`st`.`game_time` AS `game_time` from ((`score` `s` left join `user_info` `ui` on((`ui`.`id_user_info` = `s`.`id_score`))) left join `statistics` `st` on((`st`.`id_statistics` = `s`.`id_score`))) order by `s`.`total_score` desc */;
+/*!50001 VIEW `top_high_scores` AS select `ui`.`name` AS `name`,`s`.`total_score` AS `total_score`,`ui`.`age` AS `age`,`st`.`accuracy` AS `accuracy`,`st`.`game_time` AS `game_time` from ((`score` `s` join `user_info` `ui` on((`s`.`id_score` = `ui`.`id_user_info`))) join `statistics` `st` on((`st`.`id_statistics` = `s`.`id_score`))) order by `s`.`total_score` desc limit 10 */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
--- Final view structure for view `notes_stats`
+-- Final view structure for view `damage_compare`
 --
 
-/*!50001 DROP VIEW IF EXISTS `notes_stats`*/;
+/*!50001 DROP VIEW IF EXISTS `damage_compare`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
@@ -126,7 +126,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `notes_stats` AS select `ui`.`name` AS `name`,(((coalesce(`sn`.`num_notes_perfect`) + coalesce(`sn`.`num_notes_good`)) + coalesce(`sn`.`num_notes_hit`)) + coalesce(`sn`.`num_notes_missed`)) AS `total_notes`,((coalesce(`sn`.`num_notes_perfect`) * 100) / (((coalesce(`sn`.`num_notes_perfect`) + coalesce(`sn`.`num_notes_good`)) + coalesce(`sn`.`num_notes_hit`)) + coalesce(`sn`.`num_notes_missed`))) AS `perfect_percentage`,((coalesce(`sn`.`num_notes_good`) * 100) / (((coalesce(`sn`.`num_notes_perfect`) + coalesce(`sn`.`num_notes_good`)) + coalesce(`sn`.`num_notes_hit`)) + coalesce(`sn`.`num_notes_missed`))) AS `good_percentage`,((coalesce(`sn`.`num_notes_hit`) * 100) / (((coalesce(`sn`.`num_notes_perfect`) + coalesce(`sn`.`num_notes_good`)) + coalesce(`sn`.`num_notes_hit`)) + coalesce(`sn`.`num_notes_missed`))) AS `hit_percentage`,((coalesce(`sn`.`num_notes_missed`) * 100) / (((coalesce(`sn`.`num_notes_perfect`) + coalesce(`sn`.`num_notes_good`)) + coalesce(`sn`.`num_notes_hit`)) + coalesce(`sn`.`num_notes_missed`))) AS `missed_percentage` from (`user_info` `ui` join `score_notes` `sn` on((`ui`.`id_user_info` = `sn`.`id_score_notes`))) */;
+/*!50001 VIEW `damage_compare` AS select `ui`.`name` AS `name`,`sc`.`damage_taken` AS `damage_taken`,`sc`.`damage_inflicted` AS `damage_inflicted` from (`score` `sc` join `user_info` `ui` on((`ui`.`id_user_info` = `sc`.`id_score`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -212,4 +212,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-04 12:18:39
+-- Dump completed on 2022-05-04 13:45:17
