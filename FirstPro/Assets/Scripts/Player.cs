@@ -38,6 +38,11 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb2d;
 
+
+     Scene currentScene;
+
+     string sceneName;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -104,7 +109,9 @@ public class Player : MonoBehaviour
 
     void Restart()
     {
-        SceneManager.LoadScene(0);
+        currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+        SceneManager.LoadScene(sceneName);
     }
 
 

@@ -13,6 +13,7 @@ public class FallingDead : MonoBehaviour
 {
     Player player;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,8 @@ public class FallingDead : MonoBehaviour
     void Restart()
     {
         Score.scoreValue = 0;
-        SceneManager.LoadScene(1);
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        SceneManager.LoadScene(sceneName);
     }
 }

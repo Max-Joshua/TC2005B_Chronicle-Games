@@ -36,6 +36,8 @@ public class LevelLoader : MonoBehaviour
 
     public bool click = false;
 
+    int result;
+
 
 
 
@@ -59,10 +61,6 @@ public class LevelLoader : MonoBehaviour
                 click = false;
             }
 
-            // else
-            // {
-            //     PlayGame();
-            // }
 
         }
 
@@ -116,7 +114,7 @@ public class LevelLoader : MonoBehaviour
     public void CheckInfo()
     {
 
-        if (!string.IsNullOrEmpty(userName) && (!string.IsNullOrEmpty(age) && (int.Parse(age) > 1 && (int.Parse(age) < 100)) && !string.IsNullOrEmpty(eMail)  && !string.IsNullOrEmpty(country) ))
+        if (!string.IsNullOrEmpty(userName) && !string.IsNullOrEmpty(age) && !string.IsNullOrEmpty(eMail)  && !string.IsNullOrEmpty(country) )
         {
             Debug.Log("A jugarle");
 
