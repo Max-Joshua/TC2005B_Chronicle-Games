@@ -9,7 +9,7 @@ public class NoteObject : MonoBehaviour
 
     public bool canBePressed;
 
-    public KeyCode keyToPress;
+    public KeyCode keyToPress; 
 
 
     // Update is called once per frame
