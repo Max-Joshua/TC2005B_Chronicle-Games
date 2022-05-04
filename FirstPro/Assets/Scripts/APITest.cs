@@ -27,7 +27,7 @@ public class DBUsers{
 
 }
 public class DBScoreNotes{
-    public int notes;
+    public int score_notes;
 
 }
 public class DBScoreEnemies{
@@ -364,7 +364,7 @@ public class APITest : MonoBehaviour
 
          // Create the object to be sent as json
          DBScoreNotes testScoreNotes = new DBScoreNotes();
-         testScoreNotes.notes = 500;
+         testScoreNotes.score_notes = 500;
 
 
          //Debug.Log("USER: " + testUser);

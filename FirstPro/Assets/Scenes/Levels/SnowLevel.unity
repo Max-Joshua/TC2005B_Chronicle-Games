@@ -219,6 +219,7 @@ MonoBehaviour:
   player: {fileID: 2058579191}
   shootPos: {fileID: 1687166297}
   Bullet: {fileID: 1277532067253020870, guid: 0763828fd1c586e46814fb75716e1522, type: 3}
+  Explosion: {fileID: 9076848020315256202, guid: ab3b721e58a94484da2f85401461e545, type: 3}
 --- !u!61 &9538565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -362,6 +363,7 @@ MonoBehaviour:
   player: {fileID: 2058579191}
   shootPos: {fileID: 313636707}
   Bullet: {fileID: 1277532067253020870, guid: 0763828fd1c586e46814fb75716e1522, type: 3}
+  Explosion: {fileID: 9076848020315256202, guid: ab3b721e58a94484da2f85401461e545, type: 3}
 --- !u!61 &16933885
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1729,6 +1731,7 @@ MonoBehaviour:
   player: {fileID: 2058579191}
   shootPos: {fileID: 2135729234}
   Bullet: {fileID: 1277532067253020870, guid: 0763828fd1c586e46814fb75716e1522, type: 3}
+  Explosion: {fileID: 9076848020315256202, guid: ab3b721e58a94484da2f85401461e545, type: 3}
 --- !u!61 &244399669
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2814,6 +2817,7 @@ MonoBehaviour:
   player: {fileID: 2058579191}
   shootPos: {fileID: 1799550001}
   Bullet: {fileID: 1277532067253020870, guid: 0763828fd1c586e46814fb75716e1522, type: 3}
+  Explosion: {fileID: 9076848020315256202, guid: ab3b721e58a94484da2f85401461e545, type: 3}
 --- !u!61 &314773605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19593,6 +19597,7 @@ MonoBehaviour:
   player: {fileID: 2058579191}
   shootPos: {fileID: 271639974}
   Bullet: {fileID: 1277532067253020870, guid: 0763828fd1c586e46814fb75716e1522, type: 3}
+  Explosion: {fileID: 9076848020315256202, guid: ab3b721e58a94484da2f85401461e545, type: 3}
 --- !u!61 &910678632
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26812,6 +26817,7 @@ MonoBehaviour:
   player: {fileID: 2058579191}
   shootPos: {fileID: 1351563002}
   Bullet: {fileID: 1277532067253020870, guid: 0763828fd1c586e46814fb75716e1522, type: 3}
+  Explosion: {fileID: 9076848020315256202, guid: ab3b721e58a94484da2f85401461e545, type: 3}
 --- !u!61 &1320846665
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27949,6 +27955,7 @@ MonoBehaviour:
   player: {fileID: 2058579191}
   shootPos: {fileID: 856497932}
   Bullet: {fileID: 1277532067253020870, guid: 0763828fd1c586e46814fb75716e1522, type: 3}
+  Explosion: {fileID: 9076848020315256202, guid: ab3b721e58a94484da2f85401461e545, type: 3}
 --- !u!61 &1467860750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30884,7 +30891,7 @@ MonoBehaviour:
   accuracy: 0
   maxHealth: 20
   currentHealth: 0
-  maxPower: 3
+  maxPower: 1
   currentPower: 0
   damage_taken: 0
   damage_inflicted: 0

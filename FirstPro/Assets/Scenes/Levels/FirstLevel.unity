@@ -22096,8 +22096,8 @@ MonoBehaviour:
   getScoreEP: /api/score
   getStatisticsEP: /api/statistics
   getUsersEP: /api/user_info
-  getScoreNotesEP: 
-  getScoreEnemiesEP: 
+  getScoreNotesEP: /api/score_notes
+  getScoreEnemiesEP: /api/score_enemies
   allScores:
     score: []
 --- !u!1 &1514606717

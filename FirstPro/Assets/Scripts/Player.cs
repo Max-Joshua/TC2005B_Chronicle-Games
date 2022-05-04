@@ -128,10 +128,13 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(8f);
 
         deaths += 1;
-        DB.addScore();
 
+        DB.addScore();
         DB.addStatistics();
         DB.addUsers();
+        DB.addScoreEnemies();
+        DB.addScoreNotes();
+        
         Score.scoreValue = 0;
         Restart();
         
