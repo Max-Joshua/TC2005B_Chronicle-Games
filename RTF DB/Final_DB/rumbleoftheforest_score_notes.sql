@@ -28,7 +28,7 @@ CREATE TABLE `score_notes` (
   `id_score_notes` int unsigned NOT NULL AUTO_INCREMENT,
   `num_notes_perfect` int NOT NULL,
   `num_notes_good` int NOT NULL,
-  `num_notes_bad` int NOT NULL,
+  `num_notes_hit` int NOT NULL,
   `num_notes_missed` int NOT NULL,
   `id_notes` int unsigned DEFAULT NULL,
   PRIMARY KEY (`id_score_notes`),
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-03 23:10:45
+-- Dump completed on 2022-05-04 12:18:38

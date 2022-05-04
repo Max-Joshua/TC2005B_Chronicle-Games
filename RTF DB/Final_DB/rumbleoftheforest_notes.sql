@@ -26,10 +26,10 @@ DROP TABLE IF EXISTS `notes`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notes` (
   `id_notes` int unsigned NOT NULL AUTO_INCREMENT,
-  `perfect` int DEFAULT NULL,
-  `good` int DEFAULT NULL,
-  `bad` int DEFAULT NULL,
-  `missed` int DEFAULT NULL,
+  `perfect` int NOT NULL DEFAULT '20',
+  `good` int NOT NULL DEFAULT '15',
+  `hit` int NOT NULL DEFAULT '10',
+  `missed` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_notes`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-03 23:10:44
+-- Dump completed on 2022-05-04 12:18:38
