@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &15765758
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2011,7 +2011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &834518990
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9702,7 +9702,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1581232651}
   - component: {fileID: 1581232650}
-  - component: {fileID: 1581232652}
   m_Layer: 0
   m_Name: LevelLoader
   m_TagString: Untagged
@@ -9732,7 +9731,8 @@ MonoBehaviour:
   countryField: {fileID: 302488808}
   canPlay: 0
   transition: {fileID: 1554769184}
-  transitionTime: 4
+  transitionTime: 2
+  startButton: {fileID: 2103089924}
   click: 0
 --- !u!4 &1581232651
 Transform:
@@ -9749,20 +9749,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1581232652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581232649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f92401c66a6da64194ca3ba3d313373, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: 63f75cddae13c3f49b4166c1572f860c, type: 2}
-  slider: {fileID: 0}
 --- !u!1 &1714435300
 GameObject:
   m_ObjectHideFlags: 0

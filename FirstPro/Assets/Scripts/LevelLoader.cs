@@ -43,6 +43,7 @@ public class LevelLoader : MonoBehaviour
     void clicked()
     {
         CheckInfo();
+        Components();
     }
 
     public void PlayGame()
@@ -60,25 +61,32 @@ public class LevelLoader : MonoBehaviour
     }
     void StoreInfo ()
     {
-        userName = userField.GetComponent<Text>().text;
         PlayerPrefs.SetString("userName", userName);
 
-        age = ageField.GetComponent<Text>().text;
         PlayerPrefs.SetInt("age", number);
 
-        eMail = mailField.GetComponent<Text>().text;
         PlayerPrefs.SetString("eMail", eMail);
 
-        country = countryField.GetComponent<Text>().text;
         PlayerPrefs.SetString("country", country);
+    }
+
+    void Components()
+    {
+        userName = userField.GetComponent<Text>().text;
+
+        age = ageField.GetComponent<Text>().text;
+
+        eMail = mailField.GetComponent<Text>().text;
+
+        country = countryField.GetComponent<Text>().text;
     }
     public void CheckInfo()
     {
-        if ((!string.IsNullOrEmpty(userName))
-            && (!string.IsNullOrEmpty(eMail))  
-            && (!string.IsNullOrEmpty(country) 
-            && (int.TryParse(age, out number) 
-            && (!string.IsNullOrEmpty(age)))))
+        if (!string.IsNullOrEmpty(userName)
+            && !string.IsNullOrEmpty(eMail) 
+            && !string.IsNullOrEmpty(country) 
+            && int.TryParse(age, out number) 
+            && !string.IsNullOrEmpty(age))
         {
             Debug.Log("A jugarle");
             StoreInfo();
