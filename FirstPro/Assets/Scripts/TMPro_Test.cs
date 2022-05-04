@@ -14,10 +14,10 @@ public class TMPro_Test : MonoBehaviour
     [SerializeField] GameObject textPrefab;
     [SerializeField] Transform contentTransform;
 
-    public void LoadScores(ScoreList allScores)
+    public void LoadScores(TopHighScoreList allTopHighScores)
     {
         Debug.Log("Trying to load scores");
-        for (int i=0; i < 15; i++) {
+        for (int i=0; i<allTopHighScores.top_high_scores.Count; i++) {
             Debug.Log("PRINTING RESULTS SCORE");
             // Create new text objects
             GameObject textTMP = Instantiate(textPrefab);
@@ -30,11 +30,11 @@ public class TMPro_Test : MonoBehaviour
                 new Vector2 (0, 1 * i);
 
             // Extract the text from the argument object
-            DBScore score = allScores.score[i];
+            DBTopHighScores topHS = allTopHighScores.top_high_scores[i];
             TextMeshProUGUI field = textTMP.GetComponent<TextMeshProUGUI>();
-            field.text = "---------------------------\n" + "Score: " + score.total_score + " Life left: " + score.lost_life + 
-                        " Damage taken: " + score.damage_taken +
-                        " Damage inflicted: " + score.damage_inflicted;
+            field.text = "---------------------------\n" + "User: " + topHS.name + " Total Score: " + 
+                        topHS.total_score + " Age: " + topHS.age +
+                        " Accuracy: " + topHS.accuracy + "Game Time: " + topHS.game_time;
             //Debug.Log("ID: " + us.id_users + " | " + us.name + " " + us.surname);
         }
     }

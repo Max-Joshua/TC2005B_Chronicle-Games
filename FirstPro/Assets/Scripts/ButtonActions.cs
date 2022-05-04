@@ -16,6 +16,6 @@ public class ButtonActions : MonoBehaviour
 
     public void GetScores()
     {
-        api.QueryScores();
+        api.QueryTopHighScores();
     }
 }

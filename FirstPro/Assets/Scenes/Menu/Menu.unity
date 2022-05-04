@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &15765758
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1688,7 +1688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88987d2577d07574f9be1f663e77fec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 2139217630349986136, guid: cc420dd664213f74bb29ac41717f15f1, type: 3}
   levelLoader: {fileID: 0}
   url: localhost:5000
   getScoreEP: /api/score
@@ -1696,6 +1696,7 @@ MonoBehaviour:
   getUsersEP: /api/user_info
   getScoreNotesEP: 
   getScoreEnemiesEP: 
+  getTopHighScoresEP: /api/top_high_scores
   allScores:
     score: []
 --- !u!4 &646777002
@@ -1710,7 +1711,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &657360930
 GameObject:
@@ -1754,7 +1755,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &660517699
 GameObject:
@@ -1788,7 +1789,7 @@ Transform:
   - {fileID: 163948650}
   - {fileID: 1935759126}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &673513848
 GameObject:
@@ -2011,7 +2012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &834518990
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3788,7 +3789,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1204695221
 MonoBehaviour:
@@ -9111,7 +9112,7 @@ Transform:
   m_Children:
   - {fileID: 956057195}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1484457004
 GameObject:
@@ -9157,7 +9158,7 @@ Transform:
   m_Children:
   - {fileID: 1420631876}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1484457008
 Rigidbody2D:
@@ -9747,7 +9748,7 @@ Transform:
   m_Children:
   - {fileID: 1554769183}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1714435300
 GameObject:
