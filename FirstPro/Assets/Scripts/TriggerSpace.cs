@@ -63,7 +63,7 @@ public class TriggerSpace : MonoBehaviour
             totalHitBars += 1f;
             AudioSource.PlayClipAtPoint(heartBeat, player.transform.position);
 
-            if(Input.GetKey(KeyCode.E) && (player.currentPower >= 0 && player.currentPower == 3)){
+            if(Input.GetKey(KeyCode.E) && (player.currentPower >= 0 && player.currentPower == player.maxPower)){
                 
                     GameObject newBullet = Instantiate(Bullet, shootPos.position, Quaternion.identity);
                     

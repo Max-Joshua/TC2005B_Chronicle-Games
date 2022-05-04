@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
     }
 
     public void UsePower(){
-        currentPower -= 3;
+        currentPower -= maxPower;
         powerBar.SetPowerPoints(currentPower);
     }
 

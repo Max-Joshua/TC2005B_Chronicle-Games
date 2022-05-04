@@ -11,6 +11,7 @@ Chronicle Games
 */
 public class powerBar : MonoBehaviour
 {
+    Player player;
     public Slider slider;
     public Animator powerAnimation;
 

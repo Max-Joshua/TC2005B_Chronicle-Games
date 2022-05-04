@@ -28,7 +28,7 @@ public class AiPatrol : MonoBehaviour
     public Collider2D bodyCollider;
     public Transform player, shootPos;
     public GameObject Bullet;
-
+    public ParticleSystem Explosion;
     //Audio
     bool isPlaying = false;
     
@@ -127,6 +127,8 @@ public class AiPatrol : MonoBehaviour
     }
 
     public void Die(){
+
+        Instantiate(Explosion, transform.position, transform.rotation);
         Score.scoreValue += scoreEValue;
         
         Destroy(gameObject);

@@ -23,6 +23,7 @@ public class playerBullet : MonoBehaviour
     public GameObject die;
     public AudioClip hitSource;
     public GameObject playerPos;
+    public ParticleSystem Explosion;
 
     // Start is called before the first frame update
     void Start(){
@@ -79,6 +80,8 @@ public class playerBullet : MonoBehaviour
 
 
     void Die(){
+
+        Instantiate(Explosion, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }
