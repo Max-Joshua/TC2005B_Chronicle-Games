@@ -35,7 +35,7 @@ public class DBScoreNotes{
 }
 [System.Serializable]
 public class DBScoreEnemies{
-    public int numOfEnemies;
+    public int num_of_enemies;
 }
 
 [System.Serializable]
@@ -325,7 +325,7 @@ public class APITest : MonoBehaviour
 
         // Create the object to be sent as json
         DBScoreEnemies testScoreEnemies = new DBScoreEnemies();
-        testScoreEnemies.numOfEnemies = 10;
+        testScoreEnemies.num_of_enemies = 10;
 
 
         //Debug.Log("USER: " + testUser);
@@ -385,7 +385,7 @@ public class APITest : MonoBehaviour
 
          // Create the object to be sent as json
          DBScoreNotes testScoreNotes = new DBScoreNotes();
-         testScoreNotes.score_notes = 500;
+         testScoreNotes.num_of_notes = 500;
 
 
          //Debug.Log("USER: " + testUser);
