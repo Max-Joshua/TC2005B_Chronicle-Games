@@ -83,7 +83,6 @@ public class TopHighScoreList{
 public class APITest : MonoBehaviour
 {
      Player player;
-    [SerializeField] LevelLoader levelLoader;
     [SerializeField] string url;
     [SerializeField] string getScoreEP;
     [SerializeField] string getStatisticsEP;
