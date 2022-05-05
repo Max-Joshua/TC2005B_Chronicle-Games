@@ -145,7 +145,7 @@ public class APITest : MonoBehaviour
         testScore.lost_life = player.currentHealth;
         testScore.damage_inflicted = player.damage_inflicted;
         testScore.damage_taken = player.damage_taken;
-
+        Debug.Log("Score added");
 
         //Debug.Log("USER: " + testUser);
         string jsonData = JsonUtility.ToJson(testScore);
@@ -384,7 +384,6 @@ public class APITest : MonoBehaviour
 
          // Create the object to be sent as json
          DBScoreNotes testScoreNotes = new DBScoreNotes();
-         testScoreNotes.num_of_notes = 500;
 
 
          //Debug.Log("USER: " + testUser);

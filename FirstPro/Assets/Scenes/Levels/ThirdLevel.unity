@@ -1596,7 +1596,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 15
   rb: {fileID: 283150482}
   groundCheckPosition: {fileID: 1905322562}
   groundLayer:
@@ -7589,7 +7589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88987d2577d07574f9be1f663e77fec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelLoader: {fileID: 0}
   url: localhost:5000
   getScoreEP: /api/score
   getStatisticsEP: /api/statistics
@@ -8572,7 +8571,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 20
   rb: {fileID: 658393439}
   groundCheckPosition: {fileID: 688992214}
   groundLayer:
@@ -14866,7 +14865,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 20
   rb: {fileID: 957978550}
   groundCheckPosition: {fileID: 848193911}
   groundLayer:
@@ -15042,7 +15041,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 20
   rb: {fileID: 974110021}
   groundCheckPosition: {fileID: 1110265555}
   groundLayer:
@@ -22651,7 +22650,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 15
   rb: {fileID: 1013104732}
   groundCheckPosition: {fileID: 128505676}
   groundLayer:
@@ -22877,7 +22876,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 15
   rb: {fileID: 1051170342}
   groundCheckPosition: {fileID: 125043257}
   groundLayer:
@@ -24802,7 +24801,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 20
   rb: {fileID: 1327208423}
   groundCheckPosition: {fileID: 1696721593}
   groundLayer:
@@ -25686,7 +25685,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 30
   rb: {fileID: 1467340062}
   groundCheckPosition: {fileID: 1912499440}
   groundLayer:
@@ -26511,7 +26510,7 @@ MonoBehaviour:
   firstBeat: 0.4285715
   numOfLines: 0
   Timer: 0
-  BPM: 70
+  BPM: 103
 --- !u!114 &1684259111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26530,7 +26529,7 @@ MonoBehaviour:
   firstBeat: 0.4285715
   numOfLines: 0
   Timer: 0
-  BPM: 70
+  BPM: 103
 --- !u!1 &1685058695
 GameObject:
   m_ObjectHideFlags: 0
@@ -27567,7 +27566,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 30
   rb: {fileID: 1779849322}
   groundCheckPosition: {fileID: 364005509}
   groundLayer:
@@ -28986,7 +28985,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6d1ffcb9b12dab04393f46561eb8ff4e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cc93fe1df7ed48b4a968fec1a61a0896, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -29293,7 +29292,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 20
   rb: {fileID: 1887546587}
   groundCheckPosition: {fileID: 1325502052}
   groundLayer:
@@ -34919,7 +34918,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 15
   rb: {fileID: 1982629036}
   groundCheckPosition: {fileID: 392395920}
   groundLayer:
@@ -36292,7 +36291,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 20
   rb: {fileID: 2068079828}
   groundCheckPosition: {fileID: 1360574776}
   groundLayer:
@@ -37148,7 +37147,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 20
   rb: {fileID: 2132436108}
   groundCheckPosition: {fileID: 534157949}
   groundLayer:

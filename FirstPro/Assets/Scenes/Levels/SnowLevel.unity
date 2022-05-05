@@ -206,7 +206,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 15
   rb: {fileID: 9538566}
   groundCheckPosition: {fileID: 792505885}
   groundLayer:
@@ -350,7 +350,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 15
   rb: {fileID: 16933886}
   groundCheckPosition: {fileID: 276381592}
   groundLayer:
@@ -1597,13 +1597,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88987d2577d07574f9be1f663e77fec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelLoader: {fileID: 0}
   url: localhost:5000
   getScoreEP: /api/score
   getStatisticsEP: /api/statistics
   getUsersEP: /api/user_info
-  getScoreNotesEP: /api/score_notes
-  getScoreEnemiesEP: /api/score_enemies
+  getScoreNotesEP: 
+  getScoreEnemiesEP: 
   getTopHighScoresEP: 
   allScores:
     score: []
@@ -1714,7 +1713,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 20
   rb: {fileID: 244399670}
   groundCheckPosition: {fileID: 1701150630}
   groundLayer:
@@ -2800,7 +2799,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 15
   rb: {fileID: 314773606}
   groundCheckPosition: {fileID: 1393117293}
   groundLayer:
@@ -19655,7 +19654,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 20
   rb: {fileID: 910678633}
   groundCheckPosition: {fileID: 1545964818}
   groundLayer:
@@ -26876,7 +26875,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 20
   rb: {fileID: 1320846666}
   groundCheckPosition: {fileID: 824342870}
   groundLayer:
@@ -28014,7 +28013,7 @@ MonoBehaviour:
   mustPatrol: 0
   mustTurn: 0
   canShoot: 0
-  scoreEValue: 0
+  scoreEValue: 15
   rb: {fileID: 1467860751}
   groundCheckPosition: {fileID: 169922358}
   groundLayer:

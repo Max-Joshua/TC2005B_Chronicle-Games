@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
 
         if (currentHealth <= minHealth)
         {
-            Die(4.0f);
+            Die(8.0f);
             
         }
         if (currentPower <= minPower)
