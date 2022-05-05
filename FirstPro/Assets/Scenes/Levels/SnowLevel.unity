@@ -1578,7 +1578,6 @@ GameObject:
   m_Component:
   - component: {fileID: 239483631}
   - component: {fileID: 239483630}
-  - component: {fileID: 239483629}
   m_Layer: 0
   m_Name: DataBase
   m_TagString: DataBase
@@ -1586,20 +1585,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &239483629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 239483628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94fc27a42142c1f499f7bc2bc80eb229, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textPrefab: {fileID: 1310484500271410816, guid: 727ff2a27e4a47d478794eb56356226f, type: 3}
-  contentTransform: {fileID: 0}
 --- !u!114 &239483630
 MonoBehaviour:
   m_ObjectHideFlags: 0
