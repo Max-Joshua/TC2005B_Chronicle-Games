@@ -7589,7 +7589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88987d2577d07574f9be1f663e77fec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1289580252}
   levelLoader: {fileID: 0}
   url: localhost:5000
   getScoreEP: /api/score
@@ -7597,8 +7596,19 @@ MonoBehaviour:
   getUsersEP: /api/user_info
   getScoreNotesEP: 
   getScoreEnemiesEP: 
+  getTopHighScoresEP: 
   allScores:
     score: []
+  allStatistics:
+    _statisticsList: []
+  allUsers:
+    _usersList: []
+  allScoreNotes:
+    _scoreNotesList: []
+  allScoreEnemies:
+    _scoreEnemiesList: []
+  allTopHighScores:
+    top_high_scores: []
 --- !u!4 &487157267
 Transform:
   m_ObjectHideFlags: 0
@@ -25405,6 +25415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb602b8cd8c2754d8bb33e6e65163f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1289580252}
 --- !u!61 &1459088639
 BoxCollider2D:
   m_ObjectHideFlags: 0
