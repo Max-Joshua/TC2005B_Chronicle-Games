@@ -8,6 +8,8 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
 
+    APITest DB;
+    
     public AudioSource theMusic;
 
     public bool startPlaying;
