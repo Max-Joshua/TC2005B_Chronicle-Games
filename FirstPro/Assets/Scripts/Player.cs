@@ -62,10 +62,7 @@ public class Player : MonoBehaviour
 
         if (currentHealth <= minHealth)
         {
-            StartCoroutine(deadScreen());
-            accuracy = (triggerSpace_scr.totalHitBars / instantiator_scr.numOfLines) * 100;
-            gameOver.text = "GAME OVER!";
-            animator.SetBool("isDead", true);
+            Die(4.0f);
             
         }
         if (currentPower <= minPower)
@@ -107,6 +104,13 @@ public class Player : MonoBehaviour
          damage_inflicted += damage;
      }
 
+    public void Die(float seconds){
+            StartCoroutine(deadScreen(seconds));
+            accuracy = (triggerSpace_scr.totalHitBars / instantiator_scr.numOfLines) * 100;
+            gameOver.text = "GAME OVER!";
+            animator.SetBool("isDead", true);
+    }
+
     void Restart()
     {
         SceneManager.LoadScene(0);
@@ -122,8 +126,10 @@ public class Player : MonoBehaviour
             TakeDamage(1);
         }
     }
-    IEnumerator deadScreen(){
-        yield return new WaitForSeconds(8f);
+
+
+    IEnumerator deadScreen(float seconds){
+        yield return new WaitForSeconds(seconds);
 
         deaths += 1;
 
@@ -132,7 +138,7 @@ public class Player : MonoBehaviour
         DB.addUsers();
         DB.addScoreEnemies();
         DB.addScoreNotes();
-        
+
         Score.scoreValue = 0;
         Restart();
         

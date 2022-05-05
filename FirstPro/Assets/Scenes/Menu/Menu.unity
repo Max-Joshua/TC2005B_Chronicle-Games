@@ -1688,7 +1688,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88987d2577d07574f9be1f663e77fec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2139217630349986136, guid: cc420dd664213f74bb29ac41717f15f1, type: 3}
   levelLoader: {fileID: 0}
   url: localhost:5000
   getScoreEP: /api/score
@@ -1699,6 +1698,16 @@ MonoBehaviour:
   getTopHighScoresEP: /api/top_high_scores
   allScores:
     score: []
+  allStatistics:
+    _statisticsList: []
+  allUsers:
+    _usersList: []
+  allScoreNotes:
+    _scoreNotesList: []
+  allScoreEnemies:
+    _scoreEnemiesList: []
+  allTopHighScores:
+    top_high_scores: []
 --- !u!4 &646777002
 Transform:
   m_ObjectHideFlags: 0
