@@ -43,10 +43,6 @@ public class GameManager : MonoBehaviour
     public Button NL;
     public bool click = false;
 
-    public Animator transition;
-
-    public float transitionTime;
-
     
     
 
@@ -205,15 +201,6 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-    
-    }
-
-     IEnumerator LoadLevel (int levelIndex)
-    {
-        transition.SetTrigger("Start");
-        
         DB.addScore();
         DB.addStatistics();
         DB.addUsers();
@@ -221,12 +208,9 @@ public class GameManager : MonoBehaviour
         DB.addScoreNotes();
 
         Score.scoreValue = 0;
-        yield return new WaitForSeconds(transitionTime);
 
-        SceneManager.LoadScene(levelIndex);
-
-
-        
+        SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+    
     }
 
 
