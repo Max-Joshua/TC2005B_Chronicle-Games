@@ -14,19 +14,6 @@ public class FallingDead : MonoBehaviour
     Player player;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject collisionGameObject = collision.gameObject;
@@ -39,8 +26,6 @@ public class FallingDead : MonoBehaviour
     void Restart()
     {
         Score.scoreValue = 0;
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(0);
     }
 }

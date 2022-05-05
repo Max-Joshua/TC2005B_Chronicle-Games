@@ -109,9 +109,7 @@ public class Player : MonoBehaviour
 
     void Restart()
     {
-        currentScene = SceneManager.GetActiveScene();
-        sceneName = currentScene.name;
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(0);
     }
 
 
