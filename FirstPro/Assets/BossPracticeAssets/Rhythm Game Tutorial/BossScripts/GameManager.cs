@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
 
                 rankText.text = rankVal;
 
-                finalScoreText.text = currentScore.ToString();
+                finalScoreText.text = Score.scoreValue.ToString();
 
                 
 
@@ -163,7 +163,7 @@ public class GameManager : MonoBehaviour
 
         multiText.text = "Multiplier: x" + currentMultiplier;
 
-        scoreText.text = "Score: " + currentScore;
+        scoreText.text = "Score: " + Score.scoreValue;
     }
 
     public void NoteMissed()
@@ -178,7 +178,7 @@ public class GameManager : MonoBehaviour
 
     public void NormalHit()
     {
-        currentScore += scorePerNote * currentMultiplier;
+        Score.scoreValue += scorePerNote * currentMultiplier;
         NoteHit();
 
         normalHits++;
@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour
 
     public void GoodHit()
     {
-        currentScore += scorePerGoodNote * currentMultiplier;
+        Score.scoreValue += scorePerGoodNote * currentMultiplier;
         NoteHit();
 
         goodHits++;
@@ -194,7 +194,7 @@ public class GameManager : MonoBehaviour
 
     public void PerfectHit()
     {
-        currentScore += scorePerPerfectNote * currentMultiplier;
+        Score.scoreValue += scorePerPerfectNote * currentMultiplier;
         NoteHit();
 
         perfectHits++;
