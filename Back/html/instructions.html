@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1024">
-    <title>Score - Chronicle Games</title>
+    <title>Instructions - Chronicle Games</title>
     <meta property="og:type" content="">
-    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -15,15 +15,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/texts.css">
-    <link rel="stylesheet" href="../css/mysqlUseCases.css">
-    <script type="module" defer src="../js/db.js"></script>
-    
 </head>
 
-<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="57" style="background: #ffffff;">
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="57">
     <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
         <div class="container"><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive" style="--bs-light: #f8f9fa;--bs-light-rgb: 248,249,250;"><a href="/html/index.html">
+            <div class="collapse navbar-collapse" id="navbarResponsive"><a href="/html/index.html">
 <img class="img-fluid" src="assets/img/LogoCH.png" style="width: 100px;" />
 </a>
                 <ul class="navbar-nav ms-auto">
@@ -38,36 +35,28 @@
     </nav>
     <header class="text-center text-white d-flex masthead" style="background: url(&quot;assets/img/backgroundB.png&quot;);background-size: cover;">
         <div class="container my-auto">
-            <div class="row" style="text-shadow: 0px 0px 15px rgb(0,0,0);background: rgba(125,54,27,0.63);box-shadow: 0px 0px 8px rgb(0,0,0);">
+            <div class="row" style="background: rgba(0,40,46,0.52);">
                 <div class="col-lg-10 mx-auto">
-                    <h1 class="text-uppercase"><strong>top Score&nbsp;</strong></h1>
-                    <hr>
-                    <div class="section">
-                        <div class="formInput">
-                            <h1>Show score</h1>
-                            <form id="formSelect_score">
-                                <input type="submit" value="Show scores">
-                            </form>
-                        </div>
-                        <div class="resultDisplay">
-                            <h1>Result</h1>
-                            <div id="getResults_score"></div>
-                        </div>
-                    </div>
+                    <h1 class="text-uppercase"><strong>Instructions</strong></h1>
+                    <hr><img class="img-fluid" src="assets/img/instruKeyboard.png" style="box-shadow: 0px 0px 8px 7px rgb(6,56,59);">
+                </div>
+            </div>
+        </div>
     </header>
-    <section id="about" class="bg-primary" style="background: #124b48;">
+    <section id="about" class="bg-primary" style="--bs-primary-rgb: 53,112,108;">
         <div class="container">
             <div class="row">
-                <div class="col offset-lg-8 text-center mx-auto">
-                    <h2 class="text-white section-heading">Charts - Notes</h2>
-                    <hr class="light my-4">
-                    <div><canvas id="pieChart" height="936" width="1872" style="display: block; height: 468px; width: 936px;"></canvas></div>  
+                <div class="col offset-lg-8 text-center mx-auto" style="background: #00282e;font-size: 18px;">
+                    <h2 class="text-white section-heading" style="font-size: 34.128px;">Keyboard Movement</h2>
+                    <hr class="light my-4"><dl style="color: rgb(255,255,255);" class="dl-horizontal">
+                            <dt>Arrow Keys</dt>
+                            <dd>The Player will move with the arrow keys to go left, right and jump.</dd>
+                            <dt>Space Bar</dt>
+                            <dd>Pressing the spacebar at the correct tempo keeps your life full.</dd><dt>Letter E Key</dt>
+                            <dd>Using the letter E is going to activate the power attack.</dd>
+
+                      
                 </div>
-                <!-- <div class="col offset-lg-8 text-center mx-auto">
-                    <h2 class="text-white section-heading">Charts - Score</h2>
-                    <hr class="light my-4">
-                    <div><canvas data-bss-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;4500&quot;,&quot;5300&quot;,&quot;6250&quot;,&quot;7800&quot;,&quot;9800&quot;,&quot;15000&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:false,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;bold&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;ticks&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}}],&quot;yAxes&quot;:[{&quot;ticks&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}}]}}}"></canvas></div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -95,12 +84,10 @@
         </div>
     </section>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/chart.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script src="assets/js/creative.js"></script>
-    <script src="assets/js/charts.js"></script>
 </body>
 
 </html>
