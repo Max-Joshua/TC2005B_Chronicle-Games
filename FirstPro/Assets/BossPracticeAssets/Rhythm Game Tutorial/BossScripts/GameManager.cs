@@ -204,14 +204,21 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
 
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex +1));
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     
     }
 
      IEnumerator LoadLevel (int levelIndex)
     {
         transition.SetTrigger("Start");
+        
+        DB.addScore();
+        DB.addStatistics();
+        DB.addUsers();
+        DB.addScoreEnemies();
+        DB.addScoreNotes();
 
+        Score.scoreValue = 0;
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(levelIndex);
