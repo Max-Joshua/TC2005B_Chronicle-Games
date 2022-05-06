@@ -139,7 +139,6 @@ public class Player : MonoBehaviour
         DB.addScoreEnemies();
         DB.addScoreNotes();
 
-        Score.scoreValue = 0;
         Restart();
         
     }
