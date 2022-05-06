@@ -1,7 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/* 
+Chronicle Games
+04/18/2022
 
+-> Controlls every aspect of the player's movement including it's animation components and 
+    sound emittions 
+*/
 public class Movement : MonoBehaviour
 {
     //Player Sounds

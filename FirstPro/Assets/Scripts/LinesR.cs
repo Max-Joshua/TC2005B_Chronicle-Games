@@ -1,7 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/* 
+Chronicle Games
+03/15/2022
 
+-> Determines the speed of the instantiated element and limits the object to a minimum and maximum
+    position on the screen
+ 
+
+*/
 public class LinesR : MonoBehaviour
 {
 
@@ -29,23 +37,4 @@ public class LinesR : MonoBehaviour
          rectTransform.anchoredPosition = position;
      }
 
-
-    //   public void OnTriggerEnter(Collider other)
-    //   {
-    //       Debug.Log("LinesR");
-
-    //       Vector2 position = rectTransform.anchoredPosition;
-          
-    //       if (Input.GetKeyDown(KeyCode.Space) && player.currentHealth != player.maxHealth)
-    //         {
-    //             position.x = MinHorizontalPosition;
-    //             rectTransform.anchoredPosition = position;
-
-    //             if (player.currentHealth != player.maxHealth)
-    //             {
-    //                 player.Heal(10);
-    //             }
-    //         }
-          
-    //   }
 }

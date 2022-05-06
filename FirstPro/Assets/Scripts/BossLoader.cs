@@ -4,6 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/* 
+Chronicle Games
+04/30/2022
+
+-> Change the current scene to the specific level's boss fight
+
+*/
+
 public class BossLoader : MonoBehaviour
 {
      public Animator transition;

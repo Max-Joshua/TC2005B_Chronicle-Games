@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+/* 
+Chronicle Games
+04/18/2022
 
+-> Retrieves the user information and loads the first level of the game
+ 
+
+*/
 public class LevelLoader : MonoBehaviour
 {
 

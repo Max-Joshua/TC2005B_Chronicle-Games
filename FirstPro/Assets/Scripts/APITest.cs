@@ -2,7 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+/* 
+Chronicle Games
+04/28/2022
 
+-> Acces the database information through an api
+-> Obtain the api's json files in order read the info within the database
+-> Add information to the database
+
+*/
 [System.Serializable]
 public class DBScore{
 

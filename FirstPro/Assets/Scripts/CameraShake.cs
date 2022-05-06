@@ -1,7 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/* 
+Chronicle Games
+04/05/2022
 
+-> This script creates a camara shake effect, the camera will quickly and randomly move 
+    in small amounts and short bursts to give this illusion.
+
+*/
 public class CameraShake : MonoBehaviour
 {
     [SerializeField] Transform transform;

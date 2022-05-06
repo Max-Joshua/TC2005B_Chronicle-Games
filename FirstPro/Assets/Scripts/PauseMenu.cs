@@ -2,7 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+/* 
+Chronicle Games
+05/01/2022
 
+-> Pause menu controller script
+ 
+
+*/
 public class PauseMenu : MonoBehaviour
 {
 
