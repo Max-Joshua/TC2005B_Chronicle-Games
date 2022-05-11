@@ -38,7 +38,7 @@ public class DBUsers{
 }
 [System.Serializable]
 public class DBScoreNotes{
-    public int num_of_notes;
+    public int notes;
 
 }
 [System.Serializable]
